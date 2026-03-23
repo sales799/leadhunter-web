@@ -2,26 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    @apply bg-white text-gray-900;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .container-lg {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  .gradient-navy {
+    background: linear-gradient(135deg, #0B1D3A 0%, #162D50 50%, #1E3A5F 100%);
+  }
+  .gradient-navy-radial {
+    background: radial-gradient(ellipse at 60% 40%, rgba(37,99,235,0.15) 0%, transparent 60%),
+                linear-gradient(135deg, #0B1D3A 0%, #162D50 50%, #1E3A5F 100%);
+  }
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl;
+  }
+  .grid-overlay {
+    background-image:
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #F1F5F9; }
+::-webkit-scrollbar-thumb { background: #94A3B8; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #64748B; }
+
+@keyframes signalPulse {
+  0%, 100% { opacity: 0.4; r: 4; }
+  50% { opacity: 1; r: 6; }
 }
