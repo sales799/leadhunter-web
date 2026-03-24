@@ -91,12 +91,12 @@ const layers = [
     ringColor: "ring-emerald-500/20",
     iconColor: "text-emerald-500",
     description:
-      "Sonnet 4.6 generates 5-stage outreach sequences customized for 6 persona variants. Each message is crafted for the specific decision-maker type, company context, and signal that triggered the lead.",
+      "Sonnet 4.6 generates 5-stage outreach sequences customized for 6 persona variants. Every message bakes in Talpro's proven value props — 24-48hr shortlists, AI screening (HIREIQ/AIRA/EVA), 1000+ vendor ecosystem, and compliance shield — adapted to the decision-maker type and signal context.",
     details: [
       "5-stage sequences: Intro/Pilot, Differentiators, Proof/Metrics, Plan/Commercials, Nudge/Escalation",
       "6 persona variants: Site Lead, TA, HR, CTO, CFO, GM",
-      "Context-aware messaging based on trigger signal",
-      "A/B tested templates with proven conversion rates",
+      "Hardcoded value props: 24-48hr shortlists, HIREIQ/AIRA/EVA AI screening, 1000+ vendor ecosystem",
+      "Built-in differentiators: pre-boarding 1 week before start, compliance shield (PF/ESI/GST), replacement guarantee",
       "3 delivery formats: Dashboard, Email, WhatsApp/Slack",
     ],
     badge: "6 Personas",
