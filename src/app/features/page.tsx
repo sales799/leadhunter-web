@@ -89,10 +89,11 @@ const deepDive = [
     badgeVariant: "blue" as const,
     link: "/features",
     description:
-      "Sonnet 4.6 generates 5-stage outreach sequences customized for 6 persona variants. Each message is crafted for the specific decision-maker type, company context, and signal that triggered the lead.",
+      "Sonnet 4.6 generates 5-stage outreach sequences customized for 6 persona variants. Every message bakes in Talpro's proven value props — 24-48hr shortlists, AI screening stack (HIREIQ/AIRA/EVA), 1000+ vendor ecosystem, pre-boarding, compliance shield, and replacement guarantee.",
     bullets: [
       "5-stage sequences: Intro/Pilot, Differentiators, Proof/Metrics, Plan/Commercials, Nudge/Escalation",
       "6 persona variants: Site Lead, TA, HR, CTO, CFO, GM",
+      "Embedded value props: 24-48hr shortlists, HIREIQ/AIRA/EVA AI screening, 1000+ vendor ecosystem, pre-boarding, compliance shield (PF/ESI/GST), replacement guarantee",
       "3 delivery formats: Dashboard, Email digest, WhatsApp/Slack",
     ],
   },
