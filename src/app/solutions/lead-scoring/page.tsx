@@ -16,41 +16,36 @@ export const metadata: Metadata = {
 
 const scoringFactors = [
   {
-    name: "Deal size potential",
-    weight: "25%",
-    description: "Estimated contract value based on company revenue, headcount, and historical staffing spend in the industry vertical.",
+    name: "Hiring Intent Signals",
+    weight: "30 pts",
+    description: "Job postings, contractor listings, urgency indicators. Measures active demand for talent across job boards, LinkedIn, and internal career pages.",
   },
   {
-    name: "Skill demand urgency",
-    weight: "20%",
-    description: "How urgently the company needs talent, derived from hiring velocity, open role count, and time-to-fill benchmarks.",
+    name: "Company Size & Budget",
+    weight: "20 pts",
+    description: "Revenue bracket, IT budget percentage, headcount trajectory. Larger companies with dedicated IT budgets close faster and at higher contract values.",
   },
   {
-    name: "Competition density",
-    weight: "15%",
-    description: "Number of staffing agencies already engaged with this company. Lower competition means higher probability of winning.",
+    name: "Growth & Expansion",
+    weight: "20 pts",
+    description: "New office/GCC setup, funding rounds, leadership changes. Expansion signals indicate imminent large-scale hiring needs.",
   },
   {
-    name: "Compliance readiness",
-    weight: "15%",
-    description: "Whether the company has active PF, PT, TDS, and ESIC registrations. Compliant companies close faster.",
+    name: "Tech Transformation",
+    weight: "15 pts",
+    description: "Cloud migration, digital transformation initiatives, legacy modernization projects. Companies undergoing tech change need specialized staffing.",
   },
   {
-    name: "Hiring velocity",
-    weight: "15%",
-    description: "Rate of job posting growth and offer acceptance patterns over the last 90 days.",
-  },
-  {
-    name: "Funding stage",
-    weight: "10%",
-    description: "Recent funding rounds, revenue growth signals, and financial health indicators from MCA filings.",
+    name: "Staffing Compatibility",
+    weight: "15 pts",
+    description: "Contract staffing history, vendor empanelment status, geography match. Companies already using staffing partners convert 3x faster.",
   },
 ];
 
 const scoreBands = [
   {
     range: "90 \u2013 100",
-    label: "Hot",
+    label: "Ultra-Hot",
     color: "bg-emerald-500",
     textColor: "text-emerald-600",
     bgLight: "bg-emerald-50 border-emerald-200",
@@ -58,23 +53,23 @@ const scoreBands = [
   },
   {
     range: "70 \u2013 89",
-    label: "Warm",
+    label: "Confirmed",
     color: "bg-blue-500",
     textColor: "text-blue-600",
     bgLight: "bg-blue-50 border-blue-200",
-    description: "Strong opportunity developing. Add to your outreach sequence and engage within the week.",
+    description: "Passed all 7 SAV gates. Strong opportunity. Add to your outreach sequence and engage within the week.",
   },
   {
     range: "50 \u2013 69",
-    label: "Monitor",
+    label: "Probable",
     color: "bg-gold-400",
     textColor: "text-gold-600",
     bgLight: "bg-amber-50 border-amber-200",
-    description: "Emerging signals. Track for changes. Score often increases as more signals correlate.",
+    description: "Included as free bonus leads. Emerging signals — score often increases as more signals correlate.",
   },
   {
     range: "0 \u2013 49",
-    label: "Low",
+    label: "Monitoring",
     color: "bg-gray-400",
     textColor: "text-gray-500",
     bgLight: "bg-gray-50 border-gray-200",
@@ -87,13 +82,13 @@ const howItWorks = [
     number: "01",
     title: "Signal ingestion",
     description:
-      "Raw signals from 47+ sources enter the scoring pipeline. Each signal is classified by type, source credibility, and recency.",
+      "Raw signals from 51 sources enter the scoring pipeline. Each signal is classified by type, source credibility, and recency.",
   },
   {
     number: "02",
     title: "Factor analysis",
     description:
-      "TALPRO-IQ evaluates each signal against six weighted factors, pulling in enrichment data for a complete picture.",
+      "TALPRO-IQ evaluates each signal across 5 categories and 49 weighted signals, pulling in enrichment data for a complete picture.",
   },
   {
     number: "03",
@@ -185,8 +180,8 @@ export default function LeadScoringPage() {
         <SectionHead
           badge="Scoring Model"
           badgeVariant="blue"
-          title="Six factors, one score"
-          description="TALPRO-IQ evaluates every signal across six weighted dimensions, each trained on 15 years of IT staffing deal data."
+          title="Five categories, 49 signals, one score"
+          description="TALPRO-IQ evaluates every signal across five weighted categories encompassing 49 distinct signals, each trained on 15 years of IT staffing deal data."
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {scoringFactors.map((factor, i) => (

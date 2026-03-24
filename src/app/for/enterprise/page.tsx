@@ -14,25 +14,41 @@ export const metadata: Metadata = {
 
 const painPoints = [
   {
-    icon: "🏢",
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+      </svg>
+    ),
     title: "Scaling without visibility",
     description:
       "Multiple branches, dozens of BD reps, thousands of accounts — but no unified signal layer telling everyone where to focus.",
   },
   {
-    icon: "🔒",
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+      </svg>
+    ),
     title: "Compliance is non-negotiable",
     description:
       "DPDPA, client NDAs, data residency requirements. Your current tools were not built with Indian regulatory frameworks in mind.",
   },
   {
-    icon: "🔗",
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+      </svg>
+    ),
     title: "Tool sprawl, broken workflows",
     description:
       "Your CRM, email tools, and research sources do not talk to each other. Every handoff is a leak in your pipeline.",
   },
   {
-    icon: "📉",
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" />
+      </svg>
+    ),
     title: "Paying enterprise prices for SMB data",
     description:
       "Global platforms charge ₹12L+/year and still lack depth in Indian markets. You deserve India-first intelligence at fair pricing.",
@@ -154,7 +170,7 @@ const pricingTiers = [
     seats: "10-50 users",
     price: "Custom",
     features: [
-      "All Growth plan features",
+      "All Strategist plan features",
       "REST API access",
       "Custom signal rules",
       "Dedicated analyst",
@@ -215,7 +231,9 @@ export default function EnterprisePage() {
           {painPoints.map((point, i) => (
             <FadeIn key={point.title} delay={i * 0.1}>
               <Card variant="flat" className="h-full">
-                <span className="text-3xl">{point.icon}</span>
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 text-blue-600">
+                  {point.icon}
+                </div>
                 <h3 className="mt-4 text-lg font-bold text-gray-900">
                   {point.title}
                 </h3>

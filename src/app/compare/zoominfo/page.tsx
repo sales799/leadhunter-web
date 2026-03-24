@@ -62,7 +62,7 @@ const features: {
   { feature: "India-specific hiring signals", leadhunter: true, zoominfo: false },
   { feature: "MCA/ROC filing monitoring", leadhunter: true, zoominfo: false },
   { feature: "Contact accuracy (India)", leadhunter: "73%+", zoominfo: "~25%" },
-  { feature: "Starting price", leadhunter: "\u20B92,999/mo", zoominfo: "\u20B91L+/mo" },
+  { feature: "Starting price", leadhunter: "\u20B919,999/mo", zoominfo: "\u20B91L+/mo" },
   { feature: "Setup time", leadhunter: "< 1 hour", zoominfo: "2-4 weeks" },
   { feature: "Minimum contract", leadhunter: "Monthly", zoominfo: "Annual" },
   { feature: "Free trial", leadhunter: "14 days", zoominfo: "Demo only" },
@@ -230,11 +230,11 @@ export default function CompareZoomInfoPage() {
               </h3>
               <div className="mt-4">
                 <span className="text-4xl font-extrabold text-gray-900">
-                  {"\u20B9"}36K{" "}
+                  {"\u20B9"}2.4L{" "}
                 </span>
                 <span className="text-gray-500">
                   {" "}
-                  &ndash; {"\u20B9"}1.2L/year
+                  &ndash; {"\u20B9"}12L/year
                 </span>
               </div>
               <ul className="mt-6 space-y-3">

@@ -1,71 +1,88 @@
 "use client";
 
-import { useState } from "react";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 import RadarGraphic from "@/components/graphics/RadarGraphic";
+import FadeIn from "@/components/ui/FadeIn";
 
 export default function HeroSection() {
-  const [email, setEmail] = useState("");
 
   return (
     <section className="relative min-h-screen overflow-hidden gradient-navy-radial">
       <div className="absolute inset-0 grid-overlay" />
+      <div className="absolute inset-0 bg-grid-pattern" />
+      <div className="absolute inset-0 bg-noise" />
       <div className="container-lg relative flex min-h-screen items-center py-32">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
-          {/* Left */}
-          <div>
-            <Badge variant="white">AI Signal Intelligence</Badge>
-            <h1 className="mt-6 text-4xl font-extrabold tracking-display text-white sm:text-5xl lg:text-6xl">
-              Your competitors find clients faster.{" "}
-              <span className="text-gold-400">Now it&apos;s your turn.</span>
-            </h1>
-            <p className="mt-6 max-w-lg text-lg text-gray-400 leading-relaxed">
-              Detect GCC expansions, funding rounds, and hiring intent 90 days before anyone else.
-              Built for Indian IT staffing agencies.
-            </p>
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                window.location.href = `/demo?email=${encodeURIComponent(email)}`;
-              }}
-              className="mt-8 flex max-w-md gap-3"
-            >
-              <input
-                type="email"
-                placeholder="Enter your work email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 rounded-lg border border-white/20 bg-white/5 px-4 py-3 text-sm text-white placeholder-gray-500 backdrop-blur-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-                required
-              />
-              <Button type="submit" size="lg">
-                Get Early Access
-              </Button>
-            </form>
-            <div className="mt-8 flex flex-wrap items-center gap-6 text-sm text-gray-400">
-              <span className="flex items-center gap-2">
-                <span className="h-2 w-2 rounded-full bg-emerald-500" />
-                47+ signal types
-              </span>
-              <span className="flex items-center gap-2">
-                <span className="h-2 w-2 rounded-full bg-gold-400" />
-                90 days ahead
-              </span>
-              <span className="flex items-center gap-2">
-                <span className="h-2 w-2 rounded-full bg-blue-500" />
-                80% cost savings
-              </span>
-              <span className="flex items-center gap-2">
-                <span className="h-2 w-2 rounded-full bg-emerald-500" />
-                5 min setup
-              </span>
-            </div>
+        <div className="grid gap-12 lg:grid-cols-5 lg:gap-16 items-center">
+          {/* Left — 60% */}
+          <div className="lg:col-span-3">
+            <FadeIn delay={0}>
+              <Badge variant="emerald">AI-Powered Signal Intelligence</Badge>
+            </FadeIn>
+            <FadeIn delay={0.1}>
+              <h1 className="mt-6 font-heading text-4xl font-extrabold tracking-display text-white sm:text-5xl lg:text-6xl xl:text-7xl">
+                Your competitors find clients faster.
+              </h1>
+              <p className="mt-2 font-heading text-4xl font-extrabold tracking-display sm:text-5xl lg:text-6xl xl:text-7xl text-gradient-gold">
+                Now it&apos;s your turn.
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.2}>
+              <p className="mt-6 max-w-xl text-lg text-gray-400 leading-relaxed font-body">
+                LeadHunterIQ monitors 51 data sources, scores leads across 49
+                signals, and delivers dossier-grade intelligence 90 days before
+                your competitors even know the opportunity exists.
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.3}>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Button href="/demo" size="lg" shimmer>
+                  Get Early Access
+                  <svg
+                    className="ml-2 h-4 w-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </Button>
+                <Button href="/how-it-works" variant="outline_white" size="lg">
+                  Watch Demo
+                </Button>
+              </div>
+            </FadeIn>
+            <FadeIn delay={0.4}>
+              <div className="mt-10">
+                <p className="text-xs text-gray-500 font-body uppercase tracking-widest mb-4">
+                  Trusted by staffing agencies across India
+                </p>
+                <div className="flex items-center gap-8">
+                  {["TechStaff", "NexGen", "PrimeForce", "StaffMax", "BlueSky"].map(
+                    (name) => (
+                      <div
+                        key={name}
+                        className="text-sm font-heading font-bold text-gray-600 opacity-40"
+                      >
+                        {name}
+                      </div>
+                    )
+                  )}
+                </div>
+              </div>
+            </FadeIn>
           </div>
 
-          {/* Right - Radar */}
-          <div className="hidden lg:block">
-            <RadarGraphic />
+          {/* Right — 40% Radar */}
+          <div className="hidden lg:block lg:col-span-2">
+            <FadeIn delay={0.3} direction="right">
+              <RadarGraphic />
+            </FadeIn>
           </div>
         </div>
       </div>

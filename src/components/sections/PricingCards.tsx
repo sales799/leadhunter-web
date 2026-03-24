@@ -8,7 +8,7 @@ import Badge from "@/components/ui/Badge";
 import FadeIn from "@/components/ui/FadeIn";
 import { PRICING } from "@/lib/constants";
 
-const tiers = [PRICING.starter, PRICING.growth, PRICING.enterprise];
+const tiers = [PRICING.analyst, PRICING.strategist, PRICING.command];
 
 export default function PricingCards({ preview = false }: { preview?: boolean }) {
   const [annual, setAnnual] = useState(true);
@@ -17,13 +17,24 @@ export default function PricingCards({ preview = false }: { preview?: boolean })
     <Section bg={preview ? "gray" : "white"}>
       <SectionHead
         badge="Pricing"
-        title={preview ? "Simple, transparent pricing" : "Confirmed leads, not contacts."}
-        description="Every lead passes our 7-gate SAV verification. You pay for dossier-grade intelligence — not raw data. 14-day free trial."
+        badgeVariant={preview ? "gold" : "blue"}
+        title={
+          preview
+            ? "Starts at ₹666/day. Seriously."
+            : "Starts at ₹666/day. Your ROI? Infinite."
+        }
+        description="Every plan includes a 14-day free trial. No credit card required."
       />
 
       {/* Toggle */}
       <div className="mb-12 flex items-center justify-center gap-3">
-        <span className={`text-sm font-medium ${!annual ? "text-gray-900" : "text-gray-400"}`}>Monthly</span>
+        <span
+          className={`text-sm font-medium font-body ${
+            !annual ? "text-gray-900" : "text-gray-400"
+          }`}
+        >
+          Monthly
+        </span>
         <button
           onClick={() => setAnnual(!annual)}
           className={`relative h-7 w-12 rounded-full transition-colors ${
@@ -36,8 +47,13 @@ export default function PricingCards({ preview = false }: { preview?: boolean })
             }`}
           />
         </button>
-        <span className={`text-sm font-medium ${annual ? "text-gray-900" : "text-gray-400"}`}>
-          Annual <span className="text-emerald-500 text-xs font-bold">Save 17%</span>
+        <span
+          className={`text-sm font-medium font-body ${
+            annual ? "text-gray-900" : "text-gray-400"
+          }`}
+        >
+          Annual{" "}
+          <Badge variant="emerald">Save 2 months</Badge>
         </span>
       </div>
 
@@ -45,10 +61,10 @@ export default function PricingCards({ preview = false }: { preview?: boolean })
         {tiers.map((tier, i) => (
           <FadeIn key={tier.name} delay={i * 0.1}>
             <div
-              className={`relative rounded-2xl border p-8 ${
+              className={`relative rounded-2xl border p-8 transition-all duration-300 ${
                 tier.popular
                   ? "border-blue-600 bg-white shadow-xl scale-105 z-10"
-                  : "border-gray-200 bg-white"
+                  : "border-gray-200 bg-white hover:shadow-lg"
               }`}
             >
               {tier.popular && (
@@ -56,13 +72,23 @@ export default function PricingCards({ preview = false }: { preview?: boolean })
                   <Badge variant="blue">Most Popular</Badge>
                 </div>
               )}
-              <h3 className="text-xl font-bold text-gray-900">{tier.name}</h3>
-              <p className="mt-1 text-sm text-gray-400">{tier.description}</p>
+              <h3 className="text-xl font-heading font-bold text-gray-900">
+                {tier.name}
+              </h3>
+              <p className="mt-1 text-sm text-gray-400 font-body">
+                {tier.description}
+              </p>
               <div className="mt-6">
-                <span className="text-4xl font-extrabold text-gray-900">
+                <span className="font-mono text-4xl font-bold text-gray-900">
                   ₹{annual ? tier.annual : tier.price}
                 </span>
-                <span className="text-gray-400">/month</span>
+                <span className="text-gray-400 font-body">/month</span>
+              </div>
+              <p className="mt-1 text-xs text-gray-400 font-mono">
+                {tier.pricePerLead}/lead
+              </p>
+              <div className="mt-2 text-sm font-body text-gray-500">
+                {tier.leads} &middot; {tier.seats}
               </div>
               <Button
                 href="/demo"
@@ -72,23 +98,46 @@ export default function PricingCards({ preview = false }: { preview?: boolean })
                 {tier.cta}
               </Button>
               <ul className="mt-8 space-y-3">
-                {(preview ? tier.features.slice(0, 3) : tier.features).map((f) => (
-                  <li key={f} className="flex items-start gap-2 text-sm text-gray-600">
-                    <svg
-                      className="h-5 w-5 flex-shrink-0 text-emerald-500"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
+                {(preview ? tier.features.slice(0, 4) : tier.features).map(
+                  (f) => (
+                    <li
+                      key={f}
+                      className="flex items-start gap-2 text-sm text-gray-600 font-body"
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    {f}
-                  </li>
-                ))}
+                      <svg
+                        className="h-5 w-5 flex-shrink-0 text-emerald-500"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                      {f}
+                    </li>
+                  )
+                )}
               </ul>
               {preview && (
-                <p className="mt-4 text-xs text-blue-600 font-medium">
-                  + {tier.features.length - 3} more features
+                <p className="mt-4 text-xs text-blue-600 font-medium font-body">
+                  See full plan
+                  <svg
+                    className="inline-block ml-1 h-3 w-3"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
                 </p>
               )}
             </div>
@@ -98,7 +147,20 @@ export default function PricingCards({ preview = false }: { preview?: boolean })
       {preview && (
         <div className="mt-12 text-center">
           <Button href="/pricing" variant="secondary">
-            See full pricing
+            Compare all plans
+            <svg
+              className="ml-2 h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
           </Button>
         </div>
       )}

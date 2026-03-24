@@ -9,28 +9,36 @@ export default function SectionHead({
   light = false,
 }: {
   badge?: string;
-  badgeVariant?: "blue" | "emerald" | "gold" | "white" | "navy";
+  badgeVariant?: "blue" | "emerald" | "gold" | "white" | "navy" | "red";
   title: string;
   description?: string;
   align?: "left" | "center";
   light?: boolean;
 }) {
   return (
-    <div className={`mb-16 max-w-3xl ${align === "center" ? "mx-auto text-center" : ""}`}>
+    <div
+      className={`mb-16 max-w-3xl ${
+        align === "center" ? "mx-auto text-center" : ""
+      }`}
+    >
       {badge && (
         <div className="mb-4">
           <Badge variant={badgeVariant}>{badge}</Badge>
         </div>
       )}
       <h2
-        className={`text-3xl font-extrabold tracking-heading sm:text-4xl lg:text-5xl ${
+        className={`font-heading text-3xl font-extrabold tracking-heading sm:text-4xl lg:text-5xl ${
           light ? "text-white" : "text-gray-900"
         }`}
       >
         {title}
       </h2>
       {description && (
-        <p className={`mt-4 text-lg leading-relaxed ${light ? "text-gray-400" : "text-gray-500"}`}>
+        <p
+          className={`mt-6 text-lg leading-relaxed ${
+            light ? "text-gray-400" : "text-gray-500"
+          } max-w-2xl ${align === "center" ? "mx-auto" : ""}`}
+        >
           {description}
         </p>
       )}

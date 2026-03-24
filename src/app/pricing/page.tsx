@@ -5,22 +5,27 @@ import ROICalculator from "@/components/sections/ROICalculator";
 import Section from "@/components/ui/Section";
 import Accordion from "@/components/ui/Accordion";
 import Button from "@/components/ui/Button";
+import Badge from "@/components/ui/Badge";
 import CTASection from "@/components/sections/CTASection";
-import { FAQS } from "@/lib/constants";
+import { FAQS, SITE } from "@/lib/constants";
+import { ProductJsonLd, FAQJsonLd, BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "LeadHunterIQ starts at ₹24,999/month for 30 confirmed, dossier-grade leads. Every lead is SAV-verified across 7 gates. 14-day free trial.",
+    "LeadHunterIQ starts at ₹19,999/month — that's ₹666/day for enterprise-grade signal intelligence. 51 sources, 49 signals, 7 verification gates. 14-day free trial.",
 };
 
 export default function PricingPage() {
   return (
     <>
+      <ProductJsonLd />
+      <FAQJsonLd />
+      <BreadcrumbJsonLd items={[{ name: "Pricing", href: "/pricing" }]} />
       <PageHero
         badge="Pricing"
-        title="₹833/day for confirmed, dossier-grade leads."
-        description="One converted lead pays for 5 years of LeadHunterIQ. Every lead is SAV-verified, AI-scored, and delivered with ready-to-send outreach. 14-day free trial."
+        title="Starts at ₹666/day. Your ROI? Infinite."
+        description="Enterprise-grade signal intelligence at a fraction of what global tools charge. Every plan includes a 14-day free trial."
         breadcrumbs={[{ name: "Pricing", href: "/pricing" }]}
       />
 
@@ -30,11 +35,15 @@ export default function PricingPage() {
       {/* FAQ */}
       <Section bg="white">
         <div className="mx-auto max-w-3xl">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+          <h2 className="text-2xl font-heading font-bold text-gray-900 mb-8 text-center">
             Frequently asked questions
           </h2>
           {FAQS.map((faq) => (
-            <Accordion key={faq.question} question={faq.question} answer={faq.answer} />
+            <Accordion
+              key={faq.question}
+              question={faq.question}
+              answer={faq.answer}
+            />
           ))}
         </div>
       </Section>
@@ -42,16 +51,24 @@ export default function PricingPage() {
       {/* Enterprise */}
       <Section bg="gray">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-bold text-gray-900">Need custom signals?</h2>
-          <p className="mt-4 text-gray-500">
-            Enterprise plans include custom signal sources, dedicated analysts, API access, and SLA guarantees.
-            Let&apos;s build a plan that fits your agency.
+          <Badge variant="gold">Enterprise</Badge>
+          <h2 className="mt-4 text-2xl font-heading font-bold text-gray-900">
+            Need custom signals?
+          </h2>
+          <p className="mt-4 text-gray-500 font-body">
+            Command plans include custom signal sources, phone-verified contacts,
+            48-hour lead exclusivity, competitor density intelligence, and weekly
+            strategy calls. Let&apos;s build a plan that fits your agency.
           </p>
           <div className="mt-8">
             <Button href="/contact" size="lg">
               Talk to Sales
             </Button>
           </div>
+          <p className="mt-6 text-xs text-gray-400 font-body">
+            Backed by {SITE.company} &middot; 15+ years of IT staffing expertise
+            &middot; GSTIN: {SITE.gstin}
+          </p>
         </div>
       </Section>
 

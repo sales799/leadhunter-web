@@ -17,45 +17,38 @@ export const metadata: Metadata = {
 const waterfallSteps = [
   {
     number: "01",
-    source: "RocketReach",
+    source: "LinkedIn Sales Navigator",
     type: "Primary enrichment",
-    description: "First-pass contact enrichment using the largest professional contact database. Provides email, phone, and social profiles.",
-    hitRate: "45%",
+    description: "First-pass professional contact enrichment. VP+ titles, 3+ months tenure, active profiles. The foundation layer for decision-maker identification.",
+    hitRate: "42%",
   },
   {
     number: "02",
     source: "Snov.io",
-    type: "Email enrichment",
-    description: "Email-focused enrichment layer that fills gaps from RocketReach. Particularly strong on verified business email addresses.",
-    hitRate: "+12%",
+    type: "Email discovery",
+    description: "Domain-based email discovery and verification. Fills email gaps from LinkedIn layer with verified business addresses.",
+    hitRate: "+15%",
   },
   {
     number: "03",
-    source: "Apollo",
+    source: "RocketReach",
     type: "Cross-reference",
-    description: "Cross-references and validates contact data from previous steps. Adds missing phone numbers and job title verification.",
-    hitRate: "+8%",
+    description: "Cross-references and validates contact data. Adds missing phone numbers, alternative emails, and job title verification.",
+    hitRate: "+10%",
   },
   {
     number: "04",
-    source: "NeverBounce",
+    source: "Hunter.io",
     type: "Verification",
-    description: "Every email address is verified for deliverability in real-time. Catches invalid, disposable, and catch-all addresses.",
-    hitRate: "95% verified",
+    description: "Every email address verified for deliverability. Bounce rate kept below 2%. Catches invalid, disposable, and catch-all addresses.",
+    hitRate: "<2% bounce",
   },
   {
     number: "05",
-    source: "LinkedIn",
-    type: "Profile enrichment",
-    description: "Enriches professional context: current designation, company tenure, reporting structure, and professional interests.",
-    hitRate: "+5%",
-  },
-  {
-    number: "06",
-    source: "MCA filings",
+    source: "Opus AI Extraction",
     type: "India-specific",
-    description: "Ministry of Corporate Affairs director data, registered office addresses, and authorized signatory information. The India-only layer no global tool has.",
-    hitRate: "+3%",
+    description: "AI-powered extraction from MCA filings, GSTIN portals, and Indian business directories. The India-only layer no global tool has.",
+    hitRate: "+6%",
   },
 ];
 
@@ -86,7 +79,7 @@ const dataPoints = [
 const metrics = [
   { value: "73%+", label: "Indian mobile number hit rate", color: "text-blue-600" },
   { value: "95%", label: "Email verification accuracy", color: "text-emerald-500" },
-  { value: "6-layer", label: "Waterfall enrichment pipeline", color: "text-gold-500" },
+  { value: "5-layer", label: "Waterfall enrichment pipeline", color: "text-gold-500" },
 ];
 
 export default function IndiaDataPage() {
@@ -150,8 +143,8 @@ export default function IndiaDataPage() {
         <SectionHead
           badge="Enrichment Pipeline"
           badgeVariant="blue"
-          title="6-layer waterfall enrichment"
-          description="Each contact passes through six enrichment layers. If one source misses, the next one catches it. The result: 73%+ hit rate on Indian mobile numbers."
+          title="5-waterfall enrichment pipeline"
+          description="Each contact passes through five enrichment layers. If one source misses, the next one catches it. The result: 73%+ hit rate on Indian mobile numbers."
         />
         <div className="space-y-4">
           {waterfallSteps.map((step, i) => (

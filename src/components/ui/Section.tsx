@@ -12,16 +12,27 @@ export default function Section({
   className = "",
   id,
   overlay,
+  gridPattern,
 }: {
   children: React.ReactNode;
   bg?: keyof typeof bgs;
   className?: string;
   id?: string;
   overlay?: boolean;
+  gridPattern?: boolean;
 }) {
+  const isDark = bg === "navy" || bg === "navy-radial";
+
   return (
-    <section id={id} className={`relative py-24 lg:py-32 ${bgs[bg]} ${className}`}>
+    <section
+      id={id}
+      className={`relative py-24 lg:py-32 ${bgs[bg]} ${className}`}
+    >
       {overlay && <div className="absolute inset-0 grid-overlay" />}
+      {gridPattern && isDark && (
+        <div className="absolute inset-0 bg-grid-pattern" />
+      )}
+      {isDark && <div className="absolute inset-0 bg-noise" />}
       <div className="container-lg relative">{children}</div>
     </section>
   );

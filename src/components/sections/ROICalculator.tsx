@@ -27,9 +27,13 @@ function Slider({
   return (
     <div>
       <div className="flex items-center justify-between mb-2">
-        <label className="text-sm font-medium text-gray-700">{label}</label>
+        <label className="text-sm font-medium text-gray-700 font-body">
+          {label}
+        </label>
         <span className="font-mono text-sm font-bold text-blue-600">
-          {prefix}{value.toLocaleString("en-IN")}{suffix}
+          {prefix}
+          {value.toLocaleString("en-IN")}
+          {suffix}
         </span>
       </div>
       <input
@@ -39,7 +43,7 @@ function Slider({
         step={step}
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="w-full h-2 rounded-full appearance-none bg-gray-200 accent-blue-600"
+        className="w-full h-2 rounded-full appearance-none bg-gray-200 accent-blue-600 cursor-pointer"
       />
     </div>
   );
@@ -52,18 +56,24 @@ export default function ROICalculator() {
   const [closeRate, setCloseRate] = useState(10);
 
   const results = useMemo(() => {
-    const monthlyCost = 5999; // Growth plan
+    const monthlyCost = 49999; // Strategist plan
     const improvedLeads = Math.round(monthlyLeads * 1.4); // 40% more leads
     const improvedCloseRate = closeRate * 1.3; // 30% better close rate
-    const monthlyRevenue = Math.round((improvedLeads * (improvedCloseRate / 100) * avgDeal));
-    const currentRevenue = Math.round(monthlyLeads * (closeRate / 100) * avgDeal);
+    const monthlyRevenue = Math.round(
+      improvedLeads * (improvedCloseRate / 100) * avgDeal
+    );
+    const currentRevenue = Math.round(
+      monthlyLeads * (closeRate / 100) * avgDeal
+    );
     const additionalRevenue = monthlyRevenue - currentRevenue;
     const roi = Math.round((additionalRevenue / monthlyCost) * 100);
-    const paybackDays = Math.max(1, Math.round((monthlyCost / (additionalRevenue / 30))));
+    const paybackDays = Math.max(
+      1,
+      Math.round(monthlyCost / (additionalRevenue / 30))
+    );
     const costPerLead = Math.round(monthlyCost / improvedLeads);
 
     return { monthlyRevenue, additionalRevenue, roi, paybackDays, costPerLead };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [monthlyLeads, avgDeal, closeRate]);
 
   return (
@@ -77,47 +87,83 @@ export default function ROICalculator() {
       <div className="mx-auto max-w-4xl grid gap-8 lg:grid-cols-2">
         {/* Inputs */}
         <Card>
-          <h3 className="text-lg font-bold text-gray-900 mb-6">Your current numbers</h3>
+          <h3 className="text-lg font-heading font-bold text-gray-900 mb-6">
+            Your current numbers
+          </h3>
           <div className="space-y-6">
-            <Slider label="Team size" value={teamSize} onChange={setTeamSize} min={1} max={50} />
-            <Slider label="Monthly leads" value={monthlyLeads} onChange={setMonthlyLeads} min={10} max={500} />
-            <Slider label="Avg deal value" value={avgDeal} onChange={setAvgDeal} min={100000} max={5000000} step={50000} prefix="₹" />
-            <Slider label="Close rate" value={closeRate} onChange={setCloseRate} min={1} max={50} suffix="%" />
+            <Slider
+              label="Team size"
+              value={teamSize}
+              onChange={setTeamSize}
+              min={2}
+              max={50}
+            />
+            <Slider
+              label="Monthly leads"
+              value={monthlyLeads}
+              onChange={setMonthlyLeads}
+              min={10}
+              max={500}
+            />
+            <Slider
+              label="Avg deal value"
+              value={avgDeal}
+              onChange={setAvgDeal}
+              min={100000}
+              max={5000000}
+              step={50000}
+              prefix="₹"
+            />
+            <Slider
+              label="Close rate"
+              value={closeRate}
+              onChange={setCloseRate}
+              min={1}
+              max={30}
+              suffix="%"
+            />
           </div>
         </Card>
 
         {/* Results */}
         <Card className="bg-navy-900 text-white" variant="dark">
-          <h3 className="text-lg font-bold mb-6">With LeadHunterIQ</h3>
+          <h3 className="text-lg font-heading font-bold mb-6">
+            With LeadHunterIQ
+          </h3>
           <div className="space-y-6">
             <div>
-              <p className="text-sm text-gray-400">Additional monthly revenue</p>
-              <p className="font-mono text-3xl font-bold text-emerald-500">
+              <p className="text-sm text-gray-400 font-body">
+                Additional monthly revenue
+              </p>
+              <p className="font-mono text-3xl font-bold text-emerald-400">
                 ₹{results.additionalRevenue.toLocaleString("en-IN")}
               </p>
             </div>
             <div>
-              <p className="text-sm text-gray-400">Cost per lead</p>
-              <p className="font-mono text-2xl font-bold text-blue-500">
+              <p className="text-sm text-gray-400 font-body">Cost per lead</p>
+              <p className="font-mono text-2xl font-bold text-blue-400">
                 ₹{results.costPerLead}
               </p>
             </div>
             <div>
-              <p className="text-sm text-gray-400">Payback period</p>
+              <p className="text-sm text-gray-400 font-body">Payback period</p>
               <p className="font-mono text-2xl font-bold text-gold-400">
                 {results.paybackDays} days
               </p>
             </div>
             <div>
-              <p className="text-sm text-gray-400">Annual ROI</p>
-              <p className="font-mono text-2xl font-bold text-emerald-500">
+              <p className="text-sm text-gray-400 font-body">Annual ROI</p>
+              <p className="font-mono text-2xl font-bold text-emerald-400">
                 {results.roi}%
               </p>
             </div>
             <div className="rounded-lg bg-white/5 p-4 border border-white/10">
-              <p className="text-sm text-gray-300">
+              <p className="text-sm text-gray-300 font-body">
                 Based on your numbers, LeadHunterIQ pays for itself in{" "}
-                <span className="font-bold text-gold-400">{results.paybackDays} days</span>.
+                <span className="font-bold text-gold-400">
+                  {results.paybackDays} days
+                </span>
+                .
               </p>
             </div>
           </div>
