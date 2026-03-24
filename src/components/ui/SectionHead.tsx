@@ -28,7 +28,7 @@ export default function SectionHead({
       )}
       <h2
         className={`font-heading text-3xl font-extrabold tracking-heading sm:text-4xl lg:text-5xl ${
-          light ? "text-white" : "text-gray-900"
+          light ? "text-white" : "text-gray-900 dark:text-white"
         }`}
       >
         {title}
@@ -36,7 +36,7 @@ export default function SectionHead({
       {description && (
         <p
           className={`mt-6 text-lg leading-relaxed ${
-            light ? "text-gray-400" : "text-gray-500"
+            light ? "text-gray-400" : "text-gray-500 dark:text-gray-400"
           } max-w-2xl ${align === "center" ? "mx-auto" : ""}`}
         >
           {description}

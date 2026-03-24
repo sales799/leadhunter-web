@@ -11,6 +11,7 @@ import SectionHead from "@/components/ui/SectionHead";
 import { ProductJsonLd } from "@/components/seo/JsonLd";
 
 // Lazy-load below-fold heavy components to reduce initial JS bundle
+const VideoSection = dynamic(() => import("@/components/sections/VideoSection"), { ssr: true });
 const DashboardMockup = dynamic(() => import("@/components/graphics/DashboardMockup"), { ssr: true });
 const TestimonialCards = dynamic(() => import("@/components/sections/TestimonialCards"), { ssr: true });
 const PricingCards = dynamic(() => import("@/components/sections/PricingCards"), { ssr: true });
@@ -44,6 +45,9 @@ export default function Home() {
 
       {/* Section 5: How It Works Preview (WHITE) */}
       <HowItWorksSteps />
+
+      {/* Section 5.5: Video Walkthrough (LIGHT) */}
+      <VideoSection />
 
       {/* Section 6: Live Dashboard Mockup (DARK) */}
       <Section bg="navy-radial" overlay gridPattern>

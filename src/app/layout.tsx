@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans, DM_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/layout/Nav";
 import Footer from "@/components/layout/Footer";
+import ThemeProvider from "@/components/theme/ThemeProvider";
 import { OrganizationJsonLd, WebSiteJsonLd } from "@/components/seo/JsonLd";
 
 const heading = Plus_Jakarta_Sans({
@@ -61,11 +62,13 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body className="font-body antialiased">
-        <OrganizationJsonLd />
-        <WebSiteJsonLd />
-        <Nav />
-        <main>{children}</main>
-        <Footer />
+        <ThemeProvider>
+          <OrganizationJsonLd />
+          <WebSiteJsonLd />
+          <Nav />
+          <main>{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
