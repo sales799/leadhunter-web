@@ -49,11 +49,11 @@ export default function CompareTable({ rows = 8 }: { rows?: number }) {
         title="How we compare"
         description="See how we stack up against global tools that weren't built for India."
       />
-      <div className="mx-auto max-w-3xl overflow-hidden rounded-2xl border border-gray-200 shadow-sm">
+      <div className="mx-auto max-w-3xl overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm">
         <table className="w-full">
           <thead>
-            <tr className="bg-gray-50 text-sm">
-              <th className="px-6 py-4 text-left font-heading font-semibold text-gray-900">
+            <tr className="bg-gray-50 dark:bg-gray-800 text-sm">
+              <th className="px-6 py-4 text-left font-heading font-semibold text-gray-900 dark:text-white">
                 Feature
               </th>
               <th className="px-6 py-4 text-center font-heading font-semibold text-blue-600">
@@ -64,13 +64,13 @@ export default function CompareTable({ rows = 8 }: { rows?: number }) {
               </th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-100">
+          <tbody className="divide-y divide-gray-100 dark:divide-gray-700">
             {data.map((row) => (
               <tr
                 key={row.feature}
-                className="hover:bg-gray-50 transition-colors"
+                className="hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
               >
-                <td className="px-6 py-4 text-sm text-gray-700 font-body">
+                <td className="px-6 py-4 text-sm text-gray-700 dark:text-gray-300 font-body">
                   {row.feature}
                 </td>
                 <td className="px-6 py-4 text-center text-sm">

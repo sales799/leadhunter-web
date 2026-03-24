@@ -40,7 +40,7 @@ export default function ProblemSection() {
           <FadeIn key={p.title} delay={i * 0.15}>
             <Card className="border-t-4 border-t-red-500 h-full">
               <div className="mb-5">{icons[i]}</div>
-              <h3 className="text-xl font-heading font-bold text-gray-900">
+              <h3 className="text-xl font-heading font-bold text-gray-900 dark:text-white">
                 {p.title}
               </h3>
               <p className="mt-3 text-sm text-gray-500 leading-relaxed font-body">

@@ -4,6 +4,7 @@ import "./globals.css";
 import Nav from "@/components/layout/Nav";
 import Footer from "@/components/layout/Footer";
 import ThemeProvider from "@/components/theme/ThemeProvider";
+import ScrollToTop from "@/components/ui/ScrollToTop";
 import { OrganizationJsonLd, WebSiteJsonLd } from "@/components/seo/JsonLd";
 
 const heading = Plus_Jakarta_Sans({
@@ -68,6 +69,7 @@ export default function RootLayout({
           <Nav />
           <main>{children}</main>
           <Footer />
+          <ScrollToTop />
         </ThemeProvider>
       </body>
     </html>

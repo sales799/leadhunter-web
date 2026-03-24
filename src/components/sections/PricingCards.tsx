@@ -30,7 +30,7 @@ export default function PricingCards({ preview = false }: { preview?: boolean })
       <div className="mb-12 flex items-center justify-center gap-3">
         <span
           className={`text-sm font-medium font-body ${
-            !annual ? "text-gray-900" : "text-gray-400"
+            !annual ? "text-gray-900 dark:text-white" : "text-gray-400"
           }`}
         >
           Monthly
@@ -49,7 +49,7 @@ export default function PricingCards({ preview = false }: { preview?: boolean })
         </button>
         <span
           className={`text-sm font-medium font-body ${
-            annual ? "text-gray-900" : "text-gray-400"
+            annual ? "text-gray-900 dark:text-white" : "text-gray-400"
           }`}
         >
           Annual{" "}
@@ -63,8 +63,8 @@ export default function PricingCards({ preview = false }: { preview?: boolean })
             <div
               className={`relative rounded-2xl border p-8 transition-all duration-300 ${
                 tier.popular
-                  ? "border-blue-600 bg-white shadow-xl scale-105 z-10"
-                  : "border-gray-200 bg-white hover:shadow-lg"
+                  ? "border-blue-600 bg-white dark:bg-gray-800 shadow-xl scale-105 z-10"
+                  : "border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:shadow-lg"
               }`}
             >
               {tier.popular && (
@@ -72,14 +72,14 @@ export default function PricingCards({ preview = false }: { preview?: boolean })
                   <Badge variant="blue">Most Popular</Badge>
                 </div>
               )}
-              <h3 className="text-xl font-heading font-bold text-gray-900">
+              <h3 className="text-xl font-heading font-bold text-gray-900 dark:text-white">
                 {tier.name}
               </h3>
               <p className="mt-1 text-sm text-gray-400 font-body">
                 {tier.description}
               </p>
               <div className="mt-6">
-                <span className="font-mono text-4xl font-bold text-gray-900">
+                <span className="font-mono text-4xl font-bold text-gray-900 dark:text-white">
                   ₹{annual ? tier.annual : tier.price}
                 </span>
                 <span className="text-gray-400 font-body">/month</span>
