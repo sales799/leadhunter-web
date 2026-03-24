@@ -38,7 +38,7 @@ const howItWorks = [
     number: "01",
     title: "Continuous scanning",
     description:
-      "Our crawlers monitor 47+ sources in real-time across all Indian cities. Every filing, lease agreement, and job posting is captured and classified.",
+      "Our crawlers monitor 51 sources in real-time across all Indian cities. Every filing, lease agreement, and job posting is captured and classified.",
   },
   {
     number: "02",

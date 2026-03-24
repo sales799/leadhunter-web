@@ -10,7 +10,7 @@ import CTASection from "@/components/sections/CTASection";
 export const metadata: Metadata = {
   title: "LeadHunterIQ vs Manual BD Process | Automate Signal Intelligence",
   description:
-    "Compare LeadHunterIQ with manual BD processes for Indian IT staffing. Save 4 hours/day, cover 47+ signal sources, and replace a \u20B94-8L/yr BD salary with \u20B936K/yr in automation.",
+    "Compare LeadHunterIQ with manual BD processes for Indian IT staffing. Save 4 hours/day, cover 51 signal sources, and replace a \u20B94-8L/yr BD salary with \u20B92.4L/yr in automation.",
 };
 
 function Check() {
@@ -55,8 +55,8 @@ const features: {
   manual: boolean | string;
 }[] = [
   { feature: "Time per day", leadhunter: "5 minutes", manual: "4+ hours" },
-  { feature: "Signal sources monitored", leadhunter: "47+", manual: "3-5" },
-  { feature: "Annual cost", leadhunter: "\u20B936K/yr", manual: "\u20B94-8L/yr (BD salary)" },
+  { feature: "Signal sources monitored", leadhunter: "51", manual: "3-5" },
+  { feature: "Annual cost", leadhunter: "\u20B92.4L/yr", manual: "\u20B94-8L/yr (BD salary)" },
   { feature: "Speed to detect signals", leadhunter: "Real-time", manual: "60-90 day lag" },
   { feature: "GCC expansion tracking", leadhunter: true, manual: false },
   { feature: "AI-powered lead scoring", leadhunter: true, manual: false },
@@ -84,9 +84,9 @@ const timeBreakdown = [
 
 const roiData = {
   bdSalary: "4-8L",
-  toolCost: "36K",
+  toolCost: "2.4L",
   timeSaved: "4 hrs/day",
-  signalCoverage: "47+ vs 3-5 sources",
+  signalCoverage: "51 sources vs 3-5 manual",
   speedAdvantage: "Real-time vs 60-90 day lag",
   dealAcceleration: "2-3x faster pipeline",
 };
@@ -102,7 +102,7 @@ const gaps = [
     iconPath: "M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
     title: "Blind spots everywhere",
     description:
-      "A human BD can realistically monitor 3-5 signal sources. LeadHunterIQ monitors 47+, including ROC filings, STPI registrations, and commercial real estate that no person can track manually.",
+      "A human BD can realistically monitor 3-5 signal sources. LeadHunterIQ monitors 51, including ROC filings, STPI registrations, and commercial real estate that no person can track manually.",
   },
   {
     iconPath: "M13 17h8m0 0V9m0 8l-8-8-4 4-6-6",
@@ -136,7 +136,7 @@ const beforeAfterColumns = [
     title: "After LeadHunterIQ",
     items: [
       "AI-scored signals on WhatsApp by 9 AM",
-      "47+ sources monitored automatically",
+      "51 sources monitored automatically",
       "Contact data enriched and ready",
       "Compliance context per company",
       "CRM auto-populated with context",
@@ -181,8 +181,8 @@ export default function CompareManualPage() {
           <div className="mx-auto max-w-5xl grid grid-cols-2 gap-6 lg:grid-cols-4">
             {[
               { stat: "4 hrs/day", label: "Time saved per BD rep", color: "text-blue-600" },
-              { stat: "47+", label: "Signal sources vs 3-5 manual", color: "text-emerald-600" },
-              { stat: "\u20B936K/yr", label: "vs \u20B94-8L BD salary", color: "text-blue-600" },
+              { stat: "51", label: "Signal sources vs 3-5 manual", color: "text-emerald-600" },
+              { stat: "\u20B92.4L/yr", label: "vs \u20B94-8L BD salary", color: "text-blue-600" },
               { stat: "Real-time", label: "vs 60-90 day lag", color: "text-emerald-600" },
             ].map((item) => (
               <div

@@ -1,16 +1,19 @@
 "use client";
 
 const variants = {
-  light: "bg-white border border-gray-200 hover:shadow-lg hover:-translate-y-1",
-  dark: "glass-card hover:bg-white/10",
+  light:
+    "bg-white border border-gray-200 hover:shadow-xl hover:-translate-y-[2px] transition-all duration-300",
+  dark: "glass-card hover:bg-white/10 transition-all duration-300",
   flat: "bg-gray-50 border border-gray-200",
+  gradient:
+    "relative bg-white border border-gray-200 hover:shadow-xl hover:-translate-y-[2px] transition-all duration-300 overflow-hidden",
 };
 
 export default function Card({
   children,
   variant = "light",
   className = "",
-  padding = "p-6 lg:p-8",
+  padding = "p-8 lg:p-10",
 }: {
   children: React.ReactNode;
   variant?: keyof typeof variants;
@@ -19,7 +22,7 @@ export default function Card({
 }) {
   return (
     <div
-      className={`rounded-2xl transition-all duration-300 ${variants[variant]} ${padding} ${className}`}
+      className={`rounded-2xl ${variants[variant]} ${padding} ${className}`}
     >
       {children}
     </div>

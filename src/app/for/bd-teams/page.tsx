@@ -14,25 +14,41 @@ export const metadata: Metadata = {
 
 const painPoints = [
   {
-    icon: "📋",
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+      </svg>
+    ),
     title: "Stale contact lists",
     description:
       "You spend hours building lists that are outdated by the time you start calling. Decision-makers have moved on, and your data is dead on arrival.",
   },
   {
-    icon: "🔍",
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+    ),
     title: "Hours lost to manual research",
     description:
       "Scrolling LinkedIn, checking job boards, reading press releases — your mornings disappear into research that should be automated.",
   },
   {
-    icon: "📞",
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+      </svg>
+    ),
     title: "Cold outreach, cold responses",
     description:
       "Without timing context, every call is a cold call. Prospects are not hiring, not expanding, not interested — and you had no way to know.",
   },
   {
-    icon: "🎯",
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+      </svg>
+    ),
     title: "No signal, just noise",
     description:
       "Your CRM is full of accounts but empty of intent. You need to know who is hiring now, not who hired six months ago.",
@@ -152,7 +168,9 @@ export default function BDTeamsPage() {
           {painPoints.map((point, i) => (
             <FadeIn key={point.title} delay={i * 0.1}>
               <Card variant="flat" className="h-full">
-                <span className="text-3xl">{point.icon}</span>
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 text-blue-600">
+                  {point.icon}
+                </div>
                 <h3 className="mt-4 text-lg font-bold text-gray-900">
                   {point.title}
                 </h3>

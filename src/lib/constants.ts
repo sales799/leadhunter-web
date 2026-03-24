@@ -7,74 +7,77 @@ export const SITE = {
   phone: "+91 98450 00000",
   whatsapp: "https://wa.me/919845000000",
   address: "Bengaluru, Karnataka, India",
-  gstin: "29AADCT1234F1Z5",
+  gstin: "29AAHCT9485A1ZX",
   linkedin: "https://linkedin.com/company/talpro-india",
   twitter: "https://twitter.com/talproindia",
 };
 
 export const STATS = [
-  { value: "47+", label: "Signal Types" },
-  { value: "90", label: "Days Head Start", suffix: " days" },
-  { value: "80%", label: "Cost Savings vs Global Tools" },
-  { value: "5", label: "Minute Setup", suffix: " min" },
+  { value: "51", label: "Data Sources", numericValue: 51 },
+  { value: "49", label: "AI Signals", numericValue: 49 },
+  { value: "7", label: "Verification Gates", numericValue: 7 },
+  { value: "170", label: "Cost Per Lead", prefix: "₹", numericValue: 170 },
 ];
 
 export const PROBLEMS = [
   {
     title: "4+ hours wasted daily",
-    description: "Your BD team manually scans job boards, news, and LinkedIn — missing 80% of real opportunities hiding in plain sight.",
+    description:
+      "Your BD team manually scans LinkedIn, job boards, and news. By the time you spot a GCC expansion, your competitor's already pitched.",
   },
   {
-    title: "GCC signals missed entirely",
-    description: "Deloitte opened a 500-seat GCC in Hyderabad. Cognism didn't flag it. Apollo missed it. You heard about it 4 months late.",
+    title: "Global tools don't work here",
+    description:
+      "ZoomInfo doesn't know what an MCA filing is. Apollo can't read EPFO registrations. Your Indian market needs Indian intelligence.",
   },
   {
-    title: "Global tools don't get India",
-    description: "ZoomInfo charges ₹50L/year and still can't find Indian mobile numbers, PAN-linked companies, or MCA filings.",
+    title: "₹0 spent on timing",
+    description:
+      "You're spending lakhs on contact databases but ₹0 on TIMING intelligence — knowing WHO will need staffing BEFORE they start looking.",
   },
 ];
 
 export const FEATURES = [
   {
-    title: "GCC Expansion Tracker",
-    description: "Track GCC openings, expansions, and hiring across India. Monitors ROC filings, STPI registrations, and commercial lease signals.",
-    tag: "Unique",
-    tagColor: "emerald" as const,
+    title: "Signal Discovery Engine",
+    description: "51 sources. 15 industries. Every city. Every day.",
+    tag: null,
+    tagColor: null,
     icon: "gcc" as const,
   },
   {
     title: "TALPRO-IQ Scoring",
-    description: "AI scores every signal 0-100 based on hiring velocity, funding stage, expansion timeline, and historical win patterns.",
+    description: "49 signals. 100-point scale. Zero guesswork.",
     tag: null,
     tagColor: null,
     icon: "brain" as const,
   },
   {
-    title: "India-First Data Layer",
-    description: "Indian mobile numbers, MCA data, PAN-linked entities, GSTIN verification. Built from the ground up for Indian business intelligence.",
-    tag: "India-built",
-    tagColor: "gold" as const,
+    title: "SAV Verification",
+    description: "7 gates. Zero junk leads. Ever.",
+    tag: "7-Gate",
+    tagColor: "emerald" as const,
+    icon: "shield" as const,
+  },
+  {
+    title: "Contact Enrichment",
+    description: "5-waterfall pipeline. Verified emails. Decision-makers only.",
+    tag: null,
+    tagColor: null,
     icon: "india" as const,
   },
   {
-    title: "WhatsApp Hot Alerts",
-    description: "Get 90+ score signals delivered to WhatsApp instantly. Your BD team can call within minutes — first-mover advantage, automated.",
+    title: "AI Outreach Engine",
+    description: "5-stage sequences. 6 persona variants. Ready to send.",
     tag: null,
     tagColor: null,
     icon: "whatsapp" as const,
   },
   {
-    title: "Compliance Intelligence",
-    description: "Every company enriched with PF registration, PT status, TDS compliance, and GSTIN verification. Walk into pitches armed.",
-    tag: null,
-    tagColor: null,
-    icon: "shield" as const,
-  },
-  {
-    title: "CRM Pipeline Sync",
-    description: "Signals flow directly into HubSpot, Zoho CRM, or your existing ATS. Auto-create deals and trigger follow-up sequences.",
-    tag: null,
-    tagColor: null,
+    title: "Intelligence Dossier",
+    description: "6-component reports. Dossier-grade. Client-ready.",
+    tag: "Premium",
+    tagColor: "gold" as const,
     icon: "crm" as const,
   },
 ];
@@ -83,129 +86,216 @@ export const STEPS = [
   {
     number: "01",
     title: "Detect",
-    description: "LeadHunterIQ scans 47+ signal sources — ROC filings, funding rounds, job postings, GCC registrations, STPI data, and commercial real estate.",
+    description:
+      "51 sources feed our AI brain 24/7 — ROC filings, funding rounds, job postings, GCC registrations, STPI data, and commercial real estate.",
     color: "blue" as const,
   },
   {
     number: "02",
-    title: "Score & Enrich",
-    description: "TALPRO-IQ scores each signal 0-100 and enriches contacts with Indian mobile numbers, decision-maker emails, and compliance data.",
+    title: "Score & Verify",
+    description:
+      "49 signals + 7 gates = zero junk. TALPRO-IQ scores each signal 0-100 and enriches with verified contacts.",
     color: "emerald" as const,
   },
   {
     number: "03",
-    title: "Deliver & Close",
-    description: "Hot signals land on WhatsApp and your CRM in real-time. Your BD team calls first and closes before competitors even know.",
+    title: "Deliver",
+    description:
+      "WhatsApp. Email. Dashboard. Your inbox. Hot signals land in real-time so your BD team calls first.",
     color: "gold" as const,
   },
 ];
 
 export const DASHBOARD_SIGNALS = [
-  { company: "Deloitte", signal: "New GCC — Hyderabad", type: "GCC" as const, score: 96, time: "2h ago", detail: "500-seat facility, STPI registration filed" },
-  { company: "Tiger Global", signal: "Series B — FinTech Portfolio", type: "Funding" as const, score: 89, time: "4h ago", detail: "$40M round, hiring 200+ engineers" },
-  { company: "Wipro", signal: "VLSI Division Expansion", type: "Hiring" as const, score: 82, time: "6h ago", detail: "120 semiconductor roles, Bangalore" },
-  { company: "Amazon", signal: "DevOps Center Scale-up", type: "Hiring" as const, score: 78, time: "8h ago", detail: "Chennai facility, 85 DevOps engineers" },
+  {
+    company: "Costco India",
+    signal: "GCC Setup — Bengaluru",
+    type: "GCC" as const,
+    score: 94,
+    tier: "ULTRA-HOT" as const,
+    time: "2h ago",
+    detail: "STPI registration filed, 300-seat facility",
+  },
+  {
+    company: "Stryker",
+    signal: "Bengaluru Expansion",
+    type: "GCC" as const,
+    score: 87,
+    tier: "HOT" as const,
+    time: "4h ago",
+    detail: "200+ engineering roles, new campus",
+  },
+  {
+    company: "Rapid7 India",
+    signal: "Engineering Hub",
+    type: "Hiring" as const,
+    score: 78,
+    tier: "HOT" as const,
+    time: "6h ago",
+    detail: "150 cybersecurity roles, Pune",
+  },
+  {
+    company: "Series B Startup",
+    signal: "Hiring 50+ Engineers",
+    type: "Funding" as const,
+    score: 72,
+    tier: "HOT" as const,
+    time: "8h ago",
+    detail: "$25M round closed, scaling India team",
+  },
 ];
 
 export const PRICING = {
-  starter: {
-    name: "Starter",
-    price: "2,999",
-    annual: "2,499",
+  analyst: {
+    name: "Analyst",
+    price: "19,999",
+    annual: "16,666",
+    annualTotal: "1,99,990",
     description: "For agencies getting started with signal intelligence",
+    leads: "40 confirmed leads/mo",
+    seats: "2 user seats",
     features: [
-      "500 signals/month",
-      "2 team seats",
-      "GCC expansion alerts",
+      "40 confirmed leads/month",
+      "2 user seats",
+      "3 outreach stages (Stages 1-3)",
+      "Email alerts",
+      "CSV export",
       "Basic TALPRO-IQ scoring",
-      "Email delivery",
-      "CSV exports",
+      "Email support",
     ],
     cta: "Start free trial",
     popular: false,
+    pricePerLead: "₹500",
   },
-  growth: {
-    name: "Growth",
-    price: "5,999",
-    annual: "4,999",
+  strategist: {
+    name: "Strategist",
+    price: "49,999",
+    annual: "41,666",
+    annualTotal: "4,99,990",
     description: "For growing agencies that want every advantage",
+    leads: "150 confirmed leads/mo",
+    seats: "5 user seats",
     features: [
-      "2,000 signals/month",
-      "5 team seats",
-      "All signal types",
-      "Advanced TALPRO-IQ + custom weights",
-      "WhatsApp hot alerts",
-      "CRM integration (HubSpot, Zoho)",
-      "Compliance enrichment",
-      "Priority support",
+      "150 confirmed leads/month",
+      "5 user seats",
+      "All 5 outreach stages",
+      "Email + WhatsApp alerts",
+      "JD bundles included",
+      "GCC Tracker access",
+      "HubSpot/Zoho CRM integration",
+      "Monthly strategy call (30 min)",
     ],
     cta: "Start free trial",
     popular: true,
+    pricePerLead: "₹333",
   },
-  enterprise: {
-    name: "Enterprise",
-    price: "9,999",
-    annual: "8,332",
+  command: {
+    name: "Command",
+    price: "1,19,999",
+    annual: "99,999",
+    annualTotal: "11,99,990",
     description: "For large agencies dominating their markets",
+    leads: "400 confirmed leads/mo",
+    seats: "15 user seats",
     features: [
-      "Unlimited signals",
-      "Unlimited seats",
-      "All Growth features",
-      "Custom signal sources",
-      "API access",
-      "Dedicated account manager",
-      "Custom integrations",
-      "SLA guarantee",
+      "400 confirmed leads/month",
+      "15 user seats",
+      "All 5 outreach stages",
+      "All alerts + Slack + webhooks",
+      "Phone verification (human verified)",
+      "48-hour lead exclusivity",
+      "Competitor density intelligence",
+      "Full API + custom integrations",
+      "Weekly strategy calls",
     ],
     cta: "Talk to sales",
     popular: false,
+    pricePerLead: "₹300",
   },
 };
 
 export const COMPARISON = [
-  { feature: "India GCC tracking", leadhunter: true, others: false },
-  { feature: "Indian mobile enrichment", leadhunter: true, others: false },
-  { feature: "TALPRO-IQ AI scoring", leadhunter: true, others: false },
-  { feature: "Compliance intelligence (PF/PT/TDS)", leadhunter: true, others: false },
-  { feature: "WhatsApp delivery", leadhunter: true, others: false },
-  { feature: "IT staffing-specific signals", leadhunter: true, others: false },
-  { feature: "Starting price", leadhunter: "₹2,999/mo", others: "₹40,000+/mo" },
-  { feature: "Setup time", leadhunter: "5 minutes", others: "2-4 weeks" },
+  {
+    feature: "India-specific data (MCA, EPFO, STPI)",
+    leadhunter: true,
+    others: false,
+  },
+  {
+    feature: "Signal timing intelligence",
+    leadhunter: "90 days ahead",
+    others: "Contact data only",
+  },
+  {
+    feature: "7-gate verification",
+    leadhunter: "Zero junk guarantee",
+    others: "Unverified lists",
+  },
+  {
+    feature: "Pricing for Indian market",
+    leadhunter: "From ₹19,999/mo",
+    others: "$7,000+/year",
+  },
+  {
+    feature: "Ready-to-send outreach",
+    leadhunter: "5-stage, 6 personas",
+    others: "DIY",
+  },
+  {
+    feature: "Indian mobile enrichment",
+    leadhunter: true,
+    others: false,
+  },
+  {
+    feature: "TALPRO-IQ AI scoring (49 signals)",
+    leadhunter: true,
+    others: false,
+  },
+  {
+    feature: "Compliance intelligence (PF/PT/TDS)",
+    leadhunter: true,
+    others: false,
+  },
 ];
 
 export const TESTIMONIALS = [
   {
-    quote: "We detected a Deloitte GCC expansion 3 months before it hit the news. That one signal paid for a year of LeadHunterIQ.",
+    quote:
+      "We detected a Deloitte GCC expansion 3 months before it hit the news. That one signal paid for a year of LeadHunterIQ.",
     name: "Rajesh K.",
     title: "Director",
     company: "TechStaff Solutions, Bengaluru",
   },
   {
-    quote: "Our BD team saves 4 hours every day. The WhatsApp alerts mean we're always first to reach out.",
+    quote:
+      "Our BD team saves 4 hours every day. The WhatsApp alerts mean we're always first to reach out.",
     name: "Priya M.",
     title: "Head of BD",
     company: "NexGen Staffing, Hyderabad",
   },
   {
-    quote: "Switched from ZoomInfo and saved ₹8 lakh a year. The India data is actually accurate — mobile numbers that work.",
+    quote:
+      "Switched from ZoomInfo and saved ₹8 lakh a year. The India data is actually accurate — mobile numbers that work.",
     name: "Arun S.",
     title: "CEO",
     company: "PrimeForce HR, Mumbai",
   },
   {
-    quote: "The compliance intelligence alone is worth the subscription. We never miss PF or ESIC deadlines now.",
+    quote:
+      "The compliance intelligence alone is worth the subscription. We never miss PF or ESIC deadlines now.",
     name: "Deepa R.",
     title: "Operations Head",
     company: "StaffMax, Chennai",
   },
   {
-    quote: "TALPRO-IQ scoring is like having a 15-year staffing veteran reviewing every lead. It just knows which ones will convert.",
+    quote:
+      "TALPRO-IQ scoring is like having a 15-year staffing veteran reviewing every lead. It just knows which ones will convert.",
     name: "Vikram T.",
     title: "Founder",
     company: "BlueSky Consulting, Pune",
   },
   {
-    quote: "Enterprise-grade intelligence at SMB pricing. Our close rate went up 40% in the first quarter.",
+    quote:
+      "Enterprise-grade intelligence at SMB pricing. Our close rate went up 40% in the first quarter.",
     name: "Neha G.",
     title: "VP Sales",
     company: "TalentBridge India, Bengaluru",
@@ -215,45 +305,69 @@ export const TESTIMONIALS = [
 export const FAQS = [
   {
     question: "How is LeadHunterIQ different from Apollo or ZoomInfo?",
-    answer: "Apollo and ZoomInfo are global contact databases. LeadHunterIQ is signal intelligence — we detect events (GCC expansions, funding rounds, hiring surges) that indicate buying intent, then enrich with India-specific data like mobile numbers, compliance status, and MCA filings.",
+    answer:
+      "Apollo and ZoomInfo are global contact databases. LeadHunterIQ is signal intelligence — we detect events (GCC expansions, funding rounds, hiring surges) that indicate buying intent, then enrich with India-specific data like mobile numbers, compliance status, and MCA filings. We monitor 51 data sources and score across 49 signals.",
   },
   {
-    question: "What exactly is a 'signal'?",
-    answer: "A signal is a verified business event indicating a company needs staffing services. Examples: a new GCC registration in STPI, a Series B funding with hiring plans, 200+ new PF registrations, or a 50,000 sq ft commercial lease. Each is scored 0-100 by TALPRO-IQ.",
+    question: "What exactly is a 'confirmed lead'?",
+    answer:
+      "A confirmed lead has passed all 7 gates of our SAV (Signal Authenticity Verification) framework: multi-source corroboration, entity verification via MCA/GSTIN, temporal freshness checks, contact deliverability, decision-maker confirmation, TALPRO-IQ score threshold (70+), and duplicate/conflict prevention.",
   },
   {
     question: "Can I try before paying?",
-    answer: "Yes. Every plan starts with a 14-day free trial with full access to all features in your tier. No credit card required to start.",
+    answer:
+      "Yes. Every plan starts with a 14-day free trial with full access to all features in your tier. No credit card required to start.",
   },
   {
     question: "Does it work with my existing CRM?",
-    answer: "LeadHunterIQ integrates natively with HubSpot, Zoho CRM, and Zoho Recruit. We also offer API access for custom integrations.",
+    answer:
+      "Analyst plans export via CSV. Strategist plans integrate natively with HubSpot and Zoho CRM. Command plans get full API access plus custom integrations with any CRM or ATS.",
   },
   {
     question: "How do you get Indian mobile numbers?",
-    answer: "We use a proprietary India-first data waterfall — RocketReach, Snov.io, Apollo, NeverBounce verification, plus LinkedIn and MCA director filings. Our hit rate on Indian mobiles is 73%+.",
+    answer:
+      "We use a 5-waterfall enrichment pipeline: LinkedIn Sales Navigator, Snov.io, RocketReach, Hunter.io, and Opus AI extraction. Every contact is verified with bounce rate < 2% before delivery.",
   },
   {
-    question: "What's the minimum commitment?",
-    answer: "Month-to-month billing with no lock-in. Annual plans save up to 17%. Cancel anytime with a 30-day money-back guarantee.",
+    question: "What's the setup fee?",
+    answer:
+      "Analyst: ₹4,999. Strategist: ₹9,999. Command: ₹19,999. This covers onboarding, CRM integration setup, and initial signal configuration for your target industries and geographies.",
   },
   {
     question: "Is my data secure?",
-    answer: "All data is encrypted at rest and in transit. We're DPDPA 2023 compliant with full consent management and data deletion capabilities.",
+    answer:
+      "All data is encrypted at rest and in transit. We're DPDPA 2023 compliant with full consent management and data deletion capabilities.",
   },
   {
     question: "Do you offer custom signal sources?",
-    answer: "Enterprise plans include custom signal configuration. We can track specific competitors, industries, or geographic regions based on your requirements.",
+    answer:
+      "Command plans include custom signal configuration. We can track specific competitors, industries, geographic regions, or regulatory filings based on your requirements. You also get 48-hour lead exclusivity and competitor density intelligence.",
   },
 ];
 
 export const NAV_LINKS = {
   solutions: {
     capability: [
-      { name: "GCC Expansion Tracker", href: "/solutions/gcc-tracking", desc: "Detect GCC setups 90 days early" },
-      { name: "AI Lead Scoring", href: "/solutions/lead-scoring", desc: "TALPRO-IQ scores every signal" },
-      { name: "India Data Layer", href: "/solutions/india-data", desc: "95% accurate Indian contacts" },
-      { name: "Compliance Intelligence", href: "/solutions/compliance", desc: "PF, PT, ESIC auto-tracked" },
+      {
+        name: "GCC Expansion Tracker",
+        href: "/solutions/gcc-tracking",
+        desc: "Detect GCC setups 90 days early",
+      },
+      {
+        name: "AI Lead Scoring",
+        href: "/solutions/lead-scoring",
+        desc: "49-signal TALPRO-IQ engine",
+      },
+      {
+        name: "India Data Layer",
+        href: "/solutions/india-data",
+        desc: "51 sources, Indian contacts",
+      },
+      {
+        name: "Compliance Intelligence",
+        href: "/solutions/compliance",
+        desc: "PF, PT, ESIC auto-tracked",
+      },
     ],
     role: [
       { name: "For Agency Owners", href: "/for/agency-owners" },

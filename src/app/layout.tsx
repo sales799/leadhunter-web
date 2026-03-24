@@ -1,21 +1,29 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans, DM_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/layout/Nav";
 import Footer from "@/components/layout/Footer";
+import { OrganizationJsonLd, WebSiteJsonLd } from "@/components/seo/JsonLd";
 
-const inter = Inter({
+const heading = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-heading",
   display: "swap",
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["600", "700", "800"],
 });
 
-const jetbrains = JetBrains_Mono({
+const body = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-jetbrains",
+  variable: "--font-body",
   display: "swap",
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "700"],
+});
+
+const mono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
+  weight: ["500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -24,7 +32,7 @@ export const metadata: Metadata = {
     template: "%s | LeadHunterIQ",
   },
   description:
-    "Detect GCC expansions, score leads with AI, and close more staffing deals. Built for Indian IT staffing agencies. Starts at ₹2,999/month.",
+    "Monitor 51 data sources, score leads across 49 signals, and deliver dossier-grade intelligence 90 days before your competitors. Built for Indian IT staffing agencies. Starts at ₹19,999/month.",
   metadataBase: new URL("https://leadhunteriq.in"),
   openGraph: {
     type: "website",
@@ -33,7 +41,7 @@ export const metadata: Metadata = {
     siteName: "LeadHunterIQ",
     title: "LeadHunterIQ — AI Signal Intelligence for Indian IT Staffing",
     description:
-      "Detect GCC expansions, score leads with AI, and close more staffing deals. Built for Indian IT staffing agencies.",
+      "Monitor 51 data sources, score leads across 49 signals, and close more staffing deals. Built for Indian IT staffing agencies.",
     images: [{ url: "/og/home.png", width: 1200, height: 630 }],
   },
   twitter: { card: "summary_large_image" },
@@ -46,8 +54,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrains.variable}`}>
-      <body className="font-sans antialiased">
+    <html lang="en" className={`${heading.variable} ${body.variable} ${mono.variable}`}>
+      <head>
+        <meta name="theme-color" content="#0B1D3A" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
+      <body className="font-body antialiased">
+        <OrganizationJsonLd />
+        <WebSiteJsonLd />
         <Nav />
         <main>{children}</main>
         <Footer />

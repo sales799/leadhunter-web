@@ -22,16 +22,21 @@ export default function PageHero({
   return (
     <section className="relative overflow-hidden gradient-navy-radial pt-32 pb-20 lg:pt-40 lg:pb-28">
       <div className="absolute inset-0 grid-overlay" />
+      <div className="absolute inset-0 bg-grid-pattern" />
+      <div className="absolute inset-0 bg-noise" />
       <div className="container-lg relative">
         {breadcrumbs && (
-          <nav className="mb-6 flex items-center gap-2 text-sm text-gray-400">
-            <Link href="/" className="hover:text-white">
+          <nav className="mb-6 flex items-center gap-2 text-sm text-gray-400 font-body">
+            <Link href="/" className="hover:text-white transition-colors">
               Home
             </Link>
             {breadcrumbs.map((bc) => (
               <span key={bc.href} className="flex items-center gap-2">
-                <span>/</span>
-                <Link href={bc.href} className="hover:text-white">
+                <span className="text-gray-600">/</span>
+                <Link
+                  href={bc.href}
+                  className="hover:text-white transition-colors"
+                >
                   {bc.name}
                 </Link>
               </span>
@@ -43,11 +48,11 @@ export default function PageHero({
             <Badge variant="white">{badge}</Badge>
           </div>
         )}
-        <h1 className="max-w-4xl text-4xl font-extrabold tracking-display text-white sm:text-5xl lg:text-6xl">
+        <h1 className="max-w-4xl font-heading text-4xl font-extrabold tracking-display text-white sm:text-5xl lg:text-6xl">
           {title}
         </h1>
         {description && (
-          <p className="mt-6 max-w-2xl text-lg text-gray-400 leading-relaxed">
+          <p className="mt-6 max-w-2xl text-lg text-gray-400 leading-relaxed font-body">
             {description}
           </p>
         )}

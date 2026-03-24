@@ -62,7 +62,7 @@ export default function BlogPage() {
                   <div className="mb-4">
                     <Badge variant="navy">{post.category}</Badge>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors leading-tight">
+                  <h3 className="font-heading text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors leading-tight">
                     {post.title}
                   </h3>
                   <p className="mt-3 text-gray-500 text-sm leading-relaxed line-clamp-3">
@@ -82,7 +82,7 @@ export default function BlogPage() {
       {/* Newsletter signup */}
       <Section bg="gray">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-extrabold tracking-heading text-gray-900 sm:text-4xl">
+          <h2 className="font-heading text-3xl font-extrabold tracking-heading text-gray-900 sm:text-4xl">
             Get staffing intelligence in your inbox
           </h2>
           <p className="mt-4 text-lg text-gray-500">

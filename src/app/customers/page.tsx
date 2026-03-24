@@ -86,7 +86,7 @@ export default function CustomersPage() {
         <FadeIn>
           <div className="text-center mb-16">
             <Badge variant="blue">Testimonials</Badge>
-            <h2 className="mt-4 text-3xl font-extrabold tracking-heading text-gray-900 sm:text-4xl">
+            <h2 className="mt-4 font-heading text-3xl font-extrabold tracking-heading text-gray-900 sm:text-4xl">
               What our customers say
             </h2>
             <p className="mt-4 text-lg text-gray-500">
@@ -118,7 +118,7 @@ export default function CustomersPage() {
         <FadeIn>
           <div className="text-center mb-16">
             <Badge variant="emerald">Industries</Badge>
-            <h2 className="mt-4 text-3xl font-extrabold tracking-heading text-gray-900 sm:text-4xl">
+            <h2 className="mt-4 font-heading text-3xl font-extrabold tracking-heading text-gray-900 sm:text-4xl">
               Signal intelligence for every staffing vertical
             </h2>
           </div>
@@ -127,7 +127,7 @@ export default function CustomersPage() {
           {INDUSTRIES.map((ind, i) => (
             <FadeIn key={ind.title} delay={i * 0.1}>
               <Card className="h-full">
-                <h3 className="text-lg font-bold text-gray-900">
+                <h3 className="font-heading text-lg font-bold text-gray-900">
                   {ind.title}
                 </h3>
                 <p className="mt-3 text-gray-500 leading-relaxed">
@@ -143,7 +143,7 @@ export default function CustomersPage() {
       <Section bg="gray">
         <FadeIn>
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-2xl font-extrabold tracking-heading text-gray-900 sm:text-3xl">
+            <h2 className="font-heading text-2xl font-extrabold tracking-heading text-gray-900 sm:text-3xl">
               Want to be featured?
             </h2>
             <p className="mt-4 text-gray-500 leading-relaxed">

@@ -19,7 +19,7 @@ export default function PrivacyPage() {
 
       <Section bg="white">
         <div className="mx-auto max-w-3xl prose prose-lg prose-gray">
-          <h2 className="text-2xl font-bold text-gray-900 mt-0">1. Introduction</h2>
+          <h2 className="font-heading text-2xl font-bold text-gray-900 mt-0">1. Introduction</h2>
           <p className="text-gray-600 leading-relaxed">
             LeadHunterIQ (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) is a product of Talpro India
             Private Limited, registered in Bengaluru, Karnataka, India. This Privacy Policy
@@ -31,7 +31,7 @@ export default function PrivacyPage() {
             (DPDPA) and all applicable Indian data protection laws.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-10">2. Data We Collect</h2>
+          <h2 className="font-heading text-2xl font-bold text-gray-900 mt-10">2. Data We Collect</h2>
           <p className="text-gray-600 leading-relaxed">
             We collect the following categories of personal data:
           </p>
@@ -43,7 +43,7 @@ export default function PrivacyPage() {
             <li><strong>Business Intelligence Data:</strong> Company and contact information sourced from publicly available sources for our lead intelligence platform.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-10">3. How We Use Your Data</h2>
+          <h2 className="font-heading text-2xl font-bold text-gray-900 mt-10">3. How We Use Your Data</h2>
           <p className="text-gray-600 leading-relaxed">We use your personal data for the following purposes:</p>
           <ul className="text-gray-600 space-y-2">
             <li>Providing, maintaining, and improving our platform and services</li>
@@ -55,7 +55,7 @@ export default function PrivacyPage() {
             <li>Complying with legal obligations under Indian law</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-10">4. DPDPA 2023 Compliance</h2>
+          <h2 className="font-heading text-2xl font-bold text-gray-900 mt-10">4. DPDPA 2023 Compliance</h2>
           <p className="text-gray-600 leading-relaxed">
             In accordance with the Digital Personal Data Protection Act, 2023, we observe the following:
           </p>
@@ -67,7 +67,7 @@ export default function PrivacyPage() {
             <li><strong>Cross-Border Transfer:</strong> Personal data may be transferred to countries not restricted by the Central Government under the DPDPA. All transfers are subject to appropriate safeguards.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-10">5. Data Security</h2>
+          <h2 className="font-heading text-2xl font-bold text-gray-900 mt-10">5. Data Security</h2>
           <p className="text-gray-600 leading-relaxed">We implement industry-standard security measures including:</p>
           <ul className="text-gray-600 space-y-2">
             <li><strong>Encryption:</strong> All data is encrypted in transit (TLS 1.3) and at rest (AES-256).</li>
@@ -77,7 +77,7 @@ export default function PrivacyPage() {
             <li><strong>Incident Response:</strong> Documented breach notification process compliant with DPDPA requirements.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-10">6. Data Retention</h2>
+          <h2 className="font-heading text-2xl font-bold text-gray-900 mt-10">6. Data Retention</h2>
           <p className="text-gray-600 leading-relaxed">
             We retain your personal data only as long as necessary for the purposes described in this policy:
           </p>
@@ -88,7 +88,7 @@ export default function PrivacyPage() {
             <li><strong>Usage logs:</strong> Anonymized and aggregated after 12 months.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-10">7. Your Rights</h2>
+          <h2 className="font-heading text-2xl font-bold text-gray-900 mt-10">7. Your Rights</h2>
           <p className="text-gray-600 leading-relaxed">Under the DPDPA 2023, you have the right to:</p>
           <ul className="text-gray-600 space-y-2">
             <li><strong>Access:</strong> Request a summary of the personal data we hold about you.</li>
@@ -98,14 +98,14 @@ export default function PrivacyPage() {
             <li><strong>Grievance Redressal:</strong> Lodge a complaint with our Data Protection Officer or the Data Protection Board of India.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-10">8. Cookies and Tracking</h2>
+          <h2 className="font-heading text-2xl font-bold text-gray-900 mt-10">8. Cookies and Tracking</h2>
           <p className="text-gray-600 leading-relaxed">
             We use essential cookies for platform functionality and analytics cookies (with your consent) to
             improve user experience. You can manage cookie preferences through your browser settings.
             We do not sell or share cookie data with third-party advertisers.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-10">9. Third-Party Services</h2>
+          <h2 className="font-heading text-2xl font-bold text-gray-900 mt-10">9. Third-Party Services</h2>
           <p className="text-gray-600 leading-relaxed">We use the following third-party services that may process your data:</p>
           <ul className="text-gray-600 space-y-2">
             <li><strong>Razorpay:</strong> Payment processing (PCI-DSS compliant)</li>
@@ -114,14 +114,14 @@ export default function PrivacyPage() {
             <li><strong>Postmark / Email Service:</strong> Transactional email delivery</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-10">10. Changes to This Policy</h2>
+          <h2 className="font-heading text-2xl font-bold text-gray-900 mt-10">10. Changes to This Policy</h2>
           <p className="text-gray-600 leading-relaxed">
             We may update this Privacy Policy from time to time. We will notify you of material
             changes via email or a prominent notice on our platform at least 30 days before the
             changes take effect.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-10">11. Contact Us</h2>
+          <h2 className="font-heading text-2xl font-bold text-gray-900 mt-10">11. Contact Us</h2>
           <p className="text-gray-600 leading-relaxed">
             For privacy-related inquiries, data access requests, or grievances:
           </p>

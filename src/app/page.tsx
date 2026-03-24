@@ -1,38 +1,68 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import HeroSection from "@/components/sections/HeroSection";
 import StatsBar from "@/components/sections/StatsBar";
 import ProblemSection from "@/components/sections/ProblemSection";
 import FeaturesGrid from "@/components/sections/FeaturesGrid";
 import HowItWorksSteps from "@/components/sections/HowItWorksSteps";
-import DashboardMockup from "@/components/graphics/DashboardMockup";
-import TestimonialCards from "@/components/sections/TestimonialCards";
-import PricingCards from "@/components/sections/PricingCards";
-import CompareTable from "@/components/sections/CompareTable";
-import CTASection from "@/components/sections/CTASection";
 import Section from "@/components/ui/Section";
+import SectionHead from "@/components/ui/SectionHead";
+import { ProductJsonLd } from "@/components/seo/JsonLd";
+
+// Lazy-load below-fold heavy components to reduce initial JS bundle
+const DashboardMockup = dynamic(() => import("@/components/graphics/DashboardMockup"), { ssr: true });
+const TestimonialCards = dynamic(() => import("@/components/sections/TestimonialCards"), { ssr: true });
+const PricingCards = dynamic(() => import("@/components/sections/PricingCards"), { ssr: true });
+const CompareTable = dynamic(() => import("@/components/sections/CompareTable"), { ssr: true });
+const CTASection = dynamic(() => import("@/components/sections/CTASection"), { ssr: true });
 
 export const metadata: Metadata = {
   title: "LeadHunterIQ — AI Signal Intelligence for Indian IT Staffing",
   description:
-    "Detect GCC expansions, score leads with AI, and close more staffing deals. Built for Indian IT staffing agencies. Starts at ₹2,999/month.",
+    "Monitor 51 data sources, score leads across 49 signals, and deliver dossier-grade intelligence 90 days before your competitors. Built for Indian IT staffing agencies. Starts at ₹19,999/month.",
 };
 
 export default function Home() {
   return (
     <>
+      <ProductJsonLd />
+      {/* Section 1: Hero (DARK) */}
       <HeroSection />
+
+      {/* Section 2: Stats Counter Bar (overlapping hero) */}
       <StatsBar />
+
+      {/* Section 3: Problem Band (WHITE with red accents) */}
       <ProblemSection />
+
+      {/* Section 4: Solution Overview (LIGHT) */}
       <FeaturesGrid />
+
+      {/* Section 5: How It Works Preview (WHITE) */}
       <HowItWorksSteps />
-      <Section bg="navy-radial" overlay>
-        <div className="py-8">
-          <DashboardMockup />
-        </div>
+
+      {/* Section 6: Live Dashboard Mockup (DARK) */}
+      <Section bg="navy-radial" overlay gridPattern>
+        <SectionHead
+          badge="Live Intelligence"
+          badgeVariant="emerald"
+          title="See what your dashboard looks like"
+          description="Real-time signal feed with TALPRO-IQ scores, tier classifications, and one-click actions."
+          light
+        />
+        <DashboardMockup />
       </Section>
+
+      {/* Section 7: Social Proof (WHITE) */}
       <TestimonialCards count={3} />
+
+      {/* Section 8: Pricing Preview (LIGHT) */}
       <PricingCards preview />
+
+      {/* Section 9: Comparison Snapshot (WHITE) */}
       <CompareTable rows={5} />
+
+      {/* Section 10: CTA Band (DARK) */}
       <CTASection />
     </>
   );

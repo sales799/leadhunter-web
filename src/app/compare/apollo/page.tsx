@@ -65,7 +65,7 @@ const features: {
   { feature: "Email sequences", leadhunter: "Via CRM", apollo: true },
   { feature: "Free tier available", leadhunter: "14-day trial", apollo: "Yes (limited)" },
   { feature: "Contact accuracy (India)", leadhunter: "73%+", apollo: "~35%" },
-  { feature: "Starting price (paid)", leadhunter: "\u20B92,999/mo", apollo: "$49/mo" },
+  { feature: "Starting price (paid)", leadhunter: "\u20B919,999/mo", apollo: "$49/mo" },
   { feature: "CRM integration", leadhunter: true, apollo: true },
   { feature: "API access", leadhunter: true, apollo: true },
   { feature: "DPDPA 2023 compliance", leadhunter: true, apollo: false },
@@ -99,7 +99,7 @@ const leadhunterWins = [
   {
     title: "India data accuracy",
     description:
-      "Apollo's India data is community-sourced and frequently outdated. LeadHunterIQ uses proprietary waterfall enrichment across RocketReach, Snov.io, LinkedIn, and MCA filings for 73%+ Indian mobile accuracy.",
+      "Apollo's India data is community-sourced and frequently outdated. LeadHunterIQ uses proprietary waterfall enrichment across LinkedIn, Snov.io, RocketReach, Hunter.io, and Opus AI for 73%+ Indian mobile accuracy.",
   },
   {
     title: "Staffing-specific intelligence",
@@ -332,12 +332,12 @@ export default function CompareApolloPage() {
               </h3>
               <div className="mt-4">
                 <span className="text-4xl font-extrabold text-gray-900">
-                  {"\u20B9"}2,999
+                  {"\u20B9"}19,999
                 </span>
                 <span className="text-gray-500">/month</span>
               </div>
               <p className="mt-2 text-sm text-gray-400">
-                {"\u20B9"}36K &ndash; {"\u20B9"}1.2L/year depending on plan
+                {"\u20B9"}2.4L &ndash; {"\u20B9"}12L/year depending on plan
               </p>
               <ul className="mt-6 space-y-3">
                 {[
