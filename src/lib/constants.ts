@@ -389,5 +389,6 @@ export const NAV_LINKS = {
     { name: "Blog", href: "/blog" },
     { name: "Customer Stories", href: "/customers" },
     { name: "Guides & Templates", href: "/resources" },
+    { name: "Security & Compliance", href: "/security" },
   ],
 };

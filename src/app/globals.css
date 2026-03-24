@@ -24,6 +24,12 @@
     background: radial-gradient(ellipse at 60% 40%, rgba(37,99,235,0.15) 0%, transparent 60%),
                 linear-gradient(135deg, #060F1F 0%, #0B1D3A 40%, #162D50 100%);
   }
+  /* Animated gradient for hero — inspired by Stripe's flowing gradient */
+  .gradient-hero-animated {
+    background: linear-gradient(-45deg, #060F1F, #0B1D3A, #162D50, #0B1D3A, #060F1F);
+    background-size: 400% 400%;
+    animation: hero-gradient 15s ease infinite;
+  }
   .glass-card {
     @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl;
   }
@@ -114,4 +120,19 @@
 @keyframes shimmer {
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
+}
+
+@keyframes hero-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Signal ticker horizontal scroll */
+.animate-ticker {
+  animation: ticker 40s linear infinite;
+}
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
