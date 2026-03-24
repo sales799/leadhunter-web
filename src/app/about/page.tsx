@@ -93,6 +93,38 @@ export default function AboutPage() {
         </FadeIn>
       </Section>
 
+      {/* Market opportunity */}
+      <Section bg="navy-radial" overlay gridPattern>
+        <SectionHead
+          badge="Market Opportunity"
+          badgeVariant="white"
+          title="The numbers behind the opportunity"
+          light
+        />
+        <div className="grid grid-cols-2 gap-6 md:grid-cols-4 max-w-4xl mx-auto">
+          {[
+            { value: "$64.6B", label: "GCC market (2024), projected $100B by 2030", source: "EY India, Sep 2025", color: "text-blue-400" },
+            { value: "$5.6B", label: "India IT staffing market with 20-30% growth FY26", source: "ISG / NASSCOM", color: "text-emerald-400" },
+            { value: "$3.48B", label: "Indian startup funding in Q1 2026 alone", source: "Tracxn, Mar 2026", color: "text-gold-400" },
+            { value: "23/50", label: "Top 50 life sciences companies with Indian GCCs", source: "EY Analysis, 2025", color: "text-blue-400" },
+          ].map((stat) => (
+            <FadeIn key={stat.label}>
+              <div className="text-center">
+                <p className={`font-mono text-3xl font-bold ${stat.color} lg:text-4xl`}>
+                  {stat.value}
+                </p>
+                <p className="mt-2 text-sm text-gray-400 font-body">
+                  {stat.label}
+                </p>
+                <p className="mt-1 text-xs text-gray-600 font-body">
+                  {stat.source}
+                </p>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+      </Section>
+
       <Section bg="gray">
         <div className="mx-auto max-w-3xl">
           <FadeIn>
