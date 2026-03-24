@@ -12,6 +12,7 @@ import { ProductJsonLd } from "@/components/seo/JsonLd";
 
 // Lazy-load below-fold heavy components to reduce initial JS bundle
 const VideoSection = dynamic(() => import("@/components/sections/VideoSection"), { ssr: true });
+const BeforeAfterSlider = dynamic(() => import("@/components/sections/BeforeAfterSlider"), { ssr: true });
 const DashboardMockup = dynamic(() => import("@/components/graphics/DashboardMockup"), { ssr: true });
 const TestimonialCards = dynamic(() => import("@/components/sections/TestimonialCards"), { ssr: true });
 const PricingCards = dynamic(() => import("@/components/sections/PricingCards"), { ssr: true });
@@ -39,6 +40,9 @@ export default function Home() {
 
       {/* Section 3: Problem Band (WHITE with red accents) */}
       <ProblemSection />
+
+      {/* Section 3.5: Before vs After comparison */}
+      <BeforeAfterSlider />
 
       {/* Section 4: Solution Overview (LIGHT) */}
       <FeaturesGrid />

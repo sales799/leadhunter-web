@@ -7,6 +7,7 @@ import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import Badge from "@/components/ui/Badge";
 import CTASection from "@/components/sections/CTASection";
+import IndiaCoverageMap from "@/components/graphics/IndiaCoverageMap";
 
 export const metadata: Metadata = {
   title: "India-First Data Layer",
@@ -301,6 +302,17 @@ export default function IndiaDataPage() {
             </FadeIn>
           ))}
         </div>
+      </Section>
+
+      {/* Coverage Map */}
+      <Section bg="white">
+        <SectionHead
+          badge="Coverage"
+          badgeVariant="emerald"
+          title="10 cities. 51 sources. Every signal."
+          description="LeadHunterIQ provides deep data coverage across India's top IT and business hubs."
+        />
+        <IndiaCoverageMap />
       </Section>
 
       <CTASection

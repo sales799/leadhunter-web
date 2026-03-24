@@ -41,7 +41,7 @@ export default function StickyTabs({ tabs }: { tabs: Tab[] }) {
   }
 
   return (
-    <div className="sticky top-[72px] z-30 border-b border-gray-200 bg-white/95 backdrop-blur-md">
+    <div className="sticky top-[72px] z-30 border-b border-gray-200 dark:border-gray-700 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <nav
           className="flex gap-1 overflow-x-auto py-2 scrollbar-hide"
@@ -54,7 +54,7 @@ export default function StickyTabs({ tabs }: { tabs: Tab[] }) {
               className={`flex-shrink-0 rounded-lg px-4 py-2.5 text-sm font-heading font-semibold transition-all duration-200 ${
                 activeTab === tab.id
                   ? "bg-blue-600 text-white shadow-sm"
-                  : "text-gray-500 hover:bg-gray-100 hover:text-gray-900"
+                  : "text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white"
               }`}
             >
               {tab.label}

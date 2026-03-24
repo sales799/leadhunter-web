@@ -155,7 +155,7 @@ export default function FeaturesPage() {
                     <Badge variant={feat.badgeVariant}>{feat.badge}</Badge>
                   )}
                 </div>
-                <h3 className="text-2xl font-heading font-bold text-gray-900 lg:text-3xl">
+                <h3 className="text-2xl font-heading font-bold text-gray-900 dark:text-white lg:text-3xl">
                   {feat.title}
                 </h3>
                 <p className="mt-4 text-gray-500 leading-relaxed font-body">
