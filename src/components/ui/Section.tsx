@@ -1,7 +1,7 @@
 const bgs = {
-  white: "bg-white",
-  gray: "bg-gray-50",
-  "light-gray": "bg-gray-100",
+  white: "bg-white dark:bg-gray-900",
+  gray: "bg-gray-50 dark:bg-gray-800",
+  "light-gray": "bg-gray-100 dark:bg-gray-800",
   navy: "gradient-navy text-white",
   "navy-radial": "gradient-navy-radial text-white",
 };

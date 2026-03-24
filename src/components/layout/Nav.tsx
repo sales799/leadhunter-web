@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { NAV_LINKS } from "@/lib/constants";
 import Button from "@/components/ui/Button";
+import ThemeToggle from "@/components/theme/ThemeToggle";
 
 function MegaDropdown({
   children,
@@ -101,7 +102,7 @@ export default function Nav() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100"
+          ? "bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-sm border-b border-gray-100 dark:border-gray-800"
           : "bg-transparent"
       }`}
     >
@@ -124,7 +125,7 @@ export default function Nav() {
           </div>
           <span
             className={`text-lg font-heading font-extrabold tracking-tight ${
-              scrolled ? "text-gray-900" : "text-white"
+              scrolled ? "text-gray-900 dark:text-white" : "text-white"
             }`}
           >
             LeadHunterIQ
@@ -303,10 +304,11 @@ export default function Nav() {
 
         {/* CTA buttons */}
         <div className="hidden items-center gap-3 lg:flex">
+          <ThemeToggle />
           <Link
             href="/demo"
             className={`text-sm font-medium font-body ${
-              scrolled ? "text-gray-500" : "text-white/70"
+              scrolled ? "text-gray-500 dark:text-gray-400" : "text-white/70"
             } hover:underline`}
           >
             Login
@@ -319,7 +321,7 @@ export default function Nav() {
         {/* Mobile hamburger */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className={`lg:hidden p-2 ${scrolled ? "text-gray-900" : "text-white"}`}
+          className={`lg:hidden p-2 ${scrolled ? "text-gray-900 dark:text-white" : "text-white"}`}
           aria-label="Toggle menu"
         >
           <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

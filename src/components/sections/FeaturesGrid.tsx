@@ -25,12 +25,12 @@ export default function FeaturesGrid() {
         {/* Hero feature cards — larger, more prominent */}
         {heroFeatures.map((f, i) => (
           <FadeIn key={f.title} delay={i * 0.1}>
-            <div className="group rounded-2xl border border-gray-200 bg-white p-8 lg:p-10 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-blue-500/30 h-full relative overflow-hidden">
+            <div className="group gradient-border rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-8 lg:p-10 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl h-full relative overflow-hidden">
               {/* Subtle gradient accent at top */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-emerald-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity" />
               <FeatureIcon icon={f.icon} />
               <div className="flex items-center gap-2 mt-1">
-                <h3 className="text-xl font-heading font-bold text-gray-900">
+                <h3 className="text-xl font-heading font-bold text-gray-900 dark:text-white">
                   {f.title}
                 </h3>
                 {f.tag && f.tagColor && (
@@ -65,10 +65,10 @@ export default function FeaturesGrid() {
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mt-6">
         {standardFeatures.map((f, i) => (
           <FadeIn key={f.title} delay={(i + 2) * 0.1}>
-            <div className="group rounded-2xl border border-gray-200 bg-white p-6 lg:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-blue-500/30 h-full">
+            <div className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 lg:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-blue-500/30 h-full">
               <FeatureIcon icon={f.icon} />
               <div className="flex items-center gap-2 mt-1">
-                <h3 className="text-base font-heading font-bold text-gray-900">
+                <h3 className="text-base font-heading font-bold text-gray-900 dark:text-white">
                   {f.title}
                 </h3>
                 {f.tag && f.tagColor && (
