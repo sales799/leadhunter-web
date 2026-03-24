@@ -11,7 +11,7 @@ import { FAQS } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "LeadHunterIQ starts at ₹2,999/month — that's ₹99/day for enterprise-grade signal intelligence. 14-day free trial, no credit card required.",
+    "LeadHunterIQ starts at ₹24,999/month for 30 confirmed, dossier-grade leads. Every lead is SAV-verified across 7 gates. 14-day free trial.",
 };
 
 export default function PricingPage() {
@@ -19,8 +19,8 @@ export default function PricingPage() {
     <>
       <PageHero
         badge="Pricing"
-        title="Starts at ₹99/day. Seriously."
-        description="Enterprise-grade signal intelligence at a fraction of what global tools charge. Every plan includes a 14-day free trial."
+        title="₹833/day for confirmed, dossier-grade leads."
+        description="One converted lead pays for 5 years of LeadHunterIQ. Every lead is SAV-verified, AI-scored, and delivered with ready-to-send outreach. 14-day free trial."
         breadcrumbs={[{ name: "Pricing", href: "/pricing" }]}
       />
 

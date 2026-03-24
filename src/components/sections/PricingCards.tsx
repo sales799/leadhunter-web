@@ -17,8 +17,8 @@ export default function PricingCards({ preview = false }: { preview?: boolean })
     <Section bg={preview ? "gray" : "white"}>
       <SectionHead
         badge="Pricing"
-        title={preview ? "Simple, transparent pricing" : "Starts at ₹99/day. Seriously."}
-        description="Every plan includes a 14-day free trial. No credit card required."
+        title={preview ? "Simple, transparent pricing" : "Confirmed leads, not contacts."}
+        description="Every lead passes our 7-gate SAV verification. You pay for dossier-grade intelligence — not raw data. 14-day free trial."
       />
 
       {/* Toggle */}
