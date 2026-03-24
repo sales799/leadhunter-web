@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import HeroSection from "@/components/sections/HeroSection";
 import StatsBar from "@/components/sections/StatsBar";
+import SignalTicker from "@/components/sections/SignalTicker";
 import ProblemSection from "@/components/sections/ProblemSection";
 import FeaturesGrid from "@/components/sections/FeaturesGrid";
 import HowItWorksSteps from "@/components/sections/HowItWorksSteps";
@@ -31,6 +32,9 @@ export default function Home() {
 
       {/* Section 2: Stats Counter Bar (overlapping hero) */}
       <StatsBar />
+
+      {/* Section 2.5: Live Signal Ticker */}
+      <SignalTicker />
 
       {/* Section 3: Problem Band (WHITE with red accents) */}
       <ProblemSection />

@@ -41,6 +41,7 @@ const columns = [
       { name: "Privacy Policy", href: "/privacy" },
       { name: "Terms of Service", href: "/terms" },
       { name: "Refund Policy", href: "/refund" },
+      { name: "Security", href: "/security" },
     ],
   },
 ];
