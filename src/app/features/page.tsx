@@ -91,7 +91,7 @@ const deepDive = [
     description:
       "Sonnet 4.6 generates 5-stage outreach sequences customized for 6 persona variants. Each message is crafted for the specific decision-maker type, company context, and signal that triggered the lead.",
     bullets: [
-      "5-stage outreach sequences per lead",
+      "5-stage sequences: Intro/Pilot, Differentiators, Proof/Metrics, Plan/Commercials, Nudge/Escalation",
       "6 persona variants: Site Lead, TA, HR, CTO, CFO, GM",
       "3 delivery formats: Dashboard, Email digest, WhatsApp/Slack",
     ],
@@ -107,7 +107,7 @@ const deepDive = [
     description:
       "Every confirmed lead comes with a 6-component intelligence package — not just a name and email, but a complete briefing your BD team can use to walk into any pitch fully prepared.",
     bullets: [
-      "6-component dossier: company profile, signal analysis, contacts, outreach, compliance, timing",
+      "6 components: Intelligence Brief, TALPRO-IQ Scorecard, Decision-Maker Profiles, Outreach Sequences, JD Bundle, Timing Intelligence",
       "Client-ready format with one-click export",
       "CRM sync: auto-create deals in HubSpot, Zoho, or via API",
     ],

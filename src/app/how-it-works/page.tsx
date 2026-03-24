@@ -93,7 +93,7 @@ const layers = [
     description:
       "Sonnet 4.6 generates 5-stage outreach sequences customized for 6 persona variants. Each message is crafted for the specific decision-maker type, company context, and signal that triggered the lead.",
     details: [
-      "5-stage outreach sequences per lead",
+      "5-stage sequences: Intro/Pilot, Differentiators, Proof/Metrics, Plan/Commercials, Nudge/Escalation",
       "6 persona variants: Site Lead, TA, HR, CTO, CFO, GM",
       "Context-aware messaging based on trigger signal",
       "A/B tested templates with proven conversion rates",
@@ -110,12 +110,12 @@ const layers = [
     description:
       "Every confirmed lead comes with a 6-component intelligence dossier — not just a name and email, but a complete briefing your BD team can use to walk into any pitch fully prepared.",
     details: [
-      "Company profile with MCA/GSTIN verification",
-      "Signal analysis with source attribution",
-      "Decision-maker contacts with direct channels",
-      "Ready-to-send outreach sequences",
-      "Compliance status (PF, PT, TDS, ESIC)",
-      "Timing analysis and engagement window",
+      "Company Intelligence Brief (MCA/GSTIN verified, industry analysis)",
+      "TALPRO-IQ Scorecard (full 5-category breakdown with justifications)",
+      "Decision-Maker Profiles (3-5 contacts with verified channels)",
+      "Ready-to-Send Outreach (5-stage sequences, 6 persona variants)",
+      "JD Bundle (3-5 role templates matched to detected tech stack)",
+      "Timing Intelligence (win probability, engagement window, competitor density)",
     ],
     badge: "6-Component",
   },
