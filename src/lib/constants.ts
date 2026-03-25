@@ -396,3 +396,13 @@ export const NAV_LINKS = {
     { name: "Security & Compliance", href: "/security" },
   ],
 };
+
+// Cal.com Booking Configuration
+export const CAL_CONFIG = {
+  username: "talpro",
+  eventSlug: "leadhunteriq-demo",
+  duration: 15,
+  bookingUrl: "https://cal.com/talpro/leadhunteriq-demo",
+  brandColor: "#2563EB",
+  theme: "light" as const,
+};
