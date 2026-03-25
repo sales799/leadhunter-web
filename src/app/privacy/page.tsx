@@ -109,19 +109,35 @@ export default function PrivacyPage() {
           <p className="text-gray-600 leading-relaxed">We use the following third-party services that may process your data:</p>
           <ul className="text-gray-600 space-y-2">
             <li><strong>Razorpay:</strong> Payment processing (PCI-DSS compliant)</li>
-            <li><strong>Google Analytics:</strong> Website analytics (anonymized IP)</li>
+            <li><strong>Google Analytics 4:</strong> Website analytics and conversion tracking (consent-based loading)</li>
+            <li><strong>LinkedIn Insight Tag:</strong> Conversion tracking and audience insights for LinkedIn advertising (consent-based)</li>
+            <li><strong>Twitter/X Pixel:</strong> Conversion tracking for Twitter/X advertising (consent-based)</li>
             <li><strong>AWS / Cloud Infrastructure:</strong> Data hosting and storage</li>
             <li><strong>Postmark / Email Service:</strong> Transactional email delivery</li>
           </ul>
 
-          <h2 className="font-heading text-2xl font-bold text-gray-900 mt-10">10. Changes to This Policy</h2>
+          <h2 className="font-heading text-2xl font-bold text-gray-900 mt-10">10. Social Media and Tracking Technologies</h2>
+          <p className="text-gray-600 leading-relaxed">
+            We maintain a presence on social media platforms including LinkedIn, Twitter/X, and YouTube.
+            When you interact with our social media profiles or follow links from our social posts to
+            our website, the following data practices apply:
+          </p>
+          <ul className="text-gray-600 space-y-2">
+            <li><strong>UTM Parameters:</strong> Links shared from our social media posts may contain UTM tracking parameters (source, medium, campaign). These help us understand which content drives visits to our site. UTM data is stored in your browser session and included with form submissions to measure content effectiveness. This data is not personally identifiable on its own.</li>
+            <li><strong>LinkedIn Insight Tag:</strong> With your consent, we use the LinkedIn Insight Tag to measure the effectiveness of our LinkedIn campaigns and understand our website audience. LinkedIn may use this data according to their own privacy policy. You can opt out at <a href="https://www.linkedin.com/psettings/guest-controls/retargeting-opt-out" className="underline text-blue-600">LinkedIn Ad Preferences</a>.</li>
+            <li><strong>Twitter/X Pixel:</strong> With your consent, we use the Twitter/X conversion tracking pixel to measure the effectiveness of our Twitter campaigns. You can opt out in your <a href="https://twitter.com/settings/privacy_and_safety" className="underline text-blue-600">Twitter Privacy Settings</a>.</li>
+            <li><strong>Newsletter Data:</strong> When you subscribe to The Signal Report or our newsletter, we collect your email address and the source of your subscription (which page or social post you signed up from). Email addresses are stored securely and used solely for sending our newsletter. Every email includes an unsubscribe link. You may request deletion of your data at any time.</li>
+            <li><strong>Consent Management:</strong> All analytics and tracking technologies on our website are consent-based. On your first visit, you will be presented with a cookie consent banner. Analytics scripts only load after you explicitly grant consent. You can change your preference at any time by clearing your browser&apos;s local storage.</li>
+          </ul>
+
+          <h2 className="font-heading text-2xl font-bold text-gray-900 mt-10">11. Changes to This Policy</h2>
           <p className="text-gray-600 leading-relaxed">
             We may update this Privacy Policy from time to time. We will notify you of material
             changes via email or a prominent notice on our platform at least 30 days before the
             changes take effect.
           </p>
 
-          <h2 className="font-heading text-2xl font-bold text-gray-900 mt-10">11. Contact Us</h2>
+          <h2 className="font-heading text-2xl font-bold text-gray-900 mt-10">12. Contact Us</h2>
           <p className="text-gray-600 leading-relaxed">
             For privacy-related inquiries, data access requests, or grievances:
           </p>

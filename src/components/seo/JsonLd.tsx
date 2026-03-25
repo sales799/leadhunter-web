@@ -40,7 +40,7 @@ export function OrganizationJsonLd() {
       areaServed: "IN",
       availableLanguage: ["English", "Hindi"],
     },
-    sameAs: [SITE.linkedin, SITE.twitter],
+    sameAs: [SITE.linkedin, SITE.twitter, SITE.youtube],
     taxID: SITE.gstin,
   };
 
@@ -81,7 +81,7 @@ export function ProductJsonLd() {
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
     description:
-      "AI-powered signal intelligence platform for Indian IT staffing firms. Monitors 51 data sources, scores across 49 signals, and delivers dossier-grade intelligence.",
+      "AI-powered signal intelligence platform for Indian IT staffing firms. Monitors 50+ data sources, scores with proprietary AI signals, and delivers dossier-grade intelligence.",
     offers: [
       {
         "@type": "Offer",

@@ -5,7 +5,7 @@ import PageHero from "@/components/layout/PageHero";
 import Section from "@/components/ui/Section";
 import Badge from "@/components/ui/Badge";
 import Card from "@/components/ui/Card";
-import Button from "@/components/ui/Button";
+import NewsletterSignup from "@/components/sections/NewsletterSignup";
 
 export const metadata: Metadata = {
   title: "Blog | LeadHunterIQ",
@@ -81,27 +81,12 @@ export default function BlogPage() {
 
       {/* Newsletter signup */}
       <Section bg="gray">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-heading text-3xl font-extrabold tracking-heading text-gray-900 sm:text-4xl">
-            Get staffing intelligence in your inbox
-          </h2>
-          <p className="mt-4 text-lg text-gray-500">
-            Weekly insights on GCC expansions, hiring signals, and AI-powered
-            lead generation for Indian IT staffing firms.
-          </p>
-          <form className="mt-8 flex max-w-md mx-auto gap-3">
-            <input
-              type="email"
-              placeholder="Enter your work email"
-              className="flex-1 rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-              required
-            />
-            <Button type="submit">Subscribe</Button>
-          </form>
-          <p className="mt-3 text-sm text-gray-400">
-            No spam. Unsubscribe anytime.
-          </p>
-        </div>
+        <NewsletterSignup
+          source="blog"
+          variant="card"
+          heading="Get staffing intelligence in your inbox"
+          description="Weekly insights on GCC expansions, hiring signals, and AI-powered lead generation for Indian IT staffing firms."
+        />
       </Section>
     </>
   );

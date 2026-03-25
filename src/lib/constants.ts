@@ -8,15 +8,16 @@ export const SITE = {
   whatsapp: "https://wa.me/919845000000",
   address: "Bengaluru, Karnataka, India",
   gstin: "29AAHCT9485A1ZX",
-  linkedin: "https://linkedin.com/company/talpro-india",
-  twitter: "https://twitter.com/talproindia",
+  linkedin: "https://linkedin.com/company/leadhunteriq",
+  twitter: "https://x.com/LeadHunterIQ",
+  youtube: "https://youtube.com/@LeadHunterIQ",
 };
 
 export const STATS = [
-  { value: "51", label: "Data Sources", numericValue: 51 },
-  { value: "49", label: "AI Signals", numericValue: 49 },
-  { value: "7", label: "Verification Gates", numericValue: 7 },
-  { value: "170", label: "Cost Per Lead", prefix: "₹", numericValue: 170 },
+  { value: "50+", label: "Intelligence Sources", numericValue: 50 },
+  { value: "100", label: "Point AI Score", numericValue: 100 },
+  { value: "90", label: "Days Early", numericValue: 90 },
+  { value: "24/7", label: "Signal Monitoring", numericValue: 24 },
 ];
 
 export const PROBLEMS = [
@@ -28,7 +29,7 @@ export const PROBLEMS = [
   {
     title: "Global tools don't work here",
     description:
-      "ZoomInfo doesn't know what an MCA filing is. Apollo can't read EPFO registrations. Your Indian market needs Indian intelligence.",
+      "International databases miss the data that matters in India. Your market needs intelligence built for Indian business signals.",
   },
   {
     title: "₹0 spent on timing",
@@ -40,42 +41,48 @@ export const PROBLEMS = [
 export const FEATURES = [
   {
     title: "Signal Discovery Engine",
-    description: "51 sources. 15 industries. Every city. Every day.",
+    description:
+      "Proprietary AI scans dozens of intelligence sources across every major Indian industry and city — 24/7.",
     tag: null,
     tagColor: null,
     icon: "gcc" as const,
   },
   {
     title: "TALPRO-IQ Scoring",
-    description: "49 signals. 100-point scale. Zero guesswork.",
+    description:
+      "Our proprietary AI scores every signal on a 100-point scale. Zero guesswork.",
     tag: null,
     tagColor: null,
     icon: "brain" as const,
   },
   {
     title: "SAV Verification",
-    description: "7 gates. Zero junk leads. Ever.",
-    tag: "7-Gate",
+    description:
+      "Multi-layer verification framework. Zero junk leads. Guaranteed.",
+    tag: "Verified",
     tagColor: "emerald" as const,
     icon: "shield" as const,
   },
   {
     title: "Contact Enrichment",
-    description: "5-waterfall pipeline. Verified emails. Decision-makers only.",
+    description:
+      "Proprietary enrichment pipeline. Verified emails and Indian mobile numbers. Decision-makers only.",
     tag: null,
     tagColor: null,
     icon: "india" as const,
   },
   {
     title: "AI Outreach Engine",
-    description: "5-stage sequences. 6 persona variants. Ready to send.",
+    description:
+      "Multi-stage personalized sequences. Multiple persona variants. Ready to send.",
     tag: null,
     tagColor: null,
     icon: "whatsapp" as const,
   },
   {
     title: "Intelligence Dossier",
-    description: "6-component reports. Dossier-grade. Client-ready.",
+    description:
+      "Complete intelligence packages. Dossier-grade. Client-ready.",
     tag: "Premium",
     tagColor: "gold" as const,
     icon: "crm" as const,
@@ -87,14 +94,14 @@ export const STEPS = [
     number: "01",
     title: "Detect",
     description:
-      "51 sources feed our AI brain 24/7 — ROC filings, funding rounds, job postings, GCC registrations, STPI data, and commercial real estate.",
+      "Our proprietary intelligence engine scans dozens of sources 24/7 — government filings, funding databases, hiring signals, and real estate moves across India.",
     color: "blue" as const,
   },
   {
     number: "02",
     title: "Score & Verify",
     description:
-      "49 signals + 7 gates = zero junk. TALPRO-IQ scores each signal 0-100 and enriches with verified contacts.",
+      "Our TALPRO-IQ AI engine scores each signal on a 100-point scale and runs it through multi-layer verification. Only confirmed leads reach you.",
     color: "emerald" as const,
   },
   {
@@ -114,7 +121,7 @@ export const DASHBOARD_SIGNALS = [
     score: 94,
     tier: "ULTRA-HOT" as const,
     time: "2h ago",
-    detail: "STPI registration filed, 300-seat facility",
+    detail: "Major tech center expansion detected",
   },
   {
     company: "Stryker",
@@ -123,7 +130,7 @@ export const DASHBOARD_SIGNALS = [
     score: 87,
     tier: "HOT" as const,
     time: "4h ago",
-    detail: "200+ engineering roles, new campus",
+    detail: "200+ engineering roles detected",
   },
   {
     company: "Rapid7 India",
@@ -132,7 +139,7 @@ export const DASHBOARD_SIGNALS = [
     score: 78,
     tier: "HOT" as const,
     time: "6h ago",
-    detail: "150 cybersecurity roles, Pune",
+    detail: "Large cybersecurity hiring wave, Pune",
   },
   {
     company: "Series B Startup",
@@ -141,7 +148,7 @@ export const DASHBOARD_SIGNALS = [
     score: 72,
     tier: "HOT" as const,
     time: "8h ago",
-    detail: "$25M round closed, scaling India team",
+    detail: "Post-funding India team scale-up",
   },
 ];
 
@@ -157,15 +164,14 @@ export const PRICING = {
     features: [
       "40 confirmed leads/month",
       "2 user seats",
-      "3 outreach stages (Stages 1-3)",
+      "Multi-stage outreach sequences",
       "Email alerts",
       "CSV export",
-      "Basic TALPRO-IQ scoring",
+      "TALPRO-IQ AI scoring",
       "Email support",
     ],
     cta: "Start free trial",
     popular: false,
-    pricePerLead: "₹500",
   },
   strategist: {
     name: "Strategist",
@@ -178,7 +184,7 @@ export const PRICING = {
     features: [
       "150 confirmed leads/month",
       "5 user seats",
-      "All 5 outreach stages",
+      "Full outreach sequences",
       "Email + WhatsApp alerts",
       "JD bundles included",
       "GCC Tracker access",
@@ -187,7 +193,6 @@ export const PRICING = {
     ],
     cta: "Start free trial",
     popular: true,
-    pricePerLead: "₹333",
   },
   command: {
     name: "Command",
@@ -200,7 +205,7 @@ export const PRICING = {
     features: [
       "400 confirmed leads/month",
       "15 user seats",
-      "All 5 outreach stages",
+      "Full outreach sequences",
       "All alerts + Slack + webhooks",
       "Phone verification (human verified)",
       "48-hour lead exclusivity",
@@ -210,13 +215,12 @@ export const PRICING = {
     ],
     cta: "Talk to sales",
     popular: false,
-    pricePerLead: "₹300",
   },
 };
 
 export const COMPARISON = [
   {
-    feature: "India-specific data (MCA, EPFO, STPI)",
+    feature: "India-specific intelligence data",
     leadhunter: true,
     others: false,
   },
@@ -226,7 +230,7 @@ export const COMPARISON = [
     others: "Contact data only",
   },
   {
-    feature: "7-gate verification",
+    feature: "Multi-layer lead verification",
     leadhunter: "Zero junk guarantee",
     others: "Unverified lists",
   },
@@ -237,7 +241,7 @@ export const COMPARISON = [
   },
   {
     feature: "Ready-to-send outreach",
-    leadhunter: "5-stage, 6 personas",
+    leadhunter: "Multi-stage, persona-aware",
     others: "DIY",
   },
   {
@@ -246,7 +250,7 @@ export const COMPARISON = [
     others: false,
   },
   {
-    feature: "TALPRO-IQ AI scoring (49 signals)",
+    feature: "Proprietary TALPRO-IQ AI scoring",
     leadhunter: true,
     others: false,
   },
@@ -306,12 +310,12 @@ export const FAQS = [
   {
     question: "How is LeadHunterIQ different from Apollo or ZoomInfo?",
     answer:
-      "Apollo and ZoomInfo are global contact databases. LeadHunterIQ is signal intelligence — we detect events (GCC expansions, funding rounds, hiring surges) that indicate buying intent, then enrich with India-specific data like mobile numbers, compliance status, and MCA filings. We monitor 51 data sources and score across 49 signals.",
+      "Apollo and ZoomInfo are global contact databases. LeadHunterIQ is signal intelligence — we detect events (GCC expansions, funding rounds, hiring surges) that indicate buying intent, then enrich with India-specific data like mobile numbers and compliance status. Our proprietary engine monitors dozens of sources and scores leads using our TALPRO-IQ AI.",
   },
   {
     question: "What exactly is a 'confirmed lead'?",
     answer:
-      "A confirmed lead has passed all 7 gates of our SAV (Signal Authenticity Verification) framework: multi-source corroboration, entity verification via MCA/GSTIN, temporal freshness checks, contact deliverability, decision-maker confirmation, TALPRO-IQ score threshold (70+), and duplicate/conflict prevention.",
+      "A confirmed lead has passed all layers of our proprietary SAV (Signal Authenticity Verification) framework — including multi-source corroboration, entity verification, temporal freshness, contact deliverability, decision-maker confirmation, AI score threshold, and duplicate prevention. Only leads that clear every layer reach your dashboard.",
   },
   {
     question: "Can I try before paying?",
@@ -326,7 +330,7 @@ export const FAQS = [
   {
     question: "How do you get Indian mobile numbers?",
     answer:
-      "We use a 5-waterfall enrichment pipeline: LinkedIn Sales Navigator, Snov.io, RocketReach, Hunter.io, and Opus AI extraction. Every contact is verified with bounce rate < 2% before delivery.",
+      "We use a proprietary multi-source enrichment pipeline that combines several industry-leading data providers with our own AI extraction layer. Every contact is verified for deliverability before reaching your inbox.",
   },
   {
     question: "What's the setup fee?",
@@ -356,12 +360,12 @@ export const NAV_LINKS = {
       {
         name: "AI Lead Scoring",
         href: "/solutions/lead-scoring",
-        desc: "49-signal TALPRO-IQ engine",
+        desc: "Proprietary TALPRO-IQ engine",
       },
       {
         name: "India Data Layer",
         href: "/solutions/india-data",
-        desc: "51 sources, Indian contacts",
+        desc: "Deep Indian intelligence sources",
       },
       {
         name: "Compliance Intelligence",

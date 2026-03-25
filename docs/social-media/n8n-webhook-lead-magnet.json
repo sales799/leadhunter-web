@@ -1,0 +1,64 @@
+{
+  "name": "LeadHunterIQ — Lead Magnet Download",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "leadhunter-lead-magnet",
+        "responseMode": "onReceived",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const items = $input.all();\nreturn items.map(item => {\n  const d = item.json.body || item.json;\n  return {\n    json: {\n      name: d.name || '',\n      email: d.email || '',\n      company: d.company || '',\n      asset: d.asset || 'signal-taxonomy-2026',\n      consent: d.consent || false,\n      consent_timestamp: d.consent_timestamp || new Date().toISOString(),\n      utm_source: d.utm_source || '',\n      utm_medium: d.utm_medium || '',\n      utm_campaign: d.utm_campaign || '',\n      downloaded_at: new Date().toISOString()\n    }\n  };\n});"
+      },
+      "name": "Parse Data",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [450, 300]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": { "__rl": true, "mode": "list", "value": "" },
+        "sheetName": { "__rl": true, "mode": "list", "value": "" },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {}
+        },
+        "options": {}
+      },
+      "name": "Google Sheets — Leads",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [650, 200],
+      "notes": "Configure: Create a Google Sheet called 'LeadHunterIQ Lead Magnet Downloads' with columns: name, email, company, asset, consent, consent_timestamp, utm_source, utm_medium, utm_campaign, downloaded_at"
+    },
+    {
+      "parameters": {
+        "fromEmail": "hello@talpro.in",
+        "toEmail": "={{ $json.email }}",
+        "subject": "Your Signal Taxonomy Guide is ready",
+        "html": "<h2>Hi {{ $json.name }},</h2><p>Thanks for downloading <strong>The Complete Signal Taxonomy for Indian IT Staffing (2026 Edition)</strong>.</p><p><a href='https://leadhunteriq.in/downloads/signal-taxonomy-2026.pdf' style='display:inline-block;padding:12px 24px;background:#2563EB;color:white;text-decoration:none;border-radius:8px;font-weight:bold;'>Download Your Guide</a></p><p>This guide covers 45+ signal types across 7 categories that predict IT staffing demand in India.</p><p>We've also subscribed you to <strong>The Signal Report</strong> — our weekly intelligence newsletter. You'll get the top 10 staffing signals every Monday.</p><p>Want to see these signals in action? <a href='https://leadhunteriq.in/demo'>Book a 15-minute demo</a>.</p><p>Best,<br/>Bhaskar Anand<br/>Founder, LeadHunterIQ</p><p style='font-size:12px;color:#999;'>You're receiving this because you downloaded a guide from leadhunteriq.in. <a href='#'>Unsubscribe</a></p>",
+        "options": {}
+      },
+      "name": "Send Download Email",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2,
+      "position": [650, 400],
+      "notes": "Configure: Set up SMTP credentials (Resend or Postmark) for sending the download email"
+    }
+  ],
+  "connections": {
+    "Webhook": { "main": [[{ "node": "Parse Data", "type": "main", "index": 0 }]] },
+    "Parse Data": { "main": [[{ "node": "Google Sheets — Leads", "type": "main", "index": 0 }, { "node": "Send Download Email", "type": "main", "index": 0 }]] }
+  },
+  "settings": { "executionOrder": "v1" },
+  "tags": [{ "name": "LeadHunterIQ" }, { "name": "Social Media" }, { "name": "Lead Magnet" }]
+}

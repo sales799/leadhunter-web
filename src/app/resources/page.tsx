@@ -7,7 +7,7 @@ import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import Badge from "@/components/ui/Badge";
 import CTASection from "@/components/sections/CTASection";
-import { useState } from "react";
+import NewsletterSignup from "@/components/sections/NewsletterSignup";
 
 // export const metadata is not allowed in client components,
 // so metadata is defined in a separate layout or via generateMetadata in a parent.
@@ -43,8 +43,6 @@ const TEMPLATES = [
 ];
 
 export default function ResourcesPage() {
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
 
   return (
     <>
@@ -156,49 +154,15 @@ export default function ResourcesPage() {
       {/* Newsletter signup */}
       <Section bg="gray">
         <FadeIn>
-          <div className="mx-auto max-w-xl text-center">
+          <div className="text-center mb-6">
             <Badge variant="blue">Newsletter</Badge>
-            <h2 className="mt-4 text-2xl font-extrabold tracking-heading text-gray-900 sm:text-3xl">
-              Staffing Signal Weekly
-            </h2>
-            <p className="mt-4 text-gray-500 leading-relaxed">
-              Get the top 10 staffing signals of the week, market insights,
-              and BD tips delivered to your inbox every Monday.
-            </p>
-            {submitted ? (
-              <div className="mt-8 rounded-lg bg-emerald-50 border border-emerald-200 p-6">
-                <p className="font-semibold text-emerald-700">
-                  You&apos;re subscribed!
-                </p>
-                <p className="mt-1 text-sm text-emerald-600">
-                  Check your inbox for a confirmation email.
-                </p>
-              </div>
-            ) : (
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  setSubmitted(true);
-                }}
-                className="mt-8 flex max-w-md mx-auto gap-3"
-              >
-                <input
-                  type="email"
-                  placeholder="Your work email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-                  required
-                />
-                <Button type="submit" size="lg">
-                  Subscribe
-                </Button>
-              </form>
-            )}
-            <p className="mt-4 text-xs text-gray-400">
-              No spam. Unsubscribe anytime.
-            </p>
           </div>
+          <NewsletterSignup
+            source="resources"
+            variant="card"
+            heading="The Signal Report"
+            description="Get the top 10 staffing signals of the week, market insights, and BD tips delivered to your inbox every Monday."
+          />
         </FadeIn>
       </Section>
 

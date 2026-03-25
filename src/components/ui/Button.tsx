@@ -29,6 +29,7 @@ type ButtonProps = {
   onClick?: () => void;
   type?: "button" | "submit";
   shimmer?: boolean;
+  disabled?: boolean;
 };
 
 export default function Button({
@@ -40,8 +41,9 @@ export default function Button({
   onClick,
   type = "button",
   shimmer = false,
+  disabled = false,
 }: ButtonProps) {
-  const classes = `inline-flex items-center justify-center rounded-lg font-heading font-semibold tracking-tight transition-all duration-200 ${variants[variant]} ${sizes[size]} ${shimmer ? "btn-shimmer" : ""} ${className}`;
+  const classes = `inline-flex items-center justify-center rounded-lg font-heading font-semibold tracking-tight transition-all duration-200 ${variants[variant]} ${sizes[size]} ${shimmer ? "btn-shimmer" : ""} ${disabled ? "opacity-50 cursor-not-allowed" : ""} ${className}`;
 
   if (href) {
     return (
@@ -52,7 +54,7 @@ export default function Button({
   }
 
   return (
-    <button type={type} onClick={onClick} className={classes}>
+    <button type={type} onClick={onClick} className={classes} disabled={disabled}>
       {children}
     </button>
   );

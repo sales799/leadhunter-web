@@ -5,6 +5,8 @@ import PageHero from "@/components/layout/PageHero";
 import Section from "@/components/ui/Section";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
+import SocialShareBar from "@/components/sections/SocialShareBar";
+import { SITE } from "@/lib/constants";
 
 type Props = { params: { slug: string } };
 
@@ -63,14 +65,22 @@ export default function BlogPostPage({ params }: Props) {
       <Section bg="white">
         <div className="mx-auto max-w-3xl">
           {/* Post meta */}
-          <div className="mb-10 flex flex-wrap items-center gap-4 text-sm text-gray-500 border-b border-gray-200 pb-6">
-            <span className="font-medium text-gray-900">{meta.author}</span>
-            <span className="text-gray-300">|</span>
+          <div className="mb-10 flex flex-wrap items-center gap-4 text-sm text-gray-500 border-b border-gray-200 dark:border-gray-700 pb-6">
+            <span className="font-medium text-gray-900 dark:text-white">{meta.author}</span>
+            <span className="text-gray-300 dark:text-gray-600">|</span>
             <span>{formatDate(meta.date)}</span>
-            <span className="text-gray-300">|</span>
+            <span className="text-gray-300 dark:text-gray-600">|</span>
             <span>{meta.readTime}</span>
-            <span className="text-gray-300">|</span>
+            <span className="text-gray-300 dark:text-gray-600">|</span>
             <Badge variant="navy">{meta.category}</Badge>
+          </div>
+
+          {/* Share bar — top */}
+          <div className="mb-8">
+            <SocialShareBar
+              url={`${SITE.url}/blog/${params.slug}`}
+              title={meta.title}
+            />
           </div>
 
           {/* Article content */}
@@ -78,6 +88,14 @@ export default function BlogPostPage({ params }: Props) {
             className="prose prose-lg max-w-none"
             dangerouslySetInnerHTML={{ __html: html }}
           />
+
+          {/* Share bar — bottom */}
+          <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+            <SocialShareBar
+              url={`${SITE.url}/blog/${params.slug}`}
+              title={meta.title}
+            />
+          </div>
 
           {/* CTA at bottom */}
           <div className="mt-16 rounded-2xl bg-gray-50 border border-gray-200 p-8 lg:p-12 text-center">

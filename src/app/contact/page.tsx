@@ -7,9 +7,12 @@ import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import FadeIn from "@/components/ui/FadeIn";
 import { SITE } from "@/lib/constants";
+import ConsentCheckbox from "@/components/ui/ConsentCheckbox";
+import { getStoredUTM } from "@/lib/utm";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [consent, setConsent] = useState(false);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -19,7 +22,12 @@ export default function ContactPage() {
       await fetch("https://n8n.talpro.in/webhook/leadhunter-contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          ...data,
+          consent: true,
+          consent_timestamp: new Date().toISOString(),
+          ...getStoredUTM(),
+        }),
       });
     } catch {
       // Silent fail — form still shows success
@@ -85,7 +93,11 @@ export default function ContactPage() {
                     <label className="block text-sm font-heading font-medium text-gray-700 mb-1">Message</label>
                     <textarea name="message" rows={4} required className="w-full rounded-lg border border-gray-200 px-4 py-3 text-sm font-body focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none resize-none transition-colors" />
                   </div>
-                  <Button type="submit" className="w-full">Send Message</Button>
+                  <ConsentCheckbox
+                    checked={consent}
+                    onChange={setConsent}
+                  />
+                  <Button type="submit" className="w-full" disabled={!consent}>Send Message</Button>
                 </form>
               )}
             </Card>

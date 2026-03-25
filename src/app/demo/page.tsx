@@ -7,6 +7,8 @@ import Section from "@/components/ui/Section";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import FadeIn from "@/components/ui/FadeIn";
+import ConsentCheckbox from "@/components/ui/ConsentCheckbox";
+import { getStoredUTM } from "@/lib/utm";
 
 const inputClass =
   "w-full rounded-lg border border-gray-200 px-4 py-3 text-sm font-body focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-colors";
@@ -22,6 +24,7 @@ export default function DemoPage() {
     teamSize: "1-5",
     currentTools: "None / Manual process",
   });
+  const [consent, setConsent] = useState(false);
 
   function update(field: string, value: string) {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -32,7 +35,12 @@ export default function DemoPage() {
       await fetch("https://n8n.talpro.in/webhook/leadhunter-demo", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          consent: true,
+          consent_timestamp: new Date().toISOString(),
+          ...getStoredUTM(),
+        }),
       });
     } catch {
       // Silent fail — still show success
@@ -214,6 +222,10 @@ export default function DemoPage() {
                           <option>Other</option>
                         </select>
                       </div>
+                      <ConsentCheckbox
+                        checked={consent}
+                        onChange={setConsent}
+                      />
                       <div className="flex gap-3">
                         <Button
                           type="button"
@@ -228,8 +240,9 @@ export default function DemoPage() {
                           className="flex-1"
                           size="lg"
                           shimmer
+                          disabled={!consent}
                           onClick={() => {
-                            if (formData.company) handleSubmit();
+                            if (formData.company && consent) handleSubmit();
                           }}
                         >
                           Request Demo

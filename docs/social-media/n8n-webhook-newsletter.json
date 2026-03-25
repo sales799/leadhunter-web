@@ -1,0 +1,50 @@
+{
+  "name": "LeadHunterIQ — Newsletter Signup",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "leadhunter-newsletter",
+        "responseMode": "onReceived",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const items = $input.all();\nreturn items.map(item => {\n  const d = item.json.body || item.json;\n  return {\n    json: {\n      email: d.email || '',\n      source: d.source || 'unknown',\n      consent: d.consent || false,\n      consent_timestamp: d.consent_timestamp || new Date().toISOString(),\n      utm_source: d.utm_source || '',\n      utm_medium: d.utm_medium || '',\n      utm_campaign: d.utm_campaign || '',\n      utm_content: d.utm_content || '',\n      subscribed_at: new Date().toISOString()\n    }\n  };\n});"
+      },
+      "name": "Parse Data",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [450, 300]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": { "__rl": true, "mode": "list", "value": "" },
+        "sheetName": { "__rl": true, "mode": "list", "value": "" },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {}
+        },
+        "options": {}
+      },
+      "name": "Google Sheets — Subscribers",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [650, 300],
+      "notes": "Configure: Create a Google Sheet called 'LeadHunterIQ Newsletter Subscribers' with columns: email, source, consent, consent_timestamp, utm_source, utm_medium, utm_campaign, utm_content, subscribed_at"
+    }
+  ],
+  "connections": {
+    "Webhook": { "main": [[{ "node": "Parse Data", "type": "main", "index": 0 }]] },
+    "Parse Data": { "main": [[{ "node": "Google Sheets — Subscribers", "type": "main", "index": 0 }]] }
+  },
+  "settings": { "executionOrder": "v1" },
+  "tags": [{ "name": "LeadHunterIQ" }, { "name": "Social Media" }]
+}

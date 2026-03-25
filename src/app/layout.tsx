@@ -6,6 +6,11 @@ import Footer from "@/components/layout/Footer";
 import ThemeProvider from "@/components/theme/ThemeProvider";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 import { OrganizationJsonLd, WebSiteJsonLd } from "@/components/seo/JsonLd";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
+import LinkedInInsight from "@/components/analytics/LinkedInInsight";
+import TwitterPixel from "@/components/analytics/TwitterPixel";
+import CookieConsent from "@/components/analytics/CookieConsent";
+import UTMCapture from "@/components/analytics/UTMCapture";
 
 const heading = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -34,7 +39,7 @@ export const metadata: Metadata = {
     template: "%s | LeadHunterIQ",
   },
   description:
-    "Monitor 51 data sources, score leads across 49 signals, and deliver dossier-grade intelligence 90 days before your competitors. Built for Indian IT staffing agencies. Starts at ₹19,999/month.",
+    "Monitor 50+ data sources, score leads with proprietary AI signals, and deliver dossier-grade intelligence 90 days before your competitors. Built for Indian IT staffing agencies. Starts at ₹19,999/month.",
   metadataBase: new URL("https://leadhunteriq.in"),
   openGraph: {
     type: "website",
@@ -43,7 +48,7 @@ export const metadata: Metadata = {
     siteName: "LeadHunterIQ",
     title: "LeadHunterIQ — AI Signal Intelligence for Indian IT Staffing",
     description:
-      "Monitor 51 data sources, score leads across 49 signals, and close more staffing deals. Built for Indian IT staffing agencies.",
+      "Monitor 50+ data sources, score leads with proprietary AI signals, and close more staffing deals. Built for Indian IT staffing agencies.",
     images: [{ url: "/og/home.png", width: 1200, height: 630 }],
   },
   twitter: { card: "summary_large_image" },
@@ -64,12 +69,17 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased">
         <ThemeProvider>
+          <GoogleAnalytics />
+          <LinkedInInsight />
+          <TwitterPixel />
+          <UTMCapture />
           <OrganizationJsonLd />
           <WebSiteJsonLd />
           <Nav />
           <main>{children}</main>
           <Footer />
           <ScrollToTop />
+          <CookieConsent />
         </ThemeProvider>
       </body>
     </html>
