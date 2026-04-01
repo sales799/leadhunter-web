@@ -34,18 +34,18 @@ const mono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "LeadHunterIQ — AI Signal Intelligence for Indian IT Staffing",
+    default: "LeadHunterIQ — India's Intent-First GTM Platform",
     template: "%s | LeadHunterIQ",
   },
   description:
-    "Monitor 50+ data sources, score leads with proprietary AI signals, and deliver dossier-grade intelligence 90 days before your competitors. Built for Indian IT staffing agencies. Starts at ₹19,999/month.",
+    "Monitor 51+ data sources, score leads with 49 AI signals, and deliver dossier-grade intelligence 90 days before competitors. Built for Indian B2B companies. From ₹19,999/month.",
   metadataBase: new URL("https://leadhunteriq.in"),
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: "https://leadhunteriq.in",
     siteName: "LeadHunterIQ",
-    title: "LeadHunterIQ — AI Signal Intelligence for Indian IT Staffing",
+    title: "LeadHunterIQ — India's Intent-First GTM Platform",
     description:
       "Monitor 50+ data sources, score leads with proprietary AI signals, and close more staffing deals. Built for Indian IT staffing agencies.",
     images: [{ url: "/og/home.png", width: 1200, height: 630 }],

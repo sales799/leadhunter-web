@@ -2,6 +2,7 @@
 
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
+import { CalBookingButton } from "@/components/cal";
 import HeroDashboard from "@/components/graphics/HeroDashboard";
 import FadeIn from "@/components/ui/FadeIn";
 
@@ -17,14 +18,14 @@ export default function HeroSection() {
           {/* Left — 60% */}
           <div className="lg:col-span-3">
             <FadeIn delay={0}>
-              <Badge variant="emerald">AI-Powered Signal Intelligence</Badge>
+              <Badge variant="emerald">India&apos;s #1 Intent-First GTM Platform</Badge>
             </FadeIn>
             <FadeIn delay={0.1}>
               <h1 className="mt-6 font-heading text-4xl font-extrabold tracking-display text-white sm:text-5xl lg:text-6xl xl:text-7xl">
-                Your competitors find clients faster.
+                Stop guessing.
               </h1>
               <p className="mt-2 font-heading text-4xl font-extrabold tracking-display sm:text-5xl lg:text-6xl xl:text-7xl text-gradient-gold">
-                Now it&apos;s your turn.
+                Start knowing who&apos;s ready to buy.
               </p>
             </FadeIn>
             <FadeIn delay={0.2}>
@@ -36,7 +37,7 @@ export default function HeroSection() {
             </FadeIn>
             <FadeIn delay={0.3}>
               <div className="mt-8 flex flex-wrap gap-4">
-                <Button href="/demo" size="lg" shimmer>
+                <Button href="/signup" size="lg" shimmer>
                   Get Early Access
                   <svg
                     className="ml-2 h-4 w-4"
@@ -52,14 +53,16 @@ export default function HeroSection() {
                     />
                   </svg>
                 </Button>
-                <Button href="/how-it-works" variant="outline_white" size="lg">
-                  Watch Demo
-                </Button>
+                <CalBookingButton variant="outline_white" size="lg">
+                  <svg className="mr-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  Book a Demo
+                </CalBookingButton>
               </div>
             </FadeIn>
             <FadeIn delay={0.4}>
               <div className="mt-10 flex flex-wrap items-center gap-4">
-                {/* Trust badges — real credibility signals, no fake logos */}
                 <div className="flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-4 py-2">
                   <svg className="h-4 w-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />

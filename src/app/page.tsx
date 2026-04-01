@@ -20,7 +20,7 @@ const CompareTable = dynamic(() => import("@/components/sections/CompareTable"),
 const CTASection = dynamic(() => import("@/components/sections/CTASection"), { ssr: true });
 
 export const metadata: Metadata = {
-  title: "LeadHunterIQ — AI Signal Intelligence for Indian IT Staffing",
+  title: "LeadHunterIQ — India's Intent-First GTM Platform",
   description:
     "Proprietary AI signal intelligence that detects hiring intent 90 days before your competitors. Dossier-grade verified leads built for Indian IT staffing agencies. Starts at ₹19,999/month.",
 };

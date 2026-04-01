@@ -1,6 +1,6 @@
 export const SITE = {
   name: "LeadHunterIQ",
-  tagline: "AI Signal Intelligence for Indian IT Staffing",
+  tagline: "India's Intent-First GTM Platform",
   url: "https://leadhunteriq.in",
   company: "Talpro India Pvt Ltd",
   email: "hello@talpro.in",
@@ -35,7 +35,7 @@ export const PROBLEMS = [
   {
     title: "₹0 spent on timing",
     description:
-      "You're spending lakhs on contact databases but ₹0 on TIMING intelligence — knowing WHO will need staffing BEFORE they start looking.",
+      "You're spending lakhs on contact databases but ₹0 on TIMING intelligence — knowing WHO will need your services BEFORE they start looking.",
   },
 ];
 
@@ -314,7 +314,7 @@ export const FAQS = [
   {
     question: "How is LeadHunterIQ different from Apollo or ZoomInfo?",
     answer:
-      "Apollo and ZoomInfo are global contact databases. LeadHunterIQ is signal intelligence — we detect events (GCC expansions, funding rounds, hiring surges) that indicate buying intent, then enrich with India-specific data like mobile numbers and compliance status. Our proprietary engine monitors dozens of sources and scores leads using our TALPRO-IQ AI.",
+      "Apollo and ZoomInfo are global contact databases for global markets. LeadHunterIQ is signal intelligence for Indian B2B — we detect events (GCC expansions, funding rounds, hiring surges) that indicate buying intent, then enrich with India-specific data like mobile numbers and compliance status. Our proprietary engine monitors dozens of sources and scores leads using our TALPRO-IQ AI.",
   },
   {
     question: "What exactly is a 'confirmed lead'?",
@@ -381,6 +381,7 @@ export const NAV_LINKS = {
       { name: "For Agency Owners", href: "/for/agency-owners" },
       { name: "For BD Teams", href: "/for/bd-teams" },
       { name: "For Enterprise", href: "/for/enterprise" },
+      { name: "For B2B SaaS", href: "/for/saas" },
     ],
     compare: [
       { name: "vs ZoomInfo", href: "/compare/zoominfo" },
@@ -389,6 +390,7 @@ export const NAV_LINKS = {
     ],
   },
   product: [
+    { name: "GTM Playbook", href: "/plays" },
     { name: "Platform Overview", href: "/features" },
     { name: "How It Works", href: "/how-it-works" },
     { name: "Integrations", href: "/integrations" },

@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
 import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
+import { CalBookingButton } from "@/components/cal";
 import FadeIn from "@/components/ui/FadeIn";
 
 export default function CTASection({
@@ -12,14 +12,12 @@ export default function CTASection({
   title?: string;
   description?: string;
 }) {
-  const [email, setEmail] = useState("");
-
   return (
     <Section bg="navy-radial" overlay gridPattern>
       <div className="mx-auto max-w-3xl text-center">
         <FadeIn>
           <h2 className="font-heading text-3xl font-extrabold tracking-heading text-white sm:text-4xl lg:text-5xl">
-            {title || "Your next ₹50L contract"}
+            {title || "Your next \u20B950L contract"}
           </h2>
           {!title && (
             <p className="mt-2 font-heading text-3xl font-extrabold tracking-heading sm:text-4xl lg:text-5xl text-gradient-gold">
@@ -33,25 +31,20 @@ export default function CTASection({
           )}
         </FadeIn>
         <FadeIn delay={0.2}>
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              window.location.href = `/demo?email=${encodeURIComponent(email)}`;
-            }}
-            className="mt-8 flex max-w-md mx-auto gap-3"
-          >
-            <input
-              type="email"
-              placeholder="Enter your work email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="flex-1 rounded-lg border border-white/20 bg-white/5 px-4 py-3 text-sm text-white placeholder-gray-500 backdrop-blur-sm font-body focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-              required
-            />
-            <Button type="submit" size="lg" shimmer>
-              Get Early Access
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+            <Button href="/signup" size="lg" shimmer>
+              Start Free Trial
+              <svg className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </Button>
-          </form>
+            <CalBookingButton variant="outline_white" size="lg">
+              <svg className="mr-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              Book a Demo
+            </CalBookingButton>
+          </div>
           <p className="mt-4 text-sm text-gray-500 font-body">
             No credit card required. 14-day free trial.
           </p>

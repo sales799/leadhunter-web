@@ -9,7 +9,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "signal-report", "resources/signal-taxonomy",
     "solutions/gcc-tracking", "solutions/lead-scoring", "solutions/india-data", "solutions/compliance",
     "for/agency-owners", "for/bd-teams", "for/enterprise",
-    "compare/zoominfo", "compare/apollo", "compare/manual-process",
+    "compare/zoominfo", "compare/apollo", "compare/manual-process", "compare/recepto",
+    "plays", "signup", "for/saas", "for/consulting", "for/it-services",
     "privacy", "terms", "refund", "security",
   ];
 
