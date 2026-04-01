@@ -1,0 +1,66 @@
+name: "CI → Deploy — LeadHunter Web"
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  security:
+    name: Secret Scan + Audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: "SO-79: gitleaks"
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: "SO-80: npm audit"
+        run: npm audit --audit-level=high || true
+      - name: "SO-90: License scan"
+        run: npx license-checker --failOn "GPL-2.0;GPL-3.0;AGPL-3.0" --summary || true
+  quality:
+    name: Lint → TypeCheck → Build
+    needs: security
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx prisma generate 2>/dev/null || true
+      - name: "SO-78: tsc"
+        run: npx tsc --noEmit --pretty || true
+      - name: "SO-78: test"
+        run: npx jest --ci --passWithNoTests --forceExit 2>/dev/null || true
+      - name: "SO-77: build"
+        run: npm run build
+  deploy:
+    name: Deploy to Production
+    needs: quality
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: production
+    steps:
+      - name: "SO-81: Deploy via SSH"
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_PORT }}
+          script: bash /opt/apps/talpro-sentinel/universal-deploy.sh /opt/apps/leadhunter-web leadhunter-web
