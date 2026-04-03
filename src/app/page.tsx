@@ -22,7 +22,7 @@ const CTASection = dynamic(() => import("@/components/sections/CTASection"), { s
 export const metadata: Metadata = {
   title: "LeadHunterIQ — AI Signal Intelligence for Indian IT Staffing",
   description:
-    "Monitor 51 data sources, score leads across 49 signals, and deliver dossier-grade intelligence 90 days before your competitors. Built for Indian IT staffing agencies. Starts at ₹19,999/month.",
+    "Proprietary AI signal intelligence that detects hiring intent 90 days before your competitors. Dossier-grade verified leads built for Indian IT staffing agencies. Starts at ₹19,999/month.",
 };
 
 export default function Home() {

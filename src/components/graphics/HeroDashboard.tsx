@@ -131,7 +131,7 @@ export default function HeroDashboard() {
               <span className="text-emerald-400 font-bold">12</span> new today
             </span>
             <span className="text-[10px] text-gray-500 font-mono">
-              <span className="text-blue-400 font-bold">51</span> sources active
+              <span className="text-blue-400 font-bold">50+</span> sources active
             </span>
           </div>
           <span className="text-[10px] text-gray-600 font-mono">

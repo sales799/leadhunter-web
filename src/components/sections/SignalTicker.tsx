@@ -7,7 +7,7 @@ const signals = [
   { text: "STPI unit registration — Chennai", type: "gcc" },
   { text: "Cloud migration RFP — BFSI Mumbai", type: "hiring" },
   { text: "New CTO appointed — logistics startup", type: "funding" },
-  { text: "EPFO registration — new entity — Gurugram", type: "gcc" },
+  { text: "Government registration — new entity — Gurugram", type: "gcc" },
   { text: "50K sq ft lease signed — Whitefield IT Park", type: "gcc" },
   { text: "Series A — $8M — SaaS company — Bengaluru", type: "funding" },
   { text: "DevOps hiring spree — 80 roles — Noida", type: "hiring" },

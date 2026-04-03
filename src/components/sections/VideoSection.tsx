@@ -15,7 +15,7 @@ export default function VideoSection() {
         badge="See It In Action"
         badgeVariant="blue"
         title="90 seconds to understand the unfair advantage"
-        description="Watch how LeadHunterIQ detects a GCC expansion signal, scores it through 49 signals, verifies across 7 gates, and delivers a dossier-grade lead to your WhatsApp."
+        description="Watch how LeadHunterIQ detects a GCC expansion signal, scores it with proprietary AI, verifies through multiple layers, and delivers a dossier-grade lead to your WhatsApp."
       />
       <div ref={ref} className="max-w-4xl mx-auto">
         <motion.div

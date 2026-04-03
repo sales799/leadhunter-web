@@ -10,13 +10,13 @@ import { SITE } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "LeadHunterIQ is built by Talpro India Pvt Ltd — 15+ years of IT staffing expertise, now powered by AI. Based in Bengaluru. 51 sources, 49 signals, 7 verification gates.",
+    "LeadHunterIQ is built by Talpro India Pvt Ltd — 15+ years of IT staffing expertise, now powered by AI. Based in Bengaluru. 50+ sources, proprietary AI scoring, multi-layer verification.",
 };
 
 const numbers = [
   { value: "15+", label: "Years in IT staffing", color: "text-blue-600" },
-  { value: "51", label: "Data sources monitored", color: "text-emerald-500" },
-  { value: "49", label: "AI scoring signals", color: "text-gold-600" },
+  { value: "50+", label: "Data sources monitored", color: "text-emerald-500" },
+  { value: "Proprietary", label: "AI scoring signals", color: "text-gold-600" },
   { value: "₹19,999", label: "Starting price/month", color: "text-blue-600" },
 ];
 
@@ -45,8 +45,8 @@ export default function AboutPage() {
             </p>
             <p className="mt-4 text-gray-500 leading-relaxed font-body">
               LeadHunterIQ was born from that frustration. We built the tool we
-              always wanted — one that monitors 51 data sources, scores across 49
-              signals, verifies through 7 gates, and delivers dossier-grade
+              always wanted — one that monitors 50+ data sources, scores with proprietary AI
+              signals, verifies through multiple layers, and delivers dossier-grade
               intelligence to your WhatsApp before your morning chai.
             </p>
           </FadeIn>
@@ -135,8 +135,8 @@ export default function AboutPage() {
               Built in Bengaluru, for Indian staffing economics. We understand
               that a 2-person agency in Pune has different needs than a 500-person
               RPO in Mumbai. Our pricing, data sources, and signal categories are
-              designed for the Indian market — MCA filings, EPFO registrations,
-              STPI data, Indian mobile numbers, and INR billing.
+              designed for the Indian market — government filings, regulatory data,
+              Indian mobile numbers, and INR billing.
             </p>
             <div className="mt-8 rounded-xl bg-white border border-gray-200 p-6">
               <p className="text-sm font-heading font-bold text-gray-900">

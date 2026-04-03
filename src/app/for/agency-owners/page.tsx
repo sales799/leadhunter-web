@@ -9,7 +9,7 @@ import CTASection from "@/components/sections/CTASection";
 export const metadata: Metadata = {
   title: "For Staffing Agency Owners | LeadHunterIQ",
   description:
-    "Stop losing deals to faster agencies. LeadHunterIQ monitors 51 sources, scores across 49 signals, and delivers dossier-grade intelligence for ₹19,999/month.",
+    "Stop losing deals to faster agencies. LeadHunterIQ monitors 50+ sources, scores with proprietary AI signals, and delivers dossier-grade intelligence for ₹19,999/month.",
 };
 
 const painPoints = [
@@ -26,7 +26,7 @@ const painPoints = [
   {
     title: "Global tools, Indian prices impossible",
     description:
-      "ZoomInfo charges $7,000/year for contacts that barely cover India. Apollo can't read MCA filings. Your Indian market needs Indian intelligence.",
+      "ZoomInfo charges $7,000/year for contacts that barely cover India. Apollo can't read government filings. Your Indian market needs Indian intelligence.",
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -72,9 +72,9 @@ const solutions = [
     detail: "Detect GCC expansions before the news",
   },
   {
-    metric: "51",
+    metric: "50+",
     label: "data sources monitored 24/7",
-    detail: "Including MCA, EPFO, STPI, GSTIN",
+    detail: "Including government filings, regulatory data, GSTIN",
   },
 ];
 
@@ -83,7 +83,7 @@ const daySteps = [
     time: "8:00 AM",
     title: "Morning WhatsApp Alerts",
     description:
-      "Your phone buzzes with 3 high-intent signals: a GCC just posted 12 Java roles, a fintech raised Series B, and a pharma company filed for IT vendor registration. All scored across 49 signals, all contextualised.",
+      "Your phone buzzes with 3 high-intent signals: a GCC just posted 12 Java roles, a fintech raised Series B, and a pharma company filed for IT vendor registration. All scored with proprietary AI signals, all contextualised.",
   },
   {
     time: "9:30 AM",
@@ -108,11 +108,11 @@ const daySteps = [
 const comparisonRows = [
   { feature: "Monthly cost", leadhunter: "From ₹19,999", competitor: "$7,000+/year" },
   { feature: "Confirmed leads/month", leadhunter: "40-400", competitor: "DIY" },
-  { feature: "India-specific signals (MCA, EPFO)", leadhunter: "Yes", competitor: "No" },
+  { feature: "India-specific signals (gov filings, regulatory)", leadhunter: "Yes", competitor: "No" },
   { feature: "WhatsApp alerts", leadhunter: "Yes", competitor: "No" },
   { feature: "GCC expansion tracking", leadhunter: "90 days early", competitor: "No" },
-  { feature: "AI lead scoring (49 signals)", leadhunter: "TALPRO-IQ", competitor: "Basic" },
-  { feature: "Decision-maker contacts", leadhunter: "7-gate verified", competitor: "Often outdated" },
+  { feature: "AI lead scoring (proprietary)", leadhunter: "TALPRO-IQ", competitor: "Basic" },
+  { feature: "Decision-maker contacts", leadhunter: "Multi-layer verified", competitor: "Often outdated" },
   { feature: "Setup time", leadhunter: "5 minutes", competitor: "2-4 weeks" },
 ];
 
@@ -122,7 +122,7 @@ export default function AgencyOwnersPage() {
       <PageHero
         badge="For Agency Owners"
         title="Stop losing deals to faster agencies"
-        description="LeadHunterIQ monitors 51 sources, scores across 49 signals, and delivers dossier-grade intelligence to your WhatsApp — at ₹19,999/month, not $7,000/year."
+        description="LeadHunterIQ monitors 50+ sources, scores with proprietary AI signals, and delivers dossier-grade intelligence to your WhatsApp — at ₹19,999/month, not $7,000/year."
         cta1={{ label: "Start Free Trial", href: "/demo" }}
         cta2={{ label: "See Pricing", href: "/pricing" }}
         breadcrumbs={[

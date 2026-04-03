@@ -55,16 +55,16 @@ const features: {
   apollo: boolean | string;
 }[] = [
   { feature: "India GCC tracking", leadhunter: true, apollo: false },
-  { feature: "Indian mobile numbers (73%+ hit rate)", leadhunter: true, apollo: false },
+  { feature: "Indian mobile numbers (industry-leading hit rate)", leadhunter: true, apollo: false },
   { feature: "TALPRO-IQ scoring (staffing-specific)", leadhunter: true, apollo: false },
   { feature: "Compliance intelligence (PF/PT/TDS/ESIC)", leadhunter: true, apollo: false },
   { feature: "WhatsApp hot alerts", leadhunter: true, apollo: false },
   { feature: "India-specific hiring signals", leadhunter: true, apollo: false },
-  { feature: "MCA/ROC filing monitoring", leadhunter: true, apollo: false },
+  { feature: "Government filing monitoring", leadhunter: true, apollo: false },
   { feature: "Global contact database", leadhunter: "India-focused", apollo: "275M+ contacts" },
   { feature: "Email sequences", leadhunter: "Via CRM", apollo: true },
   { feature: "Free tier available", leadhunter: "14-day trial", apollo: "Yes (limited)" },
-  { feature: "Contact accuracy (India)", leadhunter: "73%+", apollo: "~35%" },
+  { feature: "Contact accuracy (India)", leadhunter: "Industry-leading", apollo: "~35%" },
   { feature: "Starting price (paid)", leadhunter: "\u20B919,999/mo", apollo: "$49/mo" },
   { feature: "CRM integration", leadhunter: true, apollo: true },
   { feature: "API access", leadhunter: true, apollo: true },
@@ -99,7 +99,7 @@ const leadhunterWins = [
   {
     title: "India data accuracy",
     description:
-      "Apollo's India data is community-sourced and frequently outdated. LeadHunterIQ uses proprietary waterfall enrichment across LinkedIn, Snov.io, RocketReach, Hunter.io, and Opus AI for 73%+ Indian mobile accuracy.",
+      "Apollo's India data is community-sourced and frequently outdated. LeadHunterIQ uses a proprietary enrichment pipeline for industry-leading Indian mobile accuracy.",
   },
   {
     title: "Staffing-specific intelligence",
@@ -109,7 +109,7 @@ const leadhunterWins = [
   {
     title: "GCC expansion tracking",
     description:
-      "The single biggest opportunity in Indian IT staffing and Apollo has zero visibility. Our tracker monitors ROC filings, STPI registrations, and commercial real estate for 90-day early warnings.",
+      "The single biggest opportunity in Indian IT staffing and Apollo has zero visibility. Our tracker monitors government filings, regulatory data, and commercial real estate for 90-day early warnings.",
   },
   {
     title: "Compliance intelligence",

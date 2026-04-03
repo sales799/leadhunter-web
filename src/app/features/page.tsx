@@ -12,7 +12,7 @@ import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 export const metadata: Metadata = {
   title: "Platform Features",
   description:
-    "Six powerful engines built for Indian IT staffing: Signal Discovery, TALPRO-IQ Scoring, 7-Gate SAV Verification, Contact Enrichment, AI Outreach, and Intelligence Dossiers. 51 sources, 49 signals.",
+    "Six powerful engines built for Indian IT staffing: Signal Discovery, TALPRO-IQ Scoring, SAV Verification, Contact Enrichment, AI Outreach, and Intelligence Dossiers. Proprietary Indian market intelligence.",
 };
 
 const deepDive = [
@@ -21,14 +21,14 @@ const deepDive = [
     icon: "gcc" as const,
     title: "Signal Discovery Engine",
     shortTitle: "Discovery",
-    badge: "51 Sources",
+    badge: "50+ Sources",
     badgeVariant: "emerald" as const,
     link: "/solutions/gcc-tracking",
     description:
-      "Monitor 51 data sources across 15 industries and every major Indian city. Our proprietary crawlers run 4 daily cron cycles, scanning ROC filings, STPI registrations, commercial real estate transactions, funding announcements, and job postings in real-time.",
+      "Our proprietary intelligence engine monitors dozens of data sources across 15+ industries and every major Indian city. Continuous scanning detects GCC expansions, funding rounds, hiring surges, and regulatory filings in real-time.",
     bullets: [
-      "51 data sources (18 free, 33 paid/API)",
-      "15 industries x 10 cities, 4 daily scan cycles",
+      "50+ proprietary intelligence sources",
+      "15+ industries, all major Indian cities, continuous monitoring",
       "GCC expansions, funding rounds, hiring surges, regulatory filings",
     ],
   },
@@ -37,46 +37,46 @@ const deepDive = [
     icon: "brain" as const,
     title: "TALPRO-IQ Scoring Engine",
     shortTitle: "Scoring",
-    badge: "49 Signals",
+    badge: "Proprietary AI",
     badgeVariant: "blue" as const,
     link: "/solutions/lead-scoring",
     description:
-      "Every signal is scored 0-100 by our Opus 4.6 AI engine across 5 categories and 49 distinct signals. The scoring model is trained on 15 years of IT staffing deal data and classifies every lead into 4 buyer types with timing predictions.",
+      "Every signal is scored 0-100 by our proprietary TALPRO-IQ AI engine. The scoring model draws on 15+ years of IT staffing domain expertise to classify leads by buyer type, predict timing, and eliminate false positives.",
     bullets: [
-      "49-signal scoring across 5 categories (100-point scale)",
-      "4 buyer type classification: Contract, Permanent, RPO, Vendor",
+      "Proprietary multi-signal AI scoring on a 100-point scale",
+      "Buyer type classification: Contract, Permanent, RPO, Vendor",
       "Timing prediction: when the prospect will need staffing",
     ],
   },
   {
     id: "sav-verification",
     icon: "shield" as const,
-    title: "7-Gate SAV Verification",
+    title: "SAV Verification Framework",
     shortTitle: "Verification",
     badge: "Zero Junk",
     badgeVariant: "emerald" as const,
     link: "/features",
     description:
-      "Every lead passes through 7 verification gates before reaching your dashboard. Multi-source corroboration, entity verification via MCA/GSTIN, temporal freshness checks, contact deliverability, decision-maker confirmation, score thresholds, and duplicate prevention.",
+      "Every lead passes through our proprietary SAV (Signal Authenticity Verification) framework — a rigorous multi-layer verification process that eliminates false positives and ensures only actionable, confirmed leads reach your dashboard.",
     bullets: [
-      "Gate 1-2: Multi-source corroboration + MCA/GSTIN entity verification",
-      "Gate 3-5: Temporal freshness, deliverability, decision-maker confirmation",
-      "Gate 6-7: Score threshold (70+) + duplicate/conflict prevention",
+      "Multi-layer verification with entity, temporal, and deliverability checks",
+      "Proprietary false positive detection filters out noise",
+      "Score threshold + duplicate prevention = zero junk guarantee",
     ],
   },
   {
     id: "contact-enrichment",
     icon: "india" as const,
-    title: "5-Waterfall Contact Enrichment",
+    title: "Contact Enrichment Pipeline",
     shortTitle: "Enrichment",
     badge: "India-Built",
     badgeVariant: "gold" as const,
     link: "/solutions/india-data",
     description:
-      "Global tools give you US emails. We give you Indian mobile numbers that actually connect. Our proprietary 5-waterfall enrichment pipeline combines LinkedIn, Snov.io, RocketReach, Hunter.io, and Opus AI extraction.",
+      "Global tools give you US emails. We give you Indian mobile numbers that actually connect. Our proprietary multi-source enrichment pipeline combines leading data providers with AI extraction to find verified decision-maker contacts.",
     bullets: [
-      "5-waterfall: LinkedIn, Snov.io, RocketReach, Hunter.io, Opus AI",
-      "Contact deliverability verified, bounce rate < 2%",
+      "Proprietary multi-source enrichment pipeline",
+      "Verified Indian mobile numbers and email addresses",
       "Decision-makers only: VP+ title, 3+ months tenure",
     ],
   },
@@ -85,16 +85,15 @@ const deepDive = [
     icon: "whatsapp" as const,
     title: "AI Outreach Engine",
     shortTitle: "Outreach",
-    badge: "6 Personas",
+    badge: "Personalized",
     badgeVariant: "blue" as const,
     link: "/features",
     description:
-      "Sonnet 4.6 generates 5-stage outreach sequences customized for 6 persona variants. Every message bakes in Talpro's proven value props — 24-48hr shortlists, AI screening stack (HIREIQ/AIRA/EVA), 1000+ vendor ecosystem, pre-boarding, compliance shield, and replacement guarantee.",
+      "Our AI generates multi-stage outreach sequences customized for different decision-maker personas. Every message embeds Talpro's proven value propositions — adapted to the signal context and the person you're reaching.",
     bullets: [
-      "5-stage sequences: Intro/Pilot, Differentiators, Proof/Metrics, Plan/Commercials, Nudge/Escalation",
-      "6 persona variants: Site Lead, TA, HR, CTO, CFO, GM",
-      "Embedded value props: 24-48hr shortlists, HIREIQ/AIRA/EVA AI screening, 1000+ vendor ecosystem, pre-boarding, compliance shield (PF/ESI/GST), replacement guarantee",
-      "3 delivery formats: Dashboard, Email digest, WhatsApp/Slack",
+      "Multi-stage sequences tailored to signal type and urgency",
+      "Persona-aware messaging for different decision-maker types",
+      "Copy/paste ready across email, WhatsApp, and LinkedIn",
     ],
   },
   {
@@ -106,11 +105,11 @@ const deepDive = [
     badgeVariant: "gold" as const,
     link: "/features",
     description:
-      "Every confirmed lead comes with a 6-component intelligence package — not just a name and email, but a complete briefing your BD team can use to walk into any pitch fully prepared.",
+      "Every confirmed lead comes with a complete intelligence package — not just a name and email, but a full briefing your BD team can use to walk into any pitch fully prepared.",
     bullets: [
-      "6 components: Intelligence Brief, TALPRO-IQ Scorecard, Decision-Maker Profiles, Outreach Sequences, JD Bundle, Timing Intelligence",
-      "Client-ready format with one-click export",
-      "CRM sync: auto-create deals in HubSpot, Zoho, or via API",
+      "Complete intelligence brief with company analysis and scoring breakdown",
+      "Verified decision-maker profiles with recommended approach angles",
+      "Ready-to-send outreach sequences + JD templates matched to tech stack",
     ],
   },
 ];

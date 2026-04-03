@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, DM_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import Nav from "@/components/layout/Nav";
-import Footer from "@/components/layout/Footer";
+import ConditionalShell from "@/components/layout/ConditionalShell";
 import ThemeProvider from "@/components/theme/ThemeProvider";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 import { OrganizationJsonLd, WebSiteJsonLd } from "@/components/seo/JsonLd";
@@ -75,9 +74,7 @@ export default function RootLayout({
           <UTMCapture />
           <OrganizationJsonLd />
           <WebSiteJsonLd />
-          <Nav />
-          <main>{children}</main>
-          <Footer />
+          <ConditionalShell>{children}</ConditionalShell>
           <ScrollToTop />
           <CookieConsent />
         </ThemeProvider>

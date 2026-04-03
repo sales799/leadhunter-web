@@ -12,50 +12,50 @@ import IndiaCoverageMap from "@/components/graphics/IndiaCoverageMap";
 export const metadata: Metadata = {
   title: "India-First Data Layer",
   description:
-    "Indian contact data that actually works. 73%+ mobile hit rate, 95% email verification, GST/PAN verification. Built for India, not adapted from global tools.",
+    "Indian contact data that actually works. Industry-leading mobile hit rates, verified email addresses, GST/PAN verification. Built for India, not adapted from global tools.",
 };
 
 const waterfallSteps = [
   {
     number: "01",
-    source: "LinkedIn Sales Navigator",
+    source: "Professional Network Layer",
     type: "Primary enrichment",
     description: "First-pass professional contact enrichment. VP+ titles, 3+ months tenure, active profiles. The foundation layer for decision-maker identification.",
-    hitRate: "42%",
+    hitRate: "Primary",
   },
   {
     number: "02",
-    source: "Snov.io",
+    source: "Email Discovery Layer",
     type: "Email discovery",
-    description: "Domain-based email discovery and verification. Fills email gaps from LinkedIn layer with verified business addresses.",
-    hitRate: "+15%",
+    description: "Domain-based email discovery and verification. Fills email gaps from the professional network layer with verified business addresses.",
+    hitRate: "Secondary",
   },
   {
     number: "03",
-    source: "RocketReach",
+    source: "Cross-Reference Layer",
     type: "Cross-reference",
     description: "Cross-references and validates contact data. Adds missing phone numbers, alternative emails, and job title verification.",
-    hitRate: "+10%",
+    hitRate: "Tertiary",
   },
   {
     number: "04",
-    source: "Hunter.io",
+    source: "Verification Layer",
     type: "Verification",
     description: "Every email address verified for deliverability. Bounce rate kept below 2%. Catches invalid, disposable, and catch-all addresses.",
     hitRate: "<2% bounce",
   },
   {
     number: "05",
-    source: "Opus AI Extraction",
+    source: "India-Specific AI Layer",
     type: "India-specific",
-    description: "AI-powered extraction from MCA filings, GSTIN portals, and Indian business directories. The India-only layer no global tool has.",
-    hitRate: "+6%",
+    description: "Proprietary AI-powered extraction from Indian business registries and directories. The India-only intelligence layer that no global tool has.",
+    hitRate: "Proprietary",
   },
 ];
 
 const globalVsIndia = [
-  { feature: "Indian mobile numbers", global: "<20%", leadhunter: "73%+", winner: "leadhunter" },
-  { feature: "Email deliverability", global: "60-70%", leadhunter: "95%+", winner: "leadhunter" },
+  { feature: "Indian mobile numbers", global: "Low", leadhunter: "Industry-leading", winner: "leadhunter" },
+  { feature: "Email deliverability", global: "Low", leadhunter: "95%+", winner: "leadhunter" },
   { feature: "GST/PAN verification", global: "No", leadhunter: "Yes", winner: "leadhunter" },
   { feature: "MCA director data", global: "No", leadhunter: "Yes", winner: "leadhunter" },
   { feature: "WhatsApp-ready numbers", global: "No", leadhunter: "Yes", winner: "leadhunter" },
@@ -78,9 +78,9 @@ const dataPoints = [
 ];
 
 const metrics = [
-  { value: "73%+", label: "Indian mobile number hit rate", color: "text-blue-600" },
+  { value: "Best", label: "Indian mobile number hit rate", color: "text-blue-600" },
   { value: "95%", label: "Email verification accuracy", color: "text-emerald-500" },
-  { value: "5-layer", label: "Waterfall enrichment pipeline", color: "text-gold-500" },
+  { value: "Multi", label: "Layer enrichment pipeline", color: "text-gold-500" },
 ];
 
 export default function IndiaDataPage() {
@@ -89,7 +89,7 @@ export default function IndiaDataPage() {
       <PageHero
         badge="India-Built"
         title="Indian contact data that actually works"
-        description="Global enrichment tools were built for the US. Indian mobile numbers, MCA filings, and GST verification are afterthoughts. We built the data layer India-first."
+        description="Global enrichment tools were built for the US. Indian mobile numbers, government filings, and GST verification are afterthoughts. We built the data layer India-first."
         breadcrumbs={[
           { name: "Solutions", href: "/features" },
           { name: "India Data", href: "/solutions/india-data" },
@@ -123,7 +123,7 @@ export default function IndiaDataPage() {
                   "Mobile numbers are the primary business channel, not email",
                   "WhatsApp is how deals actually get done in Indian staffing",
                   "Company verification requires GSTIN and PAN, not just domain",
-                  "MCA filings reveal directors, not just LinkedIn titles",
+                  "Government filings reveal directors, not just LinkedIn titles",
                   "State-level compliance data is critical for staffing pitches",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2">
@@ -144,8 +144,8 @@ export default function IndiaDataPage() {
         <SectionHead
           badge="Enrichment Pipeline"
           badgeVariant="blue"
-          title="5-waterfall enrichment pipeline"
-          description="Each contact passes through five enrichment layers. If one source misses, the next one catches it. The result: 73%+ hit rate on Indian mobile numbers."
+          title="Multi-layer enrichment pipeline"
+          description="Each contact passes through multiple enrichment layers. If one source misses, the next one catches it. The result: industry-leading hit rates on Indian mobile numbers."
         />
         <div className="space-y-4">
           {waterfallSteps.map((step, i) => (
@@ -177,8 +177,8 @@ export default function IndiaDataPage() {
         <FadeIn delay={0.5}>
           <div className="mt-8 rounded-2xl bg-emerald-50 border border-emerald-200 p-6 text-center">
             <p className="text-sm text-emerald-600 font-semibold uppercase tracking-wide">Combined result</p>
-            <p className="mt-1 text-3xl font-extrabold text-emerald-700">73%+ Indian mobile hit rate</p>
-            <p className="mt-1 text-sm text-emerald-600">vs. &lt;20% from any single global tool</p>
+            <p className="mt-1 text-3xl font-extrabold text-emerald-700">Industry-leading Indian mobile hit rate</p>
+            <p className="mt-1 text-sm text-emerald-600">vs. significantly lower rates from global tools</p>
           </div>
         </FadeIn>
       </Section>
@@ -309,7 +309,7 @@ export default function IndiaDataPage() {
         <SectionHead
           badge="Coverage"
           badgeVariant="emerald"
-          title="10 cities. 51 sources. Every signal."
+          title="All major cities. 50+ sources. Every signal."
           description="LeadHunterIQ provides deep data coverage across India's top IT and business hubs."
         />
         <IndiaCoverageMap />

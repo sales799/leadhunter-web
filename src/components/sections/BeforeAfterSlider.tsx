@@ -15,9 +15,9 @@ const beforeItems = [
 
 const afterItems = [
   { icon: "check", text: "Signals delivered to WhatsApp by 8 AM", color: "text-emerald-500" },
-  { icon: "check", text: "7-gate verified contacts, <2% bounce", color: "text-emerald-500" },
+  { icon: "check", text: "Multi-layer verified contacts, <2% bounce", color: "text-emerald-500" },
   { icon: "check", text: "Detect GCC expansions 90 days before news", color: "text-emerald-500" },
-  { icon: "check", text: "49-signal TALPRO-IQ scoring (0-100)", color: "text-emerald-500" },
+  { icon: "check", text: "Proprietary AI TALPRO-IQ scoring (0-100)", color: "text-emerald-500" },
   { icon: "check", text: "AI outreach: 5 stages, 6 persona variants", color: "text-emerald-500" },
 ];
 

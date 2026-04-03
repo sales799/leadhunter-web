@@ -13,7 +13,7 @@ import { ProductJsonLd, FAQJsonLd, BreadcrumbJsonLd } from "@/components/seo/Jso
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "LeadHunterIQ starts at ₹19,999/month — that's ₹666/day for enterprise-grade signal intelligence. 51 sources, 49 signals, 7 verification gates. 14-day free trial.",
+    "LeadHunterIQ starts at ₹19,999/month — that's ₹666/day for enterprise-grade signal intelligence. 50+ sources, proprietary AI scoring, multi-layer verification. 14-day free trial.",
 };
 
 export default function PricingPage() {

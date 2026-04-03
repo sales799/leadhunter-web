@@ -306,7 +306,7 @@ export default function Nav() {
         <div className="hidden items-center gap-3 lg:flex">
           <ThemeToggle />
           <Link
-            href="/demo"
+            href="/candidate/auth/login"
             className={`text-sm font-medium font-body ${
               scrolled ? "text-gray-500 dark:text-gray-400" : "text-white/70"
             } hover:underline`}
@@ -419,7 +419,7 @@ export default function Nav() {
                 <Button href="/demo" className="w-full">
                   Book a Demo
                 </Button>
-                <Button href="/demo" variant="secondary" className="w-full">
+                <Button href="/candidate/auth/login" variant="secondary" className="w-full">
                   Login
                 </Button>
               </div>

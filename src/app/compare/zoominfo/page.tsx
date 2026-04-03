@@ -55,13 +55,13 @@ const features: {
   zoominfo: boolean | string;
 }[] = [
   { feature: "India GCC tracking", leadhunter: true, zoominfo: false },
-  { feature: "Indian mobile numbers (73%+ hit rate)", leadhunter: true, zoominfo: false },
+  { feature: "Indian mobile numbers (industry-leading hit rate)", leadhunter: true, zoominfo: false },
   { feature: "TALPRO-IQ scoring (staffing-specific)", leadhunter: true, zoominfo: false },
   { feature: "Compliance intelligence (PF/PT/TDS/ESIC)", leadhunter: true, zoominfo: false },
   { feature: "WhatsApp hot alerts", leadhunter: true, zoominfo: false },
   { feature: "India-specific hiring signals", leadhunter: true, zoominfo: false },
-  { feature: "MCA/ROC filing monitoring", leadhunter: true, zoominfo: false },
-  { feature: "Contact accuracy (India)", leadhunter: "73%+", zoominfo: "~25%" },
+  { feature: "Government filing monitoring", leadhunter: true, zoominfo: false },
+  { feature: "Contact accuracy (India)", leadhunter: "Industry-leading", zoominfo: "~25%" },
   { feature: "Starting price", leadhunter: "\u20B919,999/mo", zoominfo: "\u20B91L+/mo" },
   { feature: "Setup time", leadhunter: "< 1 hour", zoominfo: "2-4 weeks" },
   { feature: "Minimum contract", leadhunter: "Monthly", zoominfo: "Annual" },
@@ -77,7 +77,7 @@ const gaps = [
   {
     title: "No GCC intelligence",
     description:
-      "ZoomInfo has zero visibility into Global Capability Center movements in India. No ROC filings, no STPI registrations, no commercial real estate tracking. You are flying blind on the biggest opportunity in Indian staffing.",
+      "ZoomInfo has zero visibility into Global Capability Center movements in India. No government filings, no regulatory data, no commercial real estate tracking. You are flying blind on the biggest opportunity in Indian staffing.",
   },
   {
     title: "Indian mobile numbers are a black hole",

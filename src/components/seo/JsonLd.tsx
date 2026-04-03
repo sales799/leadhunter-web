@@ -40,7 +40,7 @@ export function OrganizationJsonLd() {
       areaServed: "IN",
       availableLanguage: ["English", "Hindi"],
     },
-    sameAs: [SITE.linkedin, SITE.twitter, SITE.youtube],
+    sameAs: [SITE.linkedin, SITE.twitter, SITE.youtube, SITE.instagram],
     taxID: SITE.gstin,
   };
 

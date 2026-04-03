@@ -8,9 +8,9 @@ import Badge from "@/components/ui/Badge";
 import CTASection from "@/components/sections/CTASection";
 
 export const metadata: Metadata = {
-  title: "How It Works — 7-Layer Signal Intelligence Pipeline",
+  title: "How It Works — Proprietary Signal Intelligence Pipeline",
   description:
-    "From signal discovery to delivery in 7 layers: 51 sources, Opus 4.6 AI brain, 7-gate SAV verification, 5-waterfall contact enrichment, AI outreach, dossier assembly, and multi-channel delivery.",
+    "From signal discovery to delivery: proprietary AI engine, multi-layer SAV verification, contact enrichment, AI-generated outreach, and dossier-grade intelligence. Built for Indian IT staffing.",
 };
 
 const layers = [
@@ -21,51 +21,50 @@ const layers = [
     ringColor: "ring-blue-600/20",
     iconColor: "text-blue-600",
     description:
-      "51 data sources feed our intelligence engine across 15 industries and 10 major Indian cities. Our crawlers run 4 daily cron cycles, scanning regulatory filings, job boards, funding databases, and commercial real estate platforms.",
+      "Our proprietary intelligence engine monitors 50+ data sources across 15+ industries and every major Indian city. Continuous scanning detects the signals that matter — before your competitors know they exist.",
     details: [
-      "51 sources: 18 free + 33 paid/API",
-      "15 industries x 10 cities coverage",
-      "4 daily scan cycles for real-time detection",
-      "ROC, STPI, MCA, GSTIN, EPFO registrations",
-      "Job boards: Naukri, LinkedIn, Indeed, TimesJobs",
+      "50+ proprietary intelligence sources",
+      "15+ industries across all major Indian cities",
+      "Continuous real-time monitoring, 24/7",
+      "Government filings, corporate registrations, regulatory data",
+      "Job market signals, funding databases, commercial real estate",
     ],
-    badge: "51 Sources",
+    badge: "50+ Sources",
   },
   {
     number: "02",
-    title: "Opus 4.6 AI Brain",
+    title: "TALPRO-IQ AI Engine",
     color: "bg-emerald-500",
     ringColor: "ring-emerald-500/20",
     iconColor: "text-emerald-500",
     description:
-      "Every signal passes through our Opus 4.6 AI engine which scores across 49 distinct signals in 5 categories on a 100-point scale. The model classifies each lead into 4 buyer types and predicts optimal engagement timing.",
+      "Every signal passes through our proprietary TALPRO-IQ AI engine, which scores each lead on a 100-point scale using multi-dimensional analysis. The model classifies each lead by buyer type and predicts optimal engagement timing.",
     details: [
-      "49 signals across 5 scoring categories",
+      "Proprietary multi-signal AI scoring",
       "100-point TALPRO-IQ scale",
-      "4 buyer types: Contract, Permanent, RPO, Vendor",
+      "Buyer type classification: Contract, Permanent, RPO, Vendor",
       "Timing prediction for optimal outreach",
-      "Trained on 15 years of IT staffing deal data",
+      "Built on 15+ years of Indian IT staffing domain expertise",
     ],
-    badge: "49 Signals",
+    badge: "Proprietary AI",
   },
   {
     number: "03",
-    title: "7-Gate SAV Verification",
+    title: "SAV Verification Framework",
     color: "bg-gold-400",
     ringColor: "ring-gold-400/20",
     iconColor: "text-gold-600",
     description:
-      "The Signal Authenticity Verification framework eliminates false positives through 7 rigorous gates. Only leads that pass ALL gates reach your dashboard — zero junk, guaranteed.",
+      "Our proprietary Signal Authenticity Verification framework eliminates false positives through rigorous multi-layer checks. Only leads that pass every verification layer reach your dashboard — zero junk, guaranteed.",
     details: [
-      "Gate 1: Multi-source corroboration (3+ sources required)",
-      "Gate 2: Entity verification (MCA CIN + GSTIN active)",
-      "Gate 3: Temporal freshness (signals decay by type)",
-      "Gate 4: Contact deliverability (bounce rate < 2%)",
-      "Gate 5: Decision-maker confirmation (VP+, 3+ months)",
-      "Gate 6: TALPRO-IQ threshold (score 70+ = confirmed)",
-      "Gate 7: Duplicate & conflict prevention",
+      "Multi-source corroboration required",
+      "Entity verification against government databases",
+      "Temporal freshness and signal decay checks",
+      "Contact deliverability verification",
+      "Decision-maker confirmation and score threshold enforcement",
+      "Duplicate and conflict prevention",
     ],
-    badge: "7 Gates",
+    badge: "Zero Junk",
   },
   {
     number: "04",
@@ -74,15 +73,15 @@ const layers = [
     ringColor: "ring-blue-600/20",
     iconColor: "text-blue-600",
     description:
-      "Our 5-waterfall enrichment pipeline finds verified decision-maker contacts with Indian mobile numbers. Each contact goes through deliverability checks before reaching your CRM.",
+      "Our proprietary multi-source enrichment pipeline finds verified decision-maker contacts with Indian mobile numbers. Each contact passes through deliverability verification before reaching your CRM.",
     details: [
-      "5-waterfall: LinkedIn, Snov.io, RocketReach, Hunter.io, Opus AI",
-      "Indian mobile number enrichment (73%+ hit rate)",
+      "Proprietary multi-source enrichment pipeline",
+      "Indian mobile number enrichment",
       "Decision-maker targeting: VP+ title verification",
-      "Active LinkedIn profile confirmation",
-      "Bounce rate < 2% deliverability guarantee",
+      "Active professional profile confirmation",
+      "Deliverability guarantee on every contact",
     ],
-    badge: "5-Waterfall",
+    badge: "India-Built",
   },
   {
     number: "05",
@@ -91,15 +90,15 @@ const layers = [
     ringColor: "ring-emerald-500/20",
     iconColor: "text-emerald-500",
     description:
-      "Sonnet 4.6 generates 5-stage outreach sequences customized for 6 persona variants. Every message bakes in Talpro's proven value props — 24-48hr shortlists, AI screening (HIREIQ/AIRA/EVA), 1000+ vendor ecosystem, and compliance shield — adapted to the decision-maker type and signal context.",
+      "Our AI generates multi-stage outreach sequences customized for different decision-maker personas. Every message embeds proven value propositions adapted to the signal context and the person you're reaching out to.",
     details: [
-      "5-stage sequences: Intro/Pilot, Differentiators, Proof/Metrics, Plan/Commercials, Nudge/Escalation",
-      "6 persona variants: Site Lead, TA, HR, CTO, CFO, GM",
-      "Hardcoded value props: 24-48hr shortlists, HIREIQ/AIRA/EVA AI screening, 1000+ vendor ecosystem",
-      "Built-in differentiators: pre-boarding 1 week before start, compliance shield (PF/ESI/GST), replacement guarantee",
-      "3 delivery formats: Dashboard, Email, WhatsApp/Slack",
+      "Multi-stage outreach sequences from introduction to close",
+      "Persona-aware messaging for different decision-maker types",
+      "Proven value propositions embedded in every message",
+      "Adapted to signal context and company situation",
+      "Ready to send via email, WhatsApp, and LinkedIn",
     ],
-    badge: "6 Personas",
+    badge: "Personalized",
   },
   {
     number: "06",
@@ -108,16 +107,16 @@ const layers = [
     ringColor: "ring-gold-400/20",
     iconColor: "text-gold-600",
     description:
-      "Every confirmed lead comes with a 6-component intelligence dossier — not just a name and email, but a complete briefing your BD team can use to walk into any pitch fully prepared.",
+      "Every confirmed lead comes with a complete intelligence dossier — not just a name and email, but a comprehensive briefing your BD team can use to walk into any pitch fully prepared.",
     details: [
-      "Company Intelligence Brief (MCA/GSTIN verified, industry analysis)",
-      "TALPRO-IQ Scorecard (full 5-category breakdown with justifications)",
-      "Decision-Maker Profiles (3-5 contacts with verified channels)",
-      "Ready-to-Send Outreach (5-stage sequences, 6 persona variants)",
-      "JD Bundle (3-5 role templates matched to detected tech stack)",
-      "Timing Intelligence (win probability, engagement window, competitor density)",
+      "Company intelligence brief with verified entity data",
+      "TALPRO-IQ scorecard with category breakdown",
+      "Verified decision-maker profiles with approach recommendations",
+      "Ready-to-send outreach sequences across all channels",
+      "JD templates matched to the company's detected tech stack",
+      "Timing intelligence with engagement window analysis",
     ],
-    badge: "6-Component",
+    badge: "Complete",
   },
   {
     number: "07",
@@ -126,26 +125,26 @@ const layers = [
     ringColor: "ring-blue-600/20",
     iconColor: "text-blue-600",
     description:
-      "Confirmed signals reach your team through your preferred channels in real-time. 12 dashboard modes give you complete control over how you consume intelligence.",
+      "Confirmed signals reach your team through your preferred channels in real-time. Multiple dashboard views give you complete control over how you consume intelligence.",
     details: [
-      "Dashboard with 12 view modes",
-      "Email digest (daily/weekly configurable)",
+      "Interactive dashboard with multiple view modes",
+      "Configurable email digests (daily/weekly)",
       "Real-time WhatsApp hot alerts",
       "Slack channel integration",
       "Webhook API for custom integrations",
       "CRM auto-deal creation (HubSpot, Zoho, Salesforce)",
     ],
-    badge: "3 Formats",
+    badge: "Real-Time",
   },
 ];
 
 const falsePositives = [
   "Office relocation (not expansion)",
   "M&A integration (not new hiring)",
-  "Seasonal/project hiring (not permanent growth)",
-  "Ghost job postings",
-  "PR announcements without regulatory filings",
-  "Dormant subsidiaries despite active MCA status",
+  "Seasonal or project-based hiring spikes",
+  "Non-actionable job postings",
+  "PR announcements without substantive backing",
+  "Dormant entities despite active registrations",
 ];
 
 const timeline = [

@@ -29,7 +29,7 @@ export default function HeroSection() {
             </FadeIn>
             <FadeIn delay={0.2}>
               <p className="mt-6 max-w-xl text-lg text-gray-400 leading-relaxed font-body">
-                LeadHunterIQ monitors 51 data sources, scores leads across 49
+                LeadHunterIQ monitors 50+ data sources, scores leads with proprietary AI
                 signals, and delivers dossier-grade intelligence 90 days before
                 your competitors even know the opportunity exists.
               </p>

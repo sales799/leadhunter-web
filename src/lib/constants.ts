@@ -11,6 +11,7 @@ export const SITE = {
   linkedin: "https://linkedin.com/company/leadhunteriq",
   twitter: "https://x.com/LeadHunterIQ",
   youtube: "https://youtube.com/@LeadHunterIQ",
+  instagram: "https://instagram.com/leadhunteriq",
 };
 
 export const STATS = [

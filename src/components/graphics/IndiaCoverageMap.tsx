@@ -5,11 +5,11 @@ import { motion, useInView } from "framer-motion";
 
 const cities = [
   { name: "Delhi NCR", x: 245, y: 155, sources: 47, signals: "BFSI, IT Services, GCC", tier: "Tier 1" },
-  { name: "Mumbai", x: 155, y: 310, sources: 51, signals: "BFSI, Pharma, Enterprise", tier: "Tier 1" },
-  { name: "Bengaluru", x: 190, y: 420, sources: 51, signals: "GCC, IT, Startups", tier: "Tier 1" },
-  { name: "Hyderabad", x: 210, y: 360, sources: 49, signals: "GCC, Pharma, IT", tier: "Tier 1" },
-  { name: "Chennai", x: 225, y: 440, sources: 48, signals: "Auto, IT, Manufacturing", tier: "Tier 1" },
-  { name: "Pune", x: 165, y: 330, sources: 49, signals: "IT, Auto, GCC", tier: "Tier 1" },
+  { name: "Mumbai", x: 155, y: 310, sources: 50, signals: "BFSI, Pharma, Enterprise", tier: "Tier 1" },
+  { name: "Bengaluru", x: 190, y: 420, sources: 50, signals: "GCC, IT, Startups", tier: "Tier 1" },
+  { name: "Hyderabad", x: 210, y: 360, sources: 48, signals: "GCC, Pharma, IT", tier: "Tier 1" },
+  { name: "Chennai", x: 225, y: 440, sources: 47, signals: "Auto, IT, Manufacturing", tier: "Tier 1" },
+  { name: "Pune", x: 165, y: 330, sources: 48, signals: "IT, Auto, GCC", tier: "Tier 1" },
   { name: "Kolkata", x: 325, y: 245, sources: 42, signals: "BFSI, IT Services", tier: "Tier 1" },
   { name: "Ahmedabad", x: 130, y: 255, sources: 38, signals: "Pharma, Chemical, IT", tier: "Tier 2" },
   { name: "Kochi", x: 195, y: 465, sources: 35, signals: "IT, Tourism Tech", tier: "Tier 2" },
@@ -142,7 +142,7 @@ export default function IndiaCoverageMap() {
       <div className="flex items-center justify-center gap-6 mt-4">
         <div className="flex items-center gap-2">
           <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
-          <span className="text-xs text-gray-500 dark:text-gray-400 font-body">Tier 1 (51 sources)</span>
+          <span className="text-xs text-gray-500 dark:text-gray-400 font-body">Tier 1 (50+ sources)</span>
         </div>
         <div className="flex items-center gap-2">
           <span className="h-2.5 w-2.5 rounded-full bg-blue-400" />

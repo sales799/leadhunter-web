@@ -17,27 +17,27 @@ export const metadata: Metadata = {
 const scoringFactors = [
   {
     name: "Hiring Intent Signals",
-    weight: "30 pts",
+    weight: "Highest weight",
     description: "Job postings, contractor listings, urgency indicators. Measures active demand for talent across job boards, LinkedIn, and internal career pages.",
   },
   {
     name: "Company Size & Budget",
-    weight: "20 pts",
+    weight: "High weight",
     description: "Revenue bracket, IT budget percentage, headcount trajectory. Larger companies with dedicated IT budgets close faster and at higher contract values.",
   },
   {
     name: "Growth & Expansion",
-    weight: "20 pts",
+    weight: "High weight",
     description: "New office/GCC setup, funding rounds, leadership changes. Expansion signals indicate imminent large-scale hiring needs.",
   },
   {
     name: "Tech Transformation",
-    weight: "15 pts",
+    weight: "Significant weight",
     description: "Cloud migration, digital transformation initiatives, legacy modernization projects. Companies undergoing tech change need specialized staffing.",
   },
   {
     name: "Staffing Compatibility",
-    weight: "15 pts",
+    weight: "Significant weight",
     description: "Contract staffing history, vendor empanelment status, geography match. Companies already using staffing partners convert 3x faster.",
   },
 ];
@@ -57,7 +57,7 @@ const scoreBands = [
     color: "bg-blue-500",
     textColor: "text-blue-600",
     bgLight: "bg-blue-50 border-blue-200",
-    description: "Passed all 7 SAV gates. Strong opportunity. Add to your outreach sequence and engage within the week.",
+    description: "Passed all SAV verification layers. Strong opportunity. Add to your outreach sequence and engage within the week.",
   },
   {
     range: "50 \u2013 69",
@@ -82,13 +82,13 @@ const howItWorks = [
     number: "01",
     title: "Signal ingestion",
     description:
-      "Raw signals from 51 sources enter the scoring pipeline. Each signal is classified by type, source credibility, and recency.",
+      "Raw signals from our proprietary intelligence sources enter the scoring pipeline. Each signal is classified by type, source credibility, and recency.",
   },
   {
     number: "02",
     title: "Factor analysis",
     description:
-      "TALPRO-IQ evaluates each signal across 5 categories and 49 weighted signals, pulling in enrichment data for a complete picture.",
+      "TALPRO-IQ evaluates each signal across multiple proprietary categories and weighted signals, pulling in enrichment data for a complete picture.",
   },
   {
     number: "03",
@@ -180,8 +180,8 @@ export default function LeadScoringPage() {
         <SectionHead
           badge="Scoring Model"
           badgeVariant="blue"
-          title="Five categories, 49 signals, one score"
-          description="TALPRO-IQ evaluates every signal across five weighted categories encompassing 49 distinct signals, each trained on 15 years of IT staffing deal data."
+          title="Multiple categories, proprietary signals, one score"
+          description="TALPRO-IQ evaluates every signal across multiple weighted categories encompassing proprietary signals, each trained on 15+ years of IT staffing deal data."
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {scoringFactors.map((factor, i) => (

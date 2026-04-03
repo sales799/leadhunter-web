@@ -10,27 +10,22 @@ import CTASection from "@/components/sections/CTASection";
 export const metadata: Metadata = {
   title: "GCC Expansion Tracker",
   description:
-    "Detect GCC expansions across India 90 days before competitors. Monitor ROC filings, STPI registrations, and commercial real estate signals.",
+    "Detect GCC expansions across India 90 days before competitors. Proprietary intelligence engine monitors multiple signal categories across every major Indian city.",
 };
 
 const signalCategories = [
-  { name: "ROC filings", description: "New company registrations and amendments filed with Registrar of Companies" },
-  { name: "STPI registration", description: "Software Technology Parks of India unit registrations and renewals" },
-  { name: "GST registration", description: "New GSTIN registrations indicating commercial activity in new states" },
-  { name: "Commercial leases", description: "Office space leases in IT parks, SEZs, and commercial hubs" },
-  { name: "Real estate permits", description: "Building permits and occupancy certificates for commercial spaces" },
-  { name: "Job postings", description: "Bulk hiring signals across Naukri, LinkedIn, Indeed, and TimesJobs" },
-  { name: "LinkedIn headcount", description: "Employee count growth patterns and location-tagged new hires" },
-  { name: "News & PR", description: "Press releases, media coverage of expansion announcements" },
-  { name: "Government tenders", description: "Tender filings and government procurement portal activity" },
-  { name: "MCA filings", description: "Ministry of Corporate Affairs annual returns and financial filings" },
-  { name: "SEZ applications", description: "Special Economic Zone unit approval applications" },
-  { name: "Director appointments", description: "New India-based director appointments signaling local operations" },
-  { name: "Capital infusion", description: "FDI inflows and share allotment filings indicating investment" },
-  { name: "Company name changes", description: "Rebranding filings that signal subsidiary setup for GCC operations" },
-  { name: "Office space procurement", description: "Fit-out contracts, furniture tenders, and interior work orders" },
-  { name: "Equipment orders", description: "Bulk IT hardware and infrastructure procurement signals" },
-  { name: "Utility connections", description: "Commercial electricity, internet, and telecom provisioning requests" },
+  { name: "Corporate filings", description: "New registrations, amendments, and compliance filings that indicate company setup or expansion" },
+  { name: "Technology park registrations", description: "IT park and special zone registrations indicating tech operations establishment" },
+  { name: "Tax & compliance registrations", description: "New registrations indicating commercial activity in new states or jurisdictions" },
+  { name: "Commercial real estate", description: "Office space leases, fit-outs, and occupancy signals in IT hubs and SEZs" },
+  { name: "Job market signals", description: "Bulk hiring patterns across major Indian job portals and career pages" },
+  { name: "Professional network growth", description: "Employee headcount changes and location-tagged growth patterns" },
+  { name: "News & media", description: "Press releases, media coverage, and public announcements of expansion plans" },
+  { name: "Government procurement", description: "Tender filings and government portal activity indicating operational setup" },
+  { name: "Regulatory filings", description: "Annual returns, financial disclosures, and compliance submissions" },
+  { name: "Leadership changes", description: "Senior appointments signaling local operations establishment" },
+  { name: "Capital movements", description: "Foreign investment inflows and capital allocation signals" },
+  { name: "Infrastructure procurement", description: "IT hardware, office equipment, and infrastructure provisioning signals" },
 ];
 
 const howItWorks = [
@@ -38,7 +33,7 @@ const howItWorks = [
     number: "01",
     title: "Continuous scanning",
     description:
-      "Our crawlers monitor 51 sources in real-time across all Indian cities. Every filing, lease agreement, and job posting is captured and classified.",
+      "Our proprietary intelligence engine monitors dozens of sources in real-time across all Indian cities. Every filing, lease agreement, and job posting is captured and classified.",
   },
   {
     number: "02",
@@ -73,7 +68,7 @@ const deliverables = [
 
 const metrics = [
   { value: "90-day", label: "Average head start on competitors", color: "text-blue-600" },
-  { value: "17", label: "Signal categories monitored", color: "text-emerald-500" },
+  { value: "Multi", label: "Signal categories monitored", color: "text-emerald-500" },
   { value: "95%", label: "GCC detection rate across India", color: "text-gold-500" },
 ];
 
@@ -83,7 +78,7 @@ export default function GCCTrackingPage() {
       <PageHero
         badge="GCC Intelligence"
         title="Detect GCC expansions 90 days before anyone else"
-        description="Global Capability Centers are the largest staffing opportunities in India. LeadHunterIQ monitors 17 distinct signal categories to surface GCC expansions before your competitors even know they exist."
+        description="Global Capability Centers are the largest staffing opportunities in India. LeadHunterIQ monitors multiple signal categories to surface GCC expansions before your competitors even know they exist."
         breadcrumbs={[
           { name: "Solutions", href: "/features" },
           { name: "GCC Tracking", href: "/solutions/gcc-tracking" },
@@ -133,13 +128,13 @@ export default function GCCTrackingPage() {
         </FadeIn>
       </Section>
 
-      {/* 17 Signal Categories */}
+      {/* Signal Categories */}
       <Section bg="gray">
         <SectionHead
           badge="Signal Intelligence"
           badgeVariant="emerald"
-          title="17 signal categories, one unified view"
-          description="We don't just track one data source. LeadHunterIQ correlates signals across 17 categories to build a complete picture of every GCC expansion."
+          title="Multiple signal categories, one unified view"
+          description="We don't just track one data source. LeadHunterIQ correlates signals across multiple categories to build a complete picture of every GCC expansion."
         />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {signalCategories.map((signal, i) => (
@@ -212,7 +207,7 @@ export default function GCCTrackingPage() {
                   Deloitte GCC &mdash; Bengaluru expansion
                 </h3>
                 <div className="space-y-2 text-sm text-gray-600">
-                  <p><strong>Day 1:</strong> ROC filing detected for new subsidiary entity in Karnataka.</p>
+                  <p><strong>Day 1:</strong> Government filing detected for new subsidiary entity in Karnataka.</p>
                   <p><strong>Day 12:</strong> Commercial lease signed for 120,000 sq ft in Embassy Tech Village.</p>
                   <p><strong>Day 23:</strong> STPI unit registration application filed.</p>
                   <p><strong>Day 34:</strong> Bulk job postings (180+) appear on Naukri and LinkedIn.</p>

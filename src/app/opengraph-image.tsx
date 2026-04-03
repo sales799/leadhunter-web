@@ -105,7 +105,7 @@ export default function Image() {
               lineHeight: 1.4,
             }}
           >
-            51 sources. 49 signals. 7 gates. Dossier-grade intelligence for
+            50+ sources. Proprietary AI scoring. Verified data. Dossier-grade intelligence for
             Indian IT staffing.
           </p>
 
@@ -118,9 +118,9 @@ export default function Image() {
             }}
           >
             {[
-              { value: "51", label: "Sources" },
-              { value: "49", label: "Signals" },
-              { value: "7", label: "Gates" },
+              { value: "50+", label: "Sources" },
+              { value: "AI", label: "Scoring" },
+              { value: "Verified", label: "Data" },
               { value: "₹170", label: "Per Lead" },
             ].map((stat) => (
               <div

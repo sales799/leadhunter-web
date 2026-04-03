@@ -16,7 +16,7 @@ export default function NotFound() {
             Signal not found
           </h1>
           <p className="mt-4 text-lg text-gray-400 font-body max-w-md mx-auto">
-            Our 51 data sources couldn&apos;t locate this page. It may have been
+            Our 50+ data sources couldn&apos;t locate this page. It may have been
             moved, renamed, or never existed.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
