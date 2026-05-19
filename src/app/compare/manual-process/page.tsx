@@ -10,7 +10,7 @@ import CTASection from "@/components/sections/CTASection";
 export const metadata: Metadata = {
   title: "LeadHunterIQ vs Manual BD Process | Automate Signal Intelligence",
   description:
-    "Compare LeadHunterIQ with manual BD processes for Indian IT staffing. Save 4 hours/day, cover 50+ signal sources, and replace a \u20B94-8L/yr BD salary with \u20B92.4L/yr in automation.",
+    "Compare LeadHunterIQ with manual BD processes for Indian IT staffing. Save 4 hours/day, cover 51 signal sources, and replace a \u20B94-8L/yr BD salary with \u20B93.0L/yr in automation.",
 };
 
 function Check() {
@@ -56,7 +56,7 @@ const features: {
 }[] = [
   { feature: "Time per day", leadhunter: "5 minutes", manual: "4+ hours" },
   { feature: "Signal sources monitored", leadhunter: "50+", manual: "3-5" },
-  { feature: "Annual cost", leadhunter: "\u20B92.4L/yr", manual: "\u20B94-8L/yr (BD salary)" },
+  { feature: "Annual cost", leadhunter: "\u20B93.0L/yr", manual: "\u20B94-8L/yr (BD salary)" },
   { feature: "Speed to detect signals", leadhunter: "Real-time", manual: "60-90 day lag" },
   { feature: "GCC expansion tracking", leadhunter: true, manual: false },
   { feature: "AI-powered lead scoring", leadhunter: true, manual: false },
@@ -84,9 +84,9 @@ const timeBreakdown = [
 
 const roiData = {
   bdSalary: "4-8L",
-  toolCost: "2.4L",
+  toolCost: "3.0L",
   timeSaved: "4 hrs/day",
-  signalCoverage: "50+ sources vs 3-5 manual",
+  signalCoverage: "51 sources vs 3-5 manual",
   speedAdvantage: "Real-time vs 60-90 day lag",
   dealAcceleration: "2-3x faster pipeline",
 };
@@ -136,7 +136,7 @@ const beforeAfterColumns = [
     title: "After LeadHunterIQ",
     items: [
       "AI-scored signals on WhatsApp by 9 AM",
-      "50+ sources monitored automatically",
+      "51 sources monitored automatically",
       "Contact data enriched and ready",
       "Compliance context per company",
       "CRM auto-populated with context",
@@ -182,7 +182,7 @@ export default function CompareManualPage() {
             {[
               { stat: "4 hrs/day", label: "Time saved per BD rep", color: "text-blue-600" },
               { stat: "50+", label: "Signal sources vs 3-5 manual", color: "text-emerald-600" },
-              { stat: "\u20B92.4L/yr", label: "vs \u20B94-8L BD salary", color: "text-blue-600" },
+              { stat: "\u20B93.0L/yr", label: "vs \u20B94-8L BD salary", color: "text-blue-600" },
               { stat: "Real-time", label: "vs 60-90 day lag", color: "text-emerald-600" },
             ].map((item) => (
               <div

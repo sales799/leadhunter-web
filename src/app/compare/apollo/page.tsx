@@ -337,7 +337,7 @@ export default function CompareApolloPage() {
                 <span className="text-gray-500">/month</span>
               </div>
               <p className="mt-2 text-sm text-gray-400">
-                {"\u20B9"}2.4L &ndash; {"\u20B9"}12L/year depending on plan
+                {"\u20B9"}3.0L &ndash; {"\u20B9"}12L/year depending on plan
               </p>
               <ul className="mt-6 space-y-3">
                 {[

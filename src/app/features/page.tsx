@@ -21,13 +21,13 @@ const deepDive = [
     icon: "gcc" as const,
     title: "Signal Discovery Engine",
     shortTitle: "Discovery",
-    badge: "50+ Sources",
+    badge: "51 Sources",
     badgeVariant: "emerald" as const,
     link: "/solutions/gcc-tracking",
     description:
       "Our proprietary intelligence engine monitors dozens of data sources across 15+ industries and every major Indian city. Continuous scanning detects GCC expansions, funding rounds, hiring surges, and regulatory filings in real-time.",
     bullets: [
-      "50+ proprietary intelligence sources",
+      "51 proprietary intelligence sources",
       "15+ industries, all major Indian cities, continuous monitoring",
       "GCC expansions, funding rounds, hiring surges, regulatory filings",
     ],

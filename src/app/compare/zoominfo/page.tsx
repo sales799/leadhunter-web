@@ -230,7 +230,7 @@ export default function CompareZoomInfoPage() {
               </h3>
               <div className="mt-4">
                 <span className="text-4xl font-extrabold text-gray-900">
-                  {"\u20B9"}2.4L{" "}
+                  {"\u20B9"}3.0L{" "}
                 </span>
                 <span className="text-gray-500">
                   {" "}
