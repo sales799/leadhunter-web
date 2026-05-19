@@ -68,7 +68,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="mt-4 text-sm text-gray-400 leading-relaxed font-body max-w-xs">
-              AI signal intelligence for Indian IT staffing agencies. Monitor 50+
+              AI signal intelligence for Indian IT staffing agencies. Monitor 51
               sources, score with proprietary AI signals, close deals 90 days ahead.
             </p>
             <p className="mt-3 text-xs text-gray-500 font-body">
