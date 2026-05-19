@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import HeroSection from "@/components/sections/HeroSection";
 import StatsBar from "@/components/sections/StatsBar";
 import SignalTicker from "@/components/sections/SignalTicker";
+import SignalIntelligenceProof from "@/components/sections/SignalIntelligenceProof";
 import ProblemSection from "@/components/sections/ProblemSection";
 import FeaturesGrid from "@/components/sections/FeaturesGrid";
 import HowItWorksSteps from "@/components/sections/HowItWorksSteps";
@@ -38,7 +39,10 @@ export default function Home() {
       {/* Section 2.5: Live Signal Ticker */}
       <SignalTicker />
 
-      {/* Section 3: Problem Band (WHITE with red accents) */}
+      {/* Section 3: Intelligence proof band (DARK) */}
+      <SignalIntelligenceProof />
+
+      {/* Section 4: Problem Band (WHITE with red accents) */}
       <ProblemSection />
 
       {/* Section 3.5: Before vs After comparison */}

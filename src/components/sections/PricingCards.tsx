@@ -21,8 +21,8 @@ export default function PricingCards({ preview = false }: { preview?: boolean })
         badgeVariant={preview ? "gold" : "blue"}
         title={
           preview
-            ? "Starts at \u20B9666/day. Seriously."
-            : "Starts at \u20B9666/day. Your ROI? Infinite."
+            ? "Starts at \u20B9833/day. Seriously."
+            : "Starts at \u20B9833/day. Your ROI? Measurable."
         }
         description="Every plan includes a 14-day free trial. No credit card required."
       />
