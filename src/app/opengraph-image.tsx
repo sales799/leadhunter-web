@@ -105,7 +105,7 @@ export default function Image() {
               lineHeight: 1.4,
             }}
           >
-            50+ sources. Proprietary AI scoring. Verified data. Dossier-grade intelligence for
+            51 sources. Proprietary AI scoring. Verified data. Dossier-grade intelligence for
             Indian IT staffing.
           </p>
 

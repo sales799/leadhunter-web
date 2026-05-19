@@ -309,7 +309,7 @@ export default function IndiaDataPage() {
         <SectionHead
           badge="Coverage"
           badgeVariant="emerald"
-          title="All major cities. 50+ sources. Every signal."
+          title="All major cities. 51 sources. Every signal."
           description="LeadHunterIQ provides deep data coverage across India's top IT and business hubs."
         />
         <IndiaCoverageMap />

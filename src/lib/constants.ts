@@ -240,7 +240,7 @@ export const COMPARISON = [
   },
   {
     feature: "Pricing for Indian market",
-    leadhunter: "From ₹19,999/mo",
+    leadhunter: "From ₹24,999/mo",
     others: "$7,000+/year",
   },
   {
@@ -339,7 +339,7 @@ export const FAQS = [
   {
     question: "What's the setup fee?",
     answer:
-      "Analyst: ₹4,999. Strategist: ₹9,999. Command: ₹19,999. This covers onboarding, CRM integration setup, and initial signal configuration for your target industries and geographies.",
+      "Analyst: ₹4,999. Strategist: ₹9,999. Command: ₹24,999. This covers onboarding, CRM integration setup, and initial signal configuration for your target industries and geographies.",
   },
   {
     question: "Is my data secure?",

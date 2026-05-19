@@ -47,9 +47,9 @@ export default function TermsPage() {
           <h2 className="font-heading text-2xl font-bold text-gray-900 mt-10">4. Subscription Plans and Billing</h2>
           <p className="text-gray-600 leading-relaxed"><strong>Plans:</strong></p>
           <ul className="text-gray-600 space-y-2">
-            <li><strong>Analyst:</strong> Rs 19,999/month (billed monthly) or Rs 1,99,990/year (save 2 months). Setup fee: Rs 4,999.</li>
-            <li><strong>Strategist:</strong> Rs 49,999/month (billed monthly) or Rs 4,99,990/year (save 2 months). Setup fee: Rs 9,999.</li>
-            <li><strong>Command:</strong> Rs 1,19,999/month (billed monthly) or Rs 11,99,990/year (save 2 months). Setup fee: Rs 19,999.</li>
+            <li><strong>Analyst:</strong> Rs 24,999/month (billed monthly) or Rs 2,49,990/year (save 2 months). Setup fee: Rs 4,999.</li>
+            <li><strong>Strategist:</strong> Rs 74,999/month (billed monthly) or Rs 7,49,990/year (save 2 months). Setup fee: Rs 9,999.</li>
+            <li><strong>Command:</strong> Rs 1,99,999/month (billed monthly) or Rs 19,99,990/year (save 2 months). Setup fee: Rs 19,999.</li>
           </ul>
           <p className="text-gray-600 leading-relaxed mt-4"><strong>Billing Terms:</strong></p>
           <ul className="text-gray-600 space-y-2">

@@ -21,15 +21,15 @@ const layers = [
     ringColor: "ring-blue-600/20",
     iconColor: "text-blue-600",
     description:
-      "Our proprietary intelligence engine monitors 50+ data sources across 15+ industries and every major Indian city. Continuous scanning detects the signals that matter — before your competitors know they exist.",
+      "Our proprietary intelligence engine monitors 51 data sources across 15+ industries and every major Indian city. Continuous scanning detects the signals that matter — before your competitors know they exist.",
     details: [
-      "50+ proprietary intelligence sources",
+      "51 proprietary intelligence sources",
       "15+ industries across all major Indian cities",
       "Continuous real-time monitoring, 24/7",
       "Government filings, corporate registrations, regulatory data",
       "Job market signals, funding databases, commercial real estate",
     ],
-    badge: "50+ Sources",
+    badge: "51 Sources",
   },
   {
     number: "02",

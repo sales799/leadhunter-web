@@ -51,7 +51,7 @@ export default function CompareRecepto() {
     },
     {
       name: 'Starting Price',
-      leadhunter: '₹19,999/mo (~₹2.4L/year)',
+      leadhunter: '₹24,999/mo (~₹3.0L/year)',
       recepto: '$1,499/quarter (~₹5L/year)',
     },
     {
@@ -84,7 +84,7 @@ export default function CompareRecepto() {
   const pricingComparison = [
     {
       tier: 'Analyst',
-      leadhunter: '₹2.4L/year',
+      leadhunter: '₹3.0L/year',
       recepto: '₹5.0L/year',
       savings: '52%',
     },
@@ -151,7 +151,7 @@ export default function CompareRecepto() {
                   </li>
                   <li className="flex items-start">
                     <span className="mr-3">✓</span>
-                    <span>From ₹19,999/mo</span>
+                    <span>From ₹24,999/mo</span>
                   </li>
                 </ul>
               </Card>

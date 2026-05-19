@@ -18,10 +18,9 @@ export function useTheme() {
 
 export default function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>("light");
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
+    
     const stored = localStorage.getItem("lhiq-theme") as Theme | null;
     if (stored === "dark" || stored === "light") {
       setTheme(stored);
@@ -41,8 +40,6 @@ export default function ThemeProvider({ children }: { children: React.ReactNode 
     });
   }, []);
 
-  // Prevent flash of wrong theme
-  if (!mounted) return null;
 
   return (
     <ThemeContext.Provider value={{ theme, toggle }}>
