@@ -88,7 +88,7 @@ const plays = [
 const comparisonRows = [
   { feature: "India market coverage", leadhunter: "51 verified sources", competitor: "Minimal" },
   { feature: "Signal types", leadhunter: "Funding, hiring, tech, compliance", competitor: "Web visits only" },
-  { feature: "Monthly cost", leadhunter: "From \u20B919,999/mo", competitor: "$30,000+/year" },
+  { feature: "Monthly cost", leadhunter: "From \u20B924,999/mo", competitor: "$30,000+/year" },
   { feature: "Contact enrichment", leadhunter: "Indian mobile + email verified", competitor: "Email only" },
   { feature: "CRM integration", leadhunter: "HubSpot, Zoho native", competitor: "Salesforce-centric" },
   { feature: "Time to value", leadhunter: "5 minutes", competitor: "4-6 weeks" },

@@ -62,7 +62,7 @@ const features: {
   { feature: "India-specific hiring signals", leadhunter: true, zoominfo: false },
   { feature: "Government filing monitoring", leadhunter: true, zoominfo: false },
   { feature: "Contact accuracy (India)", leadhunter: "Industry-leading", zoominfo: "~25%" },
-  { feature: "Starting price", leadhunter: "\u20B919,999/mo", zoominfo: "\u20B91L+/mo" },
+  { feature: "Starting price", leadhunter: "\u20B924,999/mo", zoominfo: "\u20B91L+/mo" },
   { feature: "Setup time", leadhunter: "< 1 hour", zoominfo: "2-4 weeks" },
   { feature: "Minimum contract", leadhunter: "Monthly", zoominfo: "Annual" },
   { feature: "Free trial", leadhunter: "14 days", zoominfo: "Demo only" },
