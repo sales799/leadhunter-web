@@ -15,7 +15,7 @@ export const SITE = {
 };
 
 export const STATS = [
-  { value: "50+", label: "Intelligence Sources", numericValue: 50 },
+  { value: "51", label: "Intelligence Sources", numericValue: 51 },
   { value: "100", label: "Point AI Score", numericValue: 100 },
   { value: "90", label: "Days Early", numericValue: 90 },
   { value: "24/7", label: "Signal Monitoring", numericValue: 24 },
@@ -156,15 +156,15 @@ export const DASHBOARD_SIGNALS = [
 export const PRICING = {
   analyst: {
     name: "Analyst",
-    price: "19,999",
-    annual: "16,666",
-    annualTotal: "1,99,990",
-    pricePerLead: "₹500",
+    price: "24,999",
+    annual: "20,833",
+    annualTotal: "2,49,990",
+    pricePerLead: "₹833",
     description: "For agencies getting started with signal intelligence",
-    leads: "40 confirmed leads/mo",
+    leads: "30 confirmed leads/mo",
     seats: "2 user seats",
     features: [
-      "40 confirmed leads/month",
+      "30 confirmed leads/month",
       "2 user seats",
       "Multi-stage outreach sequences",
       "Email alerts",
@@ -177,10 +177,10 @@ export const PRICING = {
   },
   strategist: {
     name: "Strategist",
-    price: "49,999",
-    annual: "41,666",
-    annualTotal: "4,99,990",
-    pricePerLead: "₹333",
+    price: "74,999",
+    annual: "62,499",
+    annualTotal: "7,49,990",
+    pricePerLead: "₹500",
     description: "For growing agencies that want every advantage",
     leads: "150 confirmed leads/mo",
     seats: "5 user seats",
@@ -199,10 +199,10 @@ export const PRICING = {
   },
   command: {
     name: "Command",
-    price: "1,19,999",
-    annual: "99,999",
-    annualTotal: "11,99,990",
-    pricePerLead: "₹300",
+    price: "1,99,999",
+    annual: "1,66,666",
+    annualTotal: "19,99,990",
+    pricePerLead: "₹500",
     description: "For large agencies dominating their markets",
     leads: "400 confirmed leads/mo",
     seats: "15 user seats",

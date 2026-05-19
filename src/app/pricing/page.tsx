@@ -13,7 +13,7 @@ import { ProductJsonLd, FAQJsonLd, BreadcrumbJsonLd } from "@/components/seo/Jso
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "LeadHunterIQ starts at ₹19,999/month — that's ₹666/day for enterprise-grade signal intelligence. 50+ sources, proprietary AI scoring, multi-layer verification. 14-day free trial.",
+    "LeadHunterIQ starts at ₹24,999/month — that's ₹833/day for enterprise-grade signal intelligence. 51 sources, proprietary AI scoring, multi-layer verification. 14-day free trial.",
 };
 
 export default function PricingPage() {
@@ -24,7 +24,7 @@ export default function PricingPage() {
       <BreadcrumbJsonLd items={[{ name: "Pricing", href: "/pricing" }]} />
       <PageHero
         badge="Pricing"
-        title="Starts at ₹666/day. Your ROI? Infinite."
+        title="Starts at ₹833/day. Your ROI? Measurable."
         description="Enterprise-grade signal intelligence at a fraction of what global tools charge. Every plan includes a 14-day free trial."
         breadcrumbs={[{ name: "Pricing", href: "/pricing" }]}
       />

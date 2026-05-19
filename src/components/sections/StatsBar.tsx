@@ -4,8 +4,8 @@ import { useRef, useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
 const stats = [
-  { value: 50, label: "Intelligence Sources", prefix: "", suffix: "+", color: "text-emerald-500" },
-  { value: 100, label: "Point AI Score", prefix: "", suffix: "", color: "text-blue-500" },
+  { value: 51, label: "Intelligence Sources", prefix: "", suffix: "", color: "text-emerald-500" },
+  { value: 49, label: "TALPRO-IQ Signals", prefix: "", suffix: "", color: "text-blue-500" },
   { value: 90, label: "Days Early Detection", prefix: "", suffix: "", color: "text-gold-400" },
   { value: 15, label: "Industries Covered", prefix: "", suffix: "+", color: "text-emerald-500" },
 ];
