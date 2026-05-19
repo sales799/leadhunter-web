@@ -65,7 +65,7 @@ const features: {
   { feature: "Email sequences", leadhunter: "Via CRM", apollo: true },
   { feature: "Free tier available", leadhunter: "14-day trial", apollo: "Yes (limited)" },
   { feature: "Contact accuracy (India)", leadhunter: "Industry-leading", apollo: "~35%" },
-  { feature: "Starting price (paid)", leadhunter: "\u20B919,999/mo", apollo: "$49/mo" },
+  { feature: "Starting price (paid)", leadhunter: "\u20B924,999/mo", apollo: "$49/mo" },
   { feature: "CRM integration", leadhunter: true, apollo: true },
   { feature: "API access", leadhunter: true, apollo: true },
   { feature: "DPDPA 2023 compliance", leadhunter: true, apollo: false },
@@ -332,7 +332,7 @@ export default function CompareApolloPage() {
               </h3>
               <div className="mt-4">
                 <span className="text-4xl font-extrabold text-gray-900">
-                  {"\u20B9"}19,999
+                  {"\u20B9"}24,999
                 </span>
                 <span className="text-gray-500">/month</span>
               </div>

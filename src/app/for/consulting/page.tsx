@@ -72,7 +72,7 @@ const plays = [
 const comparisonRows = [
   { feature: "India enterprise coverage", leadhunter: "10,000+ companies tracked", competitor: "Fortune 500 focus" },
   { feature: "Signal lead time", leadhunter: "3-6 months before RFP", competitor: "RFP stage only" },
-  { feature: "Monthly cost", leadhunter: "From \u20B919,999/mo", competitor: "\u20B95L+/year" },
+  { feature: "Monthly cost", leadhunter: "From \u20B924,999/mo", competitor: "\u20B95L+/year" },
   { feature: "Signal types", leadhunter: "M&A, Board, ESG, Hiring, Expansion", competitor: "News alerts only" },
   { feature: "Contact enrichment", leadhunter: "Decision-maker mobile + email", competitor: "Company-level only" },
   { feature: "AI scoring", leadhunter: "TALPRO-IQ (49 signals)", competitor: "Manual qualification" },

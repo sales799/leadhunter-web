@@ -72,7 +72,7 @@ const plays = [
 const comparisonRows = [
   { feature: "India IT signal coverage", leadhunter: "51 verified sources", competitor: "US/EU focused" },
   { feature: "Signal lead time", leadhunter: "90 days before RFI", competitor: "At RFI stage" },
-  { feature: "Monthly cost", leadhunter: "From \u20B919,999/mo", competitor: "$15,000+/year" },
+  { feature: "Monthly cost", leadhunter: "From \u20B924,999/mo", competitor: "$15,000+/year" },
   { feature: "Technology signals", leadhunter: "Cloud, Security, AI, Legacy", competitor: "Generic intent" },
   { feature: "Contact enrichment", leadhunter: "CTO/CIO mobile + email", competitor: "Company-level" },
   { feature: "Indian regulatory signals", leadhunter: "STPI, MCA, CERT-In, EPFO", competitor: "None" },
