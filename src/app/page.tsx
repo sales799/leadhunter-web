@@ -23,7 +23,7 @@ const CTASection = dynamic(() => import("@/components/sections/CTASection"), { s
 export const metadata: Metadata = {
   title: "LeadHunterIQ — India's Intent-First GTM Platform",
   description:
-    "Proprietary AI signal intelligence that detects hiring intent 90 days before your competitors. Dossier-grade verified leads built for Indian IT staffing agencies. Starts at ₹19,999/month.",
+    "Proprietary AI signal intelligence that detects hiring intent 90 days before your competitors. Dossier-grade verified leads built for Indian IT staffing agencies. Starts at ₹24,999/month.",
 };
 
 export default function Home() {

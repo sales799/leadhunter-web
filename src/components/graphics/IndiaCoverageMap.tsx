@@ -142,7 +142,7 @@ export default function IndiaCoverageMap() {
       <div className="flex items-center justify-center gap-6 mt-4">
         <div className="flex items-center gap-2">
           <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
-          <span className="text-xs text-gray-500 dark:text-gray-400 font-body">Tier 1 (50+ sources)</span>
+          <span className="text-xs text-gray-500 dark:text-gray-400 font-body">Tier 1 (51 sources)</span>
         </div>
         <div className="flex items-center gap-2">
           <span className="h-2.5 w-2.5 rounded-full bg-blue-400" />

@@ -9,7 +9,7 @@ import CTASection from "@/components/sections/CTASection";
 export const metadata: Metadata = {
   title: "For Staffing Agency Owners | LeadHunterIQ",
   description:
-    "Stop losing deals to faster agencies. LeadHunterIQ monitors 50+ sources, scores with proprietary AI signals, and delivers dossier-grade intelligence for ₹19,999/month.",
+    "Stop losing deals to faster agencies. LeadHunterIQ monitors 51 sources, scores with proprietary AI signals, and delivers dossier-grade intelligence for ₹24,999/month.",
 };
 
 const painPoints = [
@@ -106,7 +106,7 @@ const daySteps = [
 ];
 
 const comparisonRows = [
-  { feature: "Monthly cost", leadhunter: "From ₹19,999", competitor: "$7,000+/year" },
+  { feature: "Monthly cost", leadhunter: "From ₹24,999", competitor: "$7,000+/year" },
   { feature: "Confirmed leads/month", leadhunter: "40-400", competitor: "DIY" },
   { feature: "India-specific signals (gov filings, regulatory)", leadhunter: "Yes", competitor: "No" },
   { feature: "WhatsApp alerts", leadhunter: "Yes", competitor: "No" },
@@ -122,7 +122,7 @@ export default function AgencyOwnersPage() {
       <PageHero
         badge="For Agency Owners"
         title="Stop losing deals to faster agencies"
-        description="LeadHunterIQ monitors 50+ sources, scores with proprietary AI signals, and delivers dossier-grade intelligence to your WhatsApp — at ₹19,999/month, not $7,000/year."
+        description="LeadHunterIQ monitors 51 sources, scores with proprietary AI signals, and delivers dossier-grade intelligence to your WhatsApp — at ₹24,999/month, not $7,000/year."
         cta1={{ label: "Start Free Trial", href: "/demo" }}
         cta2={{ label: "See Pricing", href: "/pricing" }}
         breadcrumbs={[
@@ -221,7 +221,7 @@ export default function AgencyOwnersPage() {
         <SectionHead
           badge="Comparison"
           badgeVariant="gold"
-          title="₹19,999/mo vs $7,000+/year"
+          title="₹24,999/mo vs $7,000+/year"
           description="Enterprise-level intelligence without the enterprise price tag."
         />
         <FadeIn delay={0.2}>
