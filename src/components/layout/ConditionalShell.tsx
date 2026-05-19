@@ -13,13 +13,13 @@ export default function ConditionalShell({
   const isCandidate = pathname.startsWith("/candidate");
 
   if (isCandidate) {
-    return <main>{children}</main>;
+    return <main id="main-content">{children}</main>;
   }
 
   return (
     <>
       <Nav />
-      <main>{children}</main>
+      <main id="main-content">{children}</main>
       <Footer />
     </>
   );

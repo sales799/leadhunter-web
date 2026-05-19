@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     template: "%s | LeadHunterIQ",
   },
   description:
-    "Monitor 51+ data sources, score leads with 49 AI signals, and deliver dossier-grade intelligence 90 days before competitors. Built for Indian B2B companies. From ₹19,999/month.",
+    "Monitor 51+ data sources, score leads with 49 AI signals, and deliver dossier-grade intelligence 90 days before competitors. Built for Indian B2B companies. From ₹24,999/month.",
   metadataBase: new URL("https://leadhunteriq.in"),
   openGraph: {
     type: "website",
@@ -47,11 +47,12 @@ export const metadata: Metadata = {
     siteName: "LeadHunterIQ",
     title: "LeadHunterIQ — India's Intent-First GTM Platform",
     description:
-      "Monitor 50+ data sources, score leads with proprietary AI signals, and close more staffing deals. Built for Indian IT staffing agencies.",
+      "Monitor 51 data sources, score leads with proprietary AI signals, and close more staffing deals. Built for Indian IT staffing agencies.",
     images: [{ url: "/og/home.png", width: 1200, height: 630 }],
   },
   twitter: { card: "summary_large_image" },
   robots: { index: true, follow: true },
+  alternates: { canonical: "/" },
 };
 
 export default function RootLayout({
@@ -63,10 +64,23 @@ export default function RootLayout({
     <html lang="en" className={`${heading.variable} ${body.variable} ${mono.variable}`}>
       <head>
         <meta name="theme-color" content="#0B1D3A" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem("lhiq-theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme:dark)").matches)){document.documentElement.classList.add("dark")}}catch(e){}})()`,
+          }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
+
       <body className="font-body antialiased">
+        {/* WCAG 2.4.1 - bypass blocks. Visible on focus only. */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded focus:bg-teal-700 focus:px-4 focus:py-2 focus:text-white focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-teal-300"
+        >
+          Skip to main content
+        </a>
         <ThemeProvider>
           <GoogleAnalytics />
           <LinkedInInsight />
