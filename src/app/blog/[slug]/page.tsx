@@ -8,14 +8,15 @@ import Button from "@/components/ui/Button";
 import SocialShareBar from "@/components/sections/SocialShareBar";
 import { SITE } from "@/lib/constants";
 
-type Props = { params: { slug: string } };
+type Props = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
   const posts = getAllPosts();
   return posts.map((post) => ({ slug: post.slug }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const params = await props.params;
   const post = getPost(params.slug);
   if (!post) return { title: "Post Not Found" };
   return {
@@ -46,7 +47,8 @@ function markdownToHtml(md: string): string {
     .replace(/<p class="text-gray-600 leading-relaxed mb-4"><\/p>/g, "");
 }
 
-export default function BlogPostPage({ params }: Props) {
+export default async function BlogPostPage(props: Props) {
+  const params = await props.params;
   const post = getPost(params.slug);
   if (!post) notFound();
 
