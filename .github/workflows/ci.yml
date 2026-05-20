@@ -69,7 +69,7 @@ jobs:
 
             git fetch origin main --prune
             git checkout main
-            git stash push -u -m "ci-predeploy-${GITHUB_SHA}" || true
+            git stash push -u -m "ci-predeploy-${{ github.sha }}" || true
             git reset --hard origin/main
 
             npm ci
