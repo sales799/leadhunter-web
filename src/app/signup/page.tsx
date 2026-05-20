@@ -45,8 +45,8 @@ export default function SignupPage() {
         setErrorMsg(result.error || 'Something went wrong. Please try again.');
         trackSignupError(result.error || 'unknown');
       }
-    } catch (error) {
-      console.error('Signup error:', error);
+    } catch {
+      console.error('Signup request failed');
       setErrorMsg('Network error. Please try again.');
       trackSignupError('network_error');
     } finally {

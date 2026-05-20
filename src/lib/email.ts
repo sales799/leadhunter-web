@@ -19,7 +19,7 @@ const FROM_EMAIL = "LeadHunterIQ <onboarding@resend.dev>";
 
 export async function sendEmail(payload: EmailPayload): Promise<boolean> {
   if (!RESEND_API_KEY) {
-    console.log("[Email] RESEND_API_KEY not set, skipping email:", payload.subject);
+    console.info("[Email] RESEND_API_KEY not set; transactional email skipped");
     return false;
   }
 
@@ -39,15 +39,20 @@ export async function sendEmail(payload: EmailPayload): Promise<boolean> {
     });
 
     if (res.ok) {
-      console.log("[Email] Sent:", payload.subject, "to", payload.to);
+      console.info("[Email] Transactional email accepted by provider");
       return true;
     }
 
     const err = await res.text();
-    console.error("[Email] Failed:", err);
+    console.error("[Email] Provider rejected transactional email", {
+      status: res.status,
+      bodyLength: err.length,
+    });
     return false;
   } catch (err) {
-    console.error("[Email] Error:", err);
+    console.error("[Email] Transactional email send failed", {
+      message: err instanceof Error ? err.message : "unknown",
+    });
     return false;
   }
 }
