@@ -23,13 +23,13 @@ const deepDive = [
     shortTitle: "Discovery",
     badge: "51 Sources",
     badgeVariant: "emerald" as const,
-    link: "/solutions/gcc-tracking",
+    link: "/solutions/signal-intelligence",
     description:
-      "Our proprietary intelligence engine monitors dozens of data sources across 15+ industries and every major Indian city. Continuous scanning detects GCC expansions, funding rounds, hiring surges, and regulatory filings in real-time.",
+      "Our Signal Intelligence module monitors dozens of data sources across 15+ industries and every major Indian city. Continuous scanning detects GCC expansions, funding rounds, hiring surges, and regulatory filings in real-time.",
     bullets: [
       "51 proprietary intelligence sources",
       "15+ industries, all major Indian cities, continuous monitoring",
-      "GCC expansions, funding rounds, hiring surges, regulatory filings",
+      "Clean module handoff into scoring, verification, and enrichment",
     ],
   },
   {
@@ -131,10 +131,8 @@ export default function FeaturesPage() {
         breadcrumbs={[{ name: "Features", href: "/features" }]}
       />
 
-      {/* Sticky tab navigation */}
       <StickyTabs tabs={tabs} />
 
-      {/* Feature deep dives */}
       {deepDive.map((feat, i) => (
         <Section
           key={feat.title}
