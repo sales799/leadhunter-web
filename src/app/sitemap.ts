@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "", "features", "pricing", "how-it-works", "about", "contact", "demo",
     "customers", "integrations", "resources", "blog",
     "signal-report", "resources/signal-taxonomy",
-    "solutions/gcc-tracking", "solutions/lead-scoring", "solutions/india-data", "solutions/compliance",
+    "solutions/signal-intelligence", "solutions/gcc-tracking", "solutions/lead-scoring", "solutions/india-data", "solutions/compliance",
     "for/agency-owners", "for/bd-teams", "for/enterprise",
     "compare/zoominfo", "compare/apollo", "compare/manual-process", "compare/recepto",
     "plays", "signup", "for/saas", "for/consulting", "for/it-services",
@@ -21,7 +21,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: p === "" ? 1 : p.includes("/") ? 0.7 : 0.8,
   }));
 
-  // Dynamic blog post URLs
   const posts = getAllPosts();
   const blogPages: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${base}/blog/${post.slug}`,
