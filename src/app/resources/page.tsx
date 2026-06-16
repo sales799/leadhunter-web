@@ -14,16 +14,20 @@ import NewsletterSignup from "@/components/sections/NewsletterSignup";
 
 const GUIDES = [
   {
-    title: "IT Staffing Lead Gen Playbook",
+    title: "Signal Taxonomy Guide",
     description:
-      "A step-by-step guide to building a signal-driven lead generation engine for IT staffing agencies. Covers GCC tracking, funding signals, and compliance-based outreach.",
-    tag: "Playbook",
+      "A structured breakdown of 45+ signal types across seven categories used by LeadHunterIQ's discovery layer to predict staffing demand in India.",
+    tag: "Guide",
+    href: "/resources/signal-taxonomy",
+    cta: "Open guide",
   },
   {
     title: "GCC Tracking Starter Kit",
     description:
       "Everything you need to start tracking Global Capability Centre setups and expansions across India. Includes signal sources, scoring criteria, and outreach templates.",
     tag: "Starter Kit",
+    href: "/solutions/gcc-tracking",
+    cta: "Explore tracker",
   },
 ];
 
@@ -43,7 +47,6 @@ const TEMPLATES = [
 ];
 
 export default function ResourcesPage() {
-
   return (
     <>
       <PageHero
@@ -53,10 +56,9 @@ export default function ResourcesPage() {
         breadcrumbs={[{ name: "Resources", href: "/resources" }]}
       />
 
-      {/* ROI Calculator link */}
       <Section bg="white">
         <FadeIn>
-          <Card className="text-center mx-auto max-w-2xl">
+          <Card className="mx-auto max-w-2xl text-center">
             <Badge variant="gold">Interactive Tool</Badge>
             <h2 className="mt-4 text-2xl font-extrabold tracking-heading text-gray-900 sm:text-3xl">
               ROI Calculator
@@ -75,10 +77,9 @@ export default function ResourcesPage() {
         </FadeIn>
       </Section>
 
-      {/* Guides section */}
       <Section bg="gray">
         <FadeIn>
-          <div className="text-center mb-16">
+          <div className="mb-16 text-center">
             <Badge variant="blue">Guides</Badge>
             <h2 className="mt-4 text-3xl font-extrabold tracking-heading text-gray-900 sm:text-4xl">
               In-depth playbooks for staffing BD
@@ -92,7 +93,7 @@ export default function ResourcesPage() {
         <div className="grid gap-6 md:grid-cols-2">
           {GUIDES.map((guide, i) => (
             <FadeIn key={guide.title} delay={i * 0.1}>
-              <Card className="h-full flex flex-col">
+              <Card className="flex h-full flex-col">
                 <div className="mb-3">
                   <Badge variant="emerald">{guide.tag}</Badge>
                 </div>
@@ -103,8 +104,8 @@ export default function ResourcesPage() {
                   {guide.description}
                 </p>
                 <div className="mt-5">
-                  <Button href="/demo" variant="secondary" size="sm">
-                    Download free
+                  <Button href={guide.href} variant="secondary" size="sm">
+                    {guide.cta}
                   </Button>
                 </div>
               </Card>
@@ -113,10 +114,9 @@ export default function ResourcesPage() {
         </div>
       </Section>
 
-      {/* Templates section */}
       <Section bg="white">
         <FadeIn>
-          <div className="text-center mb-16">
+          <div className="mb-16 text-center">
             <Badge variant="gold">Templates</Badge>
             <h2 className="mt-4 text-3xl font-extrabold tracking-heading text-gray-900 sm:text-4xl">
               Ready-to-use BD templates
@@ -130,7 +130,7 @@ export default function ResourcesPage() {
         <div className="grid gap-6 md:grid-cols-2">
           {TEMPLATES.map((tmpl, i) => (
             <FadeIn key={tmpl.title} delay={i * 0.1}>
-              <Card className="h-full flex flex-col">
+              <Card className="flex h-full flex-col">
                 <div className="mb-3">
                   <Badge variant="navy">{tmpl.tag}</Badge>
                 </div>
@@ -151,7 +151,6 @@ export default function ResourcesPage() {
         </div>
       </Section>
 
-      {/* Newsletter signup */}
       <Section bg="gray">
         <FadeIn>
           <div className="text-center mb-6">
