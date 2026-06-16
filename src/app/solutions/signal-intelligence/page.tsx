@@ -5,6 +5,7 @@ import SectionHead from "@/components/ui/SectionHead";
 import FadeIn from "@/components/ui/FadeIn";
 import Card from "@/components/ui/Card";
 import Badge from "@/components/ui/Badge";
+import Button from "@/components/ui/Button";
 import CTASection from "@/components/sections/CTASection";
 import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 import { DASHBOARD_SIGNALS } from "@/lib/constants";
@@ -111,6 +112,57 @@ const metrics = [
   { value: "51", label: "Intelligence sources", tone: "text-emerald-400" },
   { value: "15+", label: "Industries monitored", tone: "text-blue-400" },
   { value: "24/7", label: "Signal monitoring", tone: "text-gold-400" },
+];
+
+const resources = [
+  {
+    eyebrow: "Guide",
+    title: "Signal taxonomy",
+    description:
+      "Review the 45+ signal types and seven signal families that feed the discovery layer before enrichment and outreach begin.",
+    href: "/resources/signal-taxonomy",
+    cta: "Open guide",
+    badge: "Resources",
+    badgeVariant: "gold" as const,
+  },
+  {
+    eyebrow: "Newsletter",
+    title: "The Signal Report",
+    description:
+      "Subscribe to a public sample feed of weekly market movement so prospects can see how the discovery layer thinks.",
+    href: "/signal-report",
+    cta: "See report",
+    badge: "Weekly",
+    badgeVariant: "emerald" as const,
+  },
+  {
+    eyebrow: "Use case",
+    title: "GCC expansion tracker",
+    description:
+      "Go one layer deeper into one of the highest-value signal families monitored by the module across Indian tech hubs.",
+    href: "/solutions/gcc-tracking",
+    cta: "View tracker",
+    badge: "High value",
+    badgeVariant: "blue" as const,
+  },
+];
+
+const moduleFaqs = [
+  {
+    question: "What makes Signal Intelligence different from the later modules?",
+    answer:
+      "Signal Intelligence only discovers and packages market movement. It does not score, enrich contacts, or generate outreach. That separation keeps the discovery trail clean and auditable.",
+  },
+  {
+    question: "How does the module avoid noisy one-off events?",
+    answer:
+      "Single-source events are not enough. The module correlates filings, hiring activity, geography, and commercial movement before a signal is handed downstream.",
+  },
+  {
+    question: "Can customers see sample output before a demo?",
+    answer:
+      "Yes. The public module page, weekly Signal Report, and signal taxonomy guide now give prospects a clean preview of how the discovery layer classifies demand.",
+  },
 ];
 
 export default function SignalIntelligencePage() {
@@ -302,6 +354,40 @@ export default function SignalIntelligencePage() {
       </Section>
 
       <Section bg="gray">
+        <SectionHead
+          badge="Resources"
+          badgeVariant="emerald"
+          title="Explore the module from three public entry points"
+          description="Operational resources tied directly to the discovery layer, so visitors can inspect the taxonomy, sample output, and a high-value signal family."
+        />
+        <div className="grid gap-6 lg:grid-cols-3">
+          {resources.map((resource, index) => (
+            <FadeIn key={resource.title} delay={index * 0.08}>
+              <Card className="flex h-full flex-col">
+                <div className="flex items-center justify-between gap-3">
+                  <p className="text-xs font-bold uppercase tracking-widest text-gray-400">
+                    {resource.eyebrow}
+                  </p>
+                  <Badge variant={resource.badgeVariant}>{resource.badge}</Badge>
+                </div>
+                <h3 className="mt-4 font-heading text-xl font-bold text-gray-900">
+                  {resource.title}
+                </h3>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-gray-500">
+                  {resource.description}
+                </p>
+                <div className="mt-6">
+                  <Button href={resource.href} variant="secondary" size="sm">
+                    {resource.cta}
+                  </Button>
+                </div>
+              </Card>
+            </FadeIn>
+          ))}
+        </div>
+      </Section>
+
+      <Section bg="white">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
           <FadeIn direction="left">
             <SectionHead
@@ -366,6 +452,29 @@ export default function SignalIntelligencePage() {
               </div>
             </Card>
           </FadeIn>
+        </div>
+      </Section>
+
+      <Section bg="gray">
+        <SectionHead
+          badge="FAQ"
+          badgeVariant="blue"
+          title="Common questions about the discovery layer"
+          description="Short answers that clarify module boundaries and what visitors can inspect publicly today."
+        />
+        <div className="grid gap-6 lg:grid-cols-3">
+          {moduleFaqs.map((item, index) => (
+            <FadeIn key={item.question} delay={index * 0.08}>
+              <Card className="h-full">
+                <h3 className="font-heading text-lg font-bold text-gray-900">
+                  {item.question}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-gray-500">
+                  {item.answer}
+                </p>
+              </Card>
+            </FadeIn>
+          ))}
         </div>
       </Section>
 
