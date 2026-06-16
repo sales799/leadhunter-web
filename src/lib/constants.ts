@@ -357,9 +357,9 @@ export const NAV_LINKS = {
   solutions: {
     capability: [
       {
-        name: "GCC Expansion Tracker",
-        href: "/solutions/gcc-tracking",
-        desc: "Detect GCC setups 90 days early",
+        name: "Signal Intelligence",
+        href: "/solutions/signal-intelligence",
+        desc: "Track buyer timing across India",
       },
       {
         name: "AI Lead Scoring",
@@ -403,7 +403,6 @@ export const NAV_LINKS = {
   ],
 };
 
-// Cal.com Booking Configuration
 export const CAL_CONFIG = {
   username: "talpro",
   eventSlug: "leadhunteriq-demo",
