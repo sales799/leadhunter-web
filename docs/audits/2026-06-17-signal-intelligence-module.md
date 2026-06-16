@@ -9,6 +9,8 @@ Base commit: `70ece6b7a0b2e76f95be6f7667c3ee6f1f4ba7b5`
 - Repointed the feature deep-dive entry from the GCC-only leaf to the new module overview
 - Exposed the module from solution navigation and sitemap
 - Added homepage proof-band CTAs so the new slice is discoverable from public entry points
+- Added resource and FAQ sections on the module page so visitors can inspect the signal taxonomy, weekly report, and GCC tracker from the same module surface
+- Fixed the Resources index so Signal Intelligence guides point to live public routes instead of generic demo CTAs
 
 ## Files changed
 - `src/app/solutions/signal-intelligence/page.tsx`
@@ -16,6 +18,7 @@ Base commit: `70ece6b7a0b2e76f95be6f7667c3ee6f1f4ba7b5`
 - `src/lib/constants.ts`
 - `src/app/sitemap.ts`
 - `src/components/sections/SignalIntelligenceProof.tsx`
+- `src/app/resources/page.tsx`
 
 ## Validation status
 The current automation runtime did not provide working shell execution, so the following required checks could not be executed from this run:
