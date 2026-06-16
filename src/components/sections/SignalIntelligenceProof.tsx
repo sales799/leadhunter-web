@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Section from "@/components/ui/Section";
 import Badge from "@/components/ui/Badge";
+import Button from "@/components/ui/Button";
 
 const proofCards = [
   { label: "Sources watched", value: "51", detail: "18 free + 33 paid/API feeds across India", tone: "text-emerald-400" },
@@ -34,6 +35,14 @@ export default function SignalIntelligenceProof() {
                 <p className="mt-1 text-xs leading-5 text-gray-400 font-body">{card.detail}</p>
               </div>
             ))}
+          </div>
+          <div className="mt-8 flex flex-wrap gap-4">
+            <Button href="/solutions/signal-intelligence" variant="white" size="sm">
+              Explore Signal Intelligence
+            </Button>
+            <Button href="/signal-report" variant="outline_white" size="sm">
+              See Signal Report
+            </Button>
           </div>
         </div>
         <div className="rounded-2xl border border-white/10 bg-white/[0.05] p-5 shadow-2xl backdrop-blur-xl">
